@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Pororo 英语启蒙互动课堂</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            background: #f7f9fa;
+
+            margin: 0;
+
+            padding: 15px;
+
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+
+            color: #007bff;
+
+            font-size: 22px;
+
+            margin: 5px 0 15px;
+        }
+
+        .main-container {
+
+            display: flex;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+            gap: 15px;
+
+            height: 85vh;
+        }
+
+
+        /* =========================
+           左侧
+        ========================= */
+
+        .teaching-section {
+
+            flex: 78;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+
+            min-width: 0;
+        }
+
+
+        /* =========================
+           提问栏
+        ========================= */
+
+        #quiz-bar {
+
+            background: #fff;
+
+            border: 2px dashed #b7eb8f;
+
+            border-radius: 8px;
+
+            padding: 12px 20px;
+
+            min-height: 70px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            box-shadow:
+                0 2px 8px rgba(0,0,0,0.05);
+
+            transition: all 0.3s ease;
+        }
+
+        #quiz-bar.active {
+
+            background: #f6ffed;
+
+            border-color: #52c41a;
+
+            box-shadow:
+                0 4px 12px rgba(82,196,26,0.15);
+        }
+
+        .quiz-content {
+
+            flex: 1;
+
+            font-size: 16px;
+
+            line-height: 1.5;
+
+            color: #666;
+        }
+
+        #quiz-bar.active .quiz-content {
+
+            color: #333;
+        }
+
+        .resume-btn {
+
+            background: #d9d9d9;
+
+            color: #666;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            font-size: 14px;
+
+            border-radius: 6px;
+
+            cursor: not-allowed;
+
+            font-weight: bold;
+
+            white-space: nowrap;
+        }
+
+        #quiz-bar.active .resume-btn {
+
+            background: #52c41a;
+
+            color: white;
+
+            cursor: pointer;
+        }
+
+        #quiz-bar.active .resume-btn:hover {
+
+            background: #73d13d;
+        }
+
+
+        /* =========================
+           YouTube
+        ========================= */
+
+        .video-container {
+
+            flex: 1;
+
+            background: #000;
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.15);
+
+            position: relative;
+        }
+
+        #youtube-player {
+
+            width: 100%;
+
+            height: 100%;
+        }
+
+
+        /* =========================
+           右侧
+        ========================= */
+
+        .sidebar-section {
+
+            flex: 22;
+
+            background: white;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.05);
+
+            display: flex;
+
+            flex-direction: column;
+
+            padding: 15px;
+
+            overflow: hidden;
+
+            min-width: 240px;
+        }
+
+        .sidebar-title {
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            margin-bottom: 12px;
+
+            border-bottom:
+                2px solid #f0f0f0;
+
+            padding-bottom: 8px;
+
+            color: #444;
+        }
+
+        .timeline-list {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+
+            overflow-y: auto;
+
+            flex: 1;
+        }
+
+        .timeline-item {
+
+            padding: 10px;
+
+            border:
+                1px solid #eef2f5;
+
+            border-radius: 6px;
+
+            margin-bottom: 8px;
+
+            cursor: pointer;
+
+            background: #fff;
+
+            transition: 0.2s;
+        }
+
+        .timeline-item:hover {
+
+            background: #f0f7ff;
+
+            border-color: #007bff;
+        }
+
+        .timeline-item.active {
+
+            background: #e6f7ff;
+
+            border-color: #1890ff;
+
+            font-weight: bold;
+        }
+
+        .time-badge {
+
+            background: #007bff;
+
+            color: white;
+
+            padding: 1px 5px;
+
+            border-radius: 4px;
+
+            font-size: 11px;
+
+            margin-right: 6px;
+        }
+
+        .item-preview {
+
+            font-size: 12px;
+
+            color: #888;
+
+            margin-top: 4px;
+        }
+
+
+        /* =========================
+           视频列表
+        ========================= */
+
+        .video-list {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+
+            overflow-y: auto;
+
+            flex: 1;
+        }
+
+        .video-item {
+
+            padding: 10px;
+
+            border:
+                1px solid #eef2f5;
+
+            border-radius: 6px;
+
+            margin-bottom: 8px;
+
+            cursor: pointer;
+
+            background: #fff;
+
+            transition: 0.2s;
+        }
+
+        .video-item:hover {
+
+            background: #f0f7ff;
+
+            border-color: #007bff;
+        }
+
+        .video-item.active {
+
+            background: #e6f7ff;
+
+            border-color: #1890ff;
+
+            font-weight: bold;
+        }
+
+        .video-id {
+
+            font-size: 11px;
+
+            color: #999;
+
+            margin-top: 4px;
+
+            word-break: break-all;
+        }
+
+
+        /* =========================
+           状态
+        ========================= */
+
+        .loading {
+
+            text-align: center;
+
+            color: #999;
+
+            padding: 20px;
+        }
+
+        .error {
+
+            color: #d4380d;
+
+            background: #fff2f0;
+
+            border:
+                1px solid #ffccc7;
+
+            padding: 12px;
+
+            border-radius: 6px;
+
+            margin: 10px 0;
+        }
+
+
+        /* =========================
+           移动端
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .main-container {
+
+                flex-direction: column;
+
+                height: auto;
+            }
+
+            .video-container {
+
+                height: 56vw;
+
+                min-height: 250px;
+            }
+
+            .sidebar-section {
+
+                min-height: 300px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<h1>
+    🎬 Pororo 英语启蒙互动课堂
+</h1>
+
+
+<div class="main-container">
+
+
+    <!-- =========================
+         左侧教学区
+    ========================= -->
+
+    <div class="teaching-section">
+
+
+        <!-- 提问栏 -->
+
+        <div id="quiz-bar">
+
+            <div
+                class="quiz-content"
+                id="quiz-text"
+            >
+
+                🟢
+                <b>请选择一个视频开始学习</b>
+
+                <br>
+
+                左侧选择视频后，将自动加载 YouTube 视频。
+
+            </div>
+
+
+            <button
+                class="resume-btn"
+                id="resumeBtn"
+                onclick="resumeVideo()"
+                disabled
+            >
+                继续播放
+            </button>
+
+        </div>
+
+
+        <!-- YouTube -->
+
+        <div class="video-container">
+
+            <div id="youtube-player"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         右侧
+    ========================= -->
+
+    <div class="sidebar-section">
+
+
+        <div class="sidebar-title">
+
+            🎬 视频列表
+
+        </div>
+
+
+        <ul
+            class="video-list"
+            id="videoList"
+        >
+
+            <li class="loading">
+
+                正在读取视频列表...
+
+            </li>
+
+        </ul>
+
+
+        <div
+            class="sidebar-title"
+            style="margin-top:15px;"
+        >
+
+            📌 当前视频提问点
+
+        </div>
+
+
+        <ul
+            class="timeline-list"
+            id="timelineList"
+        >
+
+        </ul>
+
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   GitHub 配置
+========================================================= */
+
+const GITHUB_USER = "你的GitHub用户名";
+
+const GITHUB_REPO = "你的仓库名";
+
+const GITHUB_BRANCH = "main";
+
+const ID_FOLDER = "id";
+
+
+/* =========================================================
+   GitHub API 地址
+========================================================= */
+
+const GITHUB_API =
+
+    `https://api.github.com/repos/` +
+
+    `${GITHUB_USER}/` +
+
+    `${GITHUB_REPO}/contents/` +
+
+    `${ID_FOLDER}?ref=${GITHUB_BRANCH}`;
+
+
+/* =========================================================
+   DOM
+========================================================= */
+
+const quizBar =
+    document.getElementById("quiz-bar");
+
+const quizText =
+    document.getElementById("quiz-text");
+
+const resumeBtn =
+    document.getElementById("resumeBtn");
+
+const videoList =
+    document.getElementById("videoList");
+
+const timelineList =
+    document.getElementById("timelineList");
+
+
+/* =========================================================
+   当前视频
+========================================================= */
+
+let currentVideoId = null;
+
+let currentStopPoints = [];
+
+let triggeredIndices = new Set();
+
+let isPausedByQuiz = false;
+
+let player = null;
+
+
+/* =========================================================
+   加载 YouTube API
+========================================================= */
+
+function loadYouTubeAPI() {
+
+    return new Promise((resolve) => {
+
+        if (window.YT && window.YT.Player) {
+
+            resolve();
+
+            return;
+        }
+
+        const tag =
+            document.createElement("script");
+
+        tag.src =
+            "https://www.youtube.com/iframe_api";
+
+        window.onYouTubeIframeAPIReady =
+            resolve;
+
+        document.head.appendChild(tag);
+
+    });
+
+}
+
+
+/* =========================================================
+   初始化
+========================================================= */
+
+async function init() {
+
+    try {
+
+        await loadYouTubeAPI();
+
+        await loadVideoList();
+
+    } catch (error) {
+
+        console.error(error);
+
+        videoList.innerHTML = `
+
+            <li class="error">
+
+                视频列表加载失败。
+
+                <br>
+
+                ${error.message}
+
+            </li>
+
+        `;
+
+    }
+
+}
+
+
+/* =========================================================
+   从 GitHub 获取 id 文件列表
+========================================================= */
+
+async function loadVideoList() {
+
+    const response =
+        await fetch(GITHUB_API);
+
+    if (!response.ok) {
+
+        throw new Error(
+            `GitHub API 请求失败：${response.status}`
+        );
+
+    }
+
+    const files =
+        await response.json();
+
+
+    const jsonFiles =
+        files
+            .filter(file =>
+                file.type === "file" &&
+                file.name.toLowerCase().endsWith(".json")
+            )
+            .sort((a, b) =>
+                a.name.localeCompare(b.name)
+            );
+
+
+    if (jsonFiles.length === 0) {
+
+        videoList.innerHTML = `
+
+            <li class="loading">
+
+                id 文件夹中没有 JSON 文件。
+
+            </li>
+
+        `;
+
+        return;
+    }
+
+
+    videoList.innerHTML = "";
+
+
+    for (const file of jsonFiles) {
+
+        const videoId =
+            file.name.replace(/\.json$/i, "");
+
+        const li =
+            document.createElement("li");
+
+        li.className =
+            "video-item";
+
+        li.dataset.videoId =
+            videoId;
+
+
+        li.innerHTML = `
+
+            <div>
+
+                ${videoId}
+
+            </div>
+
+            <div class="video-id">
+
+                ${file.name}
+
+            </div>
+
+        `;
+
+
+        li.onclick = () => {
+
+            loadVideo(videoId);
+
+        };
+
+
+        videoList.appendChild(li);
+
+    }
+
+}
+
+
+/* =========================================================
+   加载某个视频
+========================================================= */
+
+async function loadVideo(videoId) {
+
+    try {
+
+        setActiveVideo(videoId);
+
+        resetQuiz();
+
+        currentVideoId =
+            videoId;
+
+
+        /*
+         * 读取：
+         *
+         * id/VIDEO_ID.json
+         */
+
+        const configUrl =
+
+            `./id/${encodeURIComponent(videoId)}.json`;
+
+
+        const response =
+            await fetch(configUrl);
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                `无法读取 ${videoId}.json`
+            );
+
+        }
+
+
+        const config =
+            await response.json();
+
+
+        currentStopPoints =
+            Array.isArray(config.stopPoints)
+                ? config.stopPoints
+                : [];
+
+
+        /*
+         * 如果 JSON 中有 title
+         */
+
+        const title =
+            config.title || videoId;
+
+
+        updateVideoTitle(title);
+
+
+        /*
+         * 渲染提问点
+         */
+
+        renderTimeline();
+
+
+        /*
+         * 加载 YouTube
+         */
+
+        await loadYouTubeVideo(videoId);
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        quizText.innerHTML = `
+
+            <span style="color:#d4380d">
+
+                ❌ 视频加载失败：
+
+                ${error.message}
+
+            </span>
+
+        `;
+
+    }
+
+}
+
+
+/* =========================================================
+   YouTube Player
+========================================================= */
+
+function loadYouTubeVideo(videoId) {
+
+    return new Promise((resolve) => {
+
+
+        if (!player) {
+
+            player =
+                new YT.Player(
+                    "youtube-player",
+                    {
+
+                        videoId: videoId,
+
+                        playerVars: {
+
+                            autoplay: 1,
+
+                            rel: 0,
+
+                            modestbranding: 1,
+
+                            playsinline: 1
+
+                        },
+
+                        events: {
+
+                            onReady: () => {
+
+                                startTimeMonitor();
+
+                                resolve();
+
+                            },
+
+                            onStateChange:
+                                onPlayerStateChange
+
+                        }
+
+                    }
+                );
+
+        } else {
+
+            player.loadVideoById(videoId);
+
+            resolve();
+
+        }
+
+    });
+
+}
+
+
+/* =========================================================
+   播放状态
+========================================================= */
+
+function onPlayerStateChange(event) {
+
+    if (
+        event.data ===
+        YT.PlayerState.PLAYING
+    ) {
+
+        if (isPausedByQuiz) {
+
+            clearQuizUI();
+
+        }
+
+    }
+
+}
+
+
+/* =========================================================
+   时间监控
+========================================================= */
+
+let monitorTimer = null;
+
+
+function startTimeMonitor() {
+
+    if (monitorTimer) {
+
+        clearInterval(monitorTimer);
+
+    }
+
+
+    monitorTimer =
+        setInterval(() => {
+
+            if (!player) return;
+
+            if (
+                player.getPlayerState() !==
+                YT.PlayerState.PLAYING
+            ) {
+
+                return;
+
+            }
+
+
+            if (isPausedByQuiz) {
+
+                return;
+
+            }
+
+
+            const currentTime =
+                player.getCurrentTime();
+
+
+            currentStopPoints.forEach(
+                (point, index) => {
+
+                    if (
+
+                        currentTime >= point.time &&
+
+                        currentTime <
+                            point.time + 0.5 &&
+
+                        !triggeredIndices.has(index)
+
+                    ) {
+
+                        triggerQuiz(
+                            point.question,
+                            index
+                        );
+
+                    }
+
+                }
+            );
+
+
+        }, 100);
+
+}
+
+
+/* =========================================================
+   触发提问
+========================================================= */
+
+function triggerQuiz(
+    questionHtml,
+    index
+) {
+
+    isPausedByQuiz = true;
+
+
+    player.pauseVideo();
+
+
+    quizBar.className =
+        "active";
+
+
+    quizText.innerHTML =
+        questionHtml;
+
+
+    resumeBtn.disabled =
+        false;
+
+
+    triggeredIndices.add(
+        index
+    );
+
+
+    document
+        .querySelectorAll(".timeline-item")
+        .forEach(item =>
+            item.classList.remove("active")
+        );
+
+
+    const activeItem =
+        document.getElementById(
+            `item-${index}`
+        );
+
+
+    if (activeItem) {
+
+        activeItem.classList.add(
+            "active"
+        );
+
+        activeItem.scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "nearest"
+
+        });
+
+    }
+
+}
+
+
+/* =========================================================
+   继续播放
+========================================================= */
+
+function resumeVideo() {
+
+    clearQuizUI();
+
+    player.playVideo();
+
+}
+
+
+/* =========================================================
+   清除提问状态
+========================================================= */
+
+function clearQuizUI() {
+
+    quizBar.className = "";
+
+
+    quizText.innerHTML = `
+
+        🟢
+
+        <b>视频播放中...</b>
+
+        <br>
+
+        正在等待下一个互动提问点。
+
+    `;
+
+
+    resumeBtn.disabled = true;
+
+
+    isPausedByQuiz = false;
+
+}
+
+
+/* =========================================================
+   重置
+========================================================= */
+
+function resetQuiz() {
+
+    triggeredIndices =
+        new Set();
+
+    isPausedByQuiz =
+        false;
+
+
+    quizBar.className = "";
+
+
+    quizText.innerHTML = `
+
+        🟢
+
+        <b>正在加载视频...</b>
+
+    `;
+
+
+    resumeBtn.disabled =
+        true;
+
+}
+
+
+/* =========================================================
+   渲染提问点
+========================================================= */
+
+function renderTimeline() {
+
+    timelineList.innerHTML = "";
+
+
+    if (
+        currentStopPoints.length === 0
+    ) {
+
+        timelineList.innerHTML = `
+
+            <li class="loading">
+
+                当前视频没有设置提问点。
+
+            </li>
+
+        `;
+
+        return;
+
+    }
+
+
+    currentStopPoints.forEach(
+        (point, index) => {
+
+            const li =
+                document.createElement("li");
+
+
+            li.className =
+                "timeline-item";
+
+
+            li.id =
+                `item-${index}`;
+
+
+            li.innerHTML = `
+
+                <div>
+
+                    <span class="time-badge">
+
+                        ${formatTime(point.time)}
+
+                    </span>
+
+                    ${point.label || ""}
+
+                </div>
+
+                <div class="item-preview">
+
+                    点击跳转到此场景
+
+                </div>
+
+            `;
+
+
+            li.onclick = () => {
+
+                jumpToTime(
+                    point.time,
+                    index
+                );
+
+            };
+
+
+            timelineList.appendChild(li);
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   跳转到提问点
+========================================================= */
+
+function jumpToTime(
+    seconds,
+    index
+) {
+
+    if (!player) return;
+
+
+    clearQuizUI();
+
+
+    /*
+     * 删除当前以及之后的触发记录
+     *
+     * 这样往回跳以后可以再次触发。
+     */
+
+    triggeredIndices =
+        new Set(
+            [...triggeredIndices]
+                .filter(i => i < index)
+        );
+
+
+    player.seekTo(
+        seconds,
+        true
+    );
+
+
+    player.playVideo();
+
+
+    document
+        .querySelectorAll(".timeline-item")
+        .forEach(item =>
+            item.classList.remove("active")
+        );
+
+
+    const item =
+        document.getElementById(
+            `item-${index}`
+        );
+
+
+    if (item) {
+
+        item.classList.add(
+            "active"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   设置当前视频
+========================================================= */
+
+function setActiveVideo(
+    videoId
+) {
+
+    document
+        .querySelectorAll(".video-item")
+        .forEach(item => {
+
+            item.classList.toggle(
+                "active",
+                item.dataset.videoId === videoId
+            );
+
+        });
+
+}
+
+
+/* =========================================================
+   修改标题
+========================================================= */
+
+function updateVideoTitle(title) {
+
+    document.title =
+        `${title} - Pororo 英语启蒙互动课堂`;
+
+}
+
+
+/* =========================================================
+   时间格式化
+========================================================= */
+
+function formatTime(seconds) {
+
+    seconds =
+        Math.floor(Number(seconds) || 0);
+
+
+    const minutes =
+        Math.floor(seconds / 60);
+
+
+    const secs =
+        seconds % 60;
+
+
+    return (
+
+        String(minutes).padStart(2, "0") +
+
+        ":" +
+
+        String(secs).padStart(2, "0")
+
+    );
+
+}
+
+
+/* =========================================================
+   空格键控制播放
+========================================================= */
+
+window.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.code !== "Space" &&
+            event.keyCode !== 32
+        ) {
+
+            return;
+
+        }
+
+
+        /*
+         * 输入框等元素不拦截
+         */
+
+        const tag =
+            document.activeElement?.tagName;
+
+
+        if (
+            tag === "INPUT" ||
+            tag === "TEXTAREA"
+        ) {
+
+            return;
+
+        }
+
+
+        event.preventDefault();
+
+
+        if (!player) return;
+
+
+        const state =
+            player.getPlayerState();
+
+
+        if (
+            state ===
+            YT.PlayerState.PLAYING
+        ) {
+
+            player.pauseVideo();
+
+        } else {
+
+            player.playVideo();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   启动
+========================================================= */
+
+init();
+
+</script>
+
+</body>
+</html>
