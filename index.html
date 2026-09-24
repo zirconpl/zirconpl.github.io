@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -10,7 +11,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Pororo 英语启蒙互动课堂</title>
+    <title>英语启蒙互动课堂</title>
 
     <style>
 
@@ -18,7 +19,16 @@
             box-sizing: border-box;
         }
 
+        html,
         body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+
             font-family:
                 -apple-system,
                 BlinkMacSystemFont,
@@ -26,62 +36,314 @@
                 Arial,
                 sans-serif;
 
-            background: #f7f9fa;
-
-            margin: 0;
-
-            padding: 15px;
+            background: #f5f7fa;
 
             color: #333;
+
+            overflow: hidden;
         }
 
-        h1 {
-            text-align: center;
 
-            color: #007bff;
+        /* =====================================================
+           顶部
+        ===================================================== */
 
-            font-size: 22px;
+        .top-bar {
 
-            margin: 5px 0 15px;
-        }
+            height: 56px;
 
-        .main-container {
+            background: #fff;
+
+            border-bottom: 1px solid #e8e8e8;
 
             display: flex;
 
-            max-width: 1400px;
+            align-items: center;
 
-            margin: 0 auto;
+            justify-content: center;
 
-            gap: 15px;
+            position: relative;
 
-            height: 85vh;
+            z-index: 10;
+        }
+
+        .top-title {
+
+            font-size: 20px;
+
+            font-weight: 600;
+
+            color: #1677ff;
         }
 
 
-        /* =========================
+        /* =====================================================
+           主体三栏
+        ===================================================== */
+
+        .main-container {
+
+            height: calc(100vh - 56px);
+
+            display: grid;
+
+            grid-template-columns:
+                250px
+                minmax(400px, 1fr)
+                300px;
+
+            gap: 12px;
+
+            padding: 12px;
+
+            max-width: 1800px;
+
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
            左侧
-        ========================= */
+        ===================================================== */
 
-        .teaching-section {
+        .left-panel {
 
-            flex: 78;
+            background: #fff;
+
+            border-radius: 8px;
+
+            border: 1px solid #e8e8e8;
+
+            overflow: hidden;
 
             display: flex;
 
             flex-direction: column;
 
-            gap: 12px;
-
             min-width: 0;
         }
 
+        .panel-header {
 
-        /* =========================
-           提问栏
-        ========================= */
+            height: 48px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 0 15px;
+
+            border-bottom: 1px solid #f0f0f0;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            color: #333;
+        }
+
+        .panel-header-icon {
+
+            margin-right: 7px;
+        }
+
+        .series-list {
+
+            flex: 1;
+
+            overflow-y: auto;
+
+            padding: 8px;
+        }
+
+
+        /* =====================================================
+           系列
+        ===================================================== */
+
+        .series-item {
+
+            margin-bottom: 5px;
+        }
+
+        .series-header {
+
+            min-height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 8px 10px;
+
+            border-radius: 6px;
+
+            cursor: pointer;
+
+            user-select: none;
+
+            transition: background 0.15s;
+        }
+
+        .series-header:hover {
+
+            background: #f5f8fc;
+        }
+
+        .series-header.active-series {
+
+            background: #f0f7ff;
+        }
+
+        .series-arrow {
+
+            width: 20px;
+
+            color: #777;
+
+            font-size: 12px;
+
+            transition: transform 0.15s;
+        }
+
+        .series-arrow.open {
+
+            transform: rotate(90deg);
+        }
+
+        .series-name {
+
+            flex: 1;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            overflow: hidden;
+
+            white-space: nowrap;
+
+            text-overflow: ellipsis;
+        }
+
+        .series-count {
+
+            font-size: 11px;
+
+            color: #999;
+
+            margin-left: 5px;
+        }
+
+        .video-list {
+
+            display: none;
+
+            padding: 0 0 4px 20px;
+        }
+
+        .video-list.open {
+
+            display: block;
+        }
+
+        .video-item {
+
+            padding: 9px 10px;
+
+            border-radius: 6px;
+
+            cursor: pointer;
+
+            margin-bottom: 2px;
+
+            font-size: 13px;
+
+            line-height: 1.4;
+
+            color: #555;
+
+            transition: all 0.15s;
+
+            position: relative;
+        }
+
+        .video-item:hover {
+
+            background: #f5f8fc;
+
+            color: #1677ff;
+        }
+
+        .video-item.active {
+
+            background: #e6f4ff;
+
+            color: #1677ff;
+
+            font-weight: 600;
+        }
+
+        .video-item.active::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 7px;
+
+            bottom: 7px;
+
+            width: 3px;
+
+            border-radius: 2px;
+
+            background: #1677ff;
+        }
+
+        .video-id {
+
+            font-size: 10px;
+
+            color: #aaa;
+
+            margin-top: 3px;
+
+            font-weight: normal;
+
+            word-break: break-all;
+        }
+
+
+        /* =====================================================
+           中间播放器
+        ===================================================== */
+
+        .center-panel {
+
+            min-width: 0;
+
+            min-height: 0;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+
+        /* 提问栏 */
 
         #quiz-bar {
+
+            min-height: 86px;
+
+            flex-shrink: 0;
 
             background: #fff;
 
@@ -89,22 +351,18 @@
 
             border-radius: 8px;
 
-            padding: 12px 20px;
-
-            min-height: 70px;
+            padding: 12px 16px;
 
             display: flex;
 
             align-items: center;
 
-            justify-content: space-between;
-
             gap: 15px;
 
             box-shadow:
-                0 2px 8px rgba(0,0,0,0.05);
+                0 2px 8px rgba(0,0,0,0.04);
 
-            transition: all 0.3s ease;
+            transition: all 0.2s;
         }
 
         #quiz-bar.active {
@@ -114,16 +372,18 @@
             border-color: #52c41a;
 
             box-shadow:
-                0 4px 12px rgba(82,196,26,0.15);
+                0 3px 12px rgba(82,196,26,0.12);
         }
 
         .quiz-content {
 
             flex: 1;
 
-            font-size: 16px;
+            min-width: 0;
 
-            line-height: 1.5;
+            font-size: 15px;
+
+            line-height: 1.55;
 
             color: #666;
         }
@@ -135,30 +395,30 @@
 
         .resume-btn {
 
-            background: #d9d9d9;
-
-            color: #666;
+            flex-shrink: 0;
 
             border: none;
 
-            padding: 10px 20px;
-
-            font-size: 14px;
+            padding: 9px 18px;
 
             border-radius: 6px;
 
+            background: #d9d9d9;
+
+            color: #999;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
             cursor: not-allowed;
-
-            font-weight: bold;
-
-            white-space: nowrap;
         }
 
         #quiz-bar.active .resume-btn {
 
             background: #52c41a;
 
-            color: white;
+            color: #fff;
 
             cursor: pointer;
         }
@@ -169,13 +429,15 @@
         }
 
 
-        /* =========================
-           YouTube
-        ========================= */
+        /* =====================================================
+           视频
+        ===================================================== */
 
         .video-container {
 
             flex: 1;
+
+            min-height: 0;
 
             background: #000;
 
@@ -183,67 +445,76 @@
 
             overflow: hidden;
 
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.15);
-
             position: relative;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.12);
         }
 
         #youtube-player {
+
+            position: absolute;
+
+            inset: 0;
 
             width: 100%;
 
             height: 100%;
         }
 
+        #youtube-player iframe {
 
-        /* =========================
+            width: 100% !important;
+
+            height: 100% !important;
+        }
+
+
+        /* =====================================================
            右侧
-        ========================= */
+        ===================================================== */
 
-        .sidebar-section {
+        .right-panel {
 
-            flex: 22;
-
-            background: white;
+            background: #fff;
 
             border-radius: 8px;
 
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e8e8e8;
+
+            overflow: hidden;
 
             display: flex;
 
             flex-direction: column;
 
-            padding: 15px;
+            min-width: 0;
+        }
+
+        .current-video-title {
+
+            padding: 10px 15px;
+
+            background: #fafafa;
+
+            border-bottom: 1px solid #f0f0f0;
+
+            font-size: 13px;
+
+            color: #777;
+
+            white-space: nowrap;
 
             overflow: hidden;
 
-            min-width: 240px;
-        }
-
-        .sidebar-title {
-
-            font-size: 16px;
-
-            font-weight: bold;
-
-            margin-bottom: 12px;
-
-            border-bottom:
-                2px solid #f0f0f0;
-
-            padding-bottom: 8px;
-
-            color: #444;
+            text-overflow: ellipsis;
         }
 
         .timeline-list {
 
             list-style: none;
 
-            padding: 0;
+            padding: 8px;
 
             margin: 0;
 
@@ -256,178 +527,206 @@
 
             padding: 10px;
 
-            border:
-                1px solid #eef2f5;
+            border: 1px solid #eef2f5;
 
             border-radius: 6px;
 
-            margin-bottom: 8px;
+            margin-bottom: 7px;
 
             cursor: pointer;
 
             background: #fff;
 
-            transition: 0.2s;
+            transition: all 0.15s;
         }
 
         .timeline-item:hover {
 
             background: #f0f7ff;
 
-            border-color: #007bff;
+            border-color: #91caff;
         }
 
         .timeline-item.active {
 
-            background: #e6f7ff;
+            background: #e6f4ff;
 
-            border-color: #1890ff;
+            border-color: #1677ff;
 
-            font-weight: bold;
         }
 
         .time-badge {
 
-            background: #007bff;
+            display: inline-block;
 
-            color: white;
+            background: #1677ff;
 
-            padding: 1px 5px;
+            color: #fff;
+
+            padding: 2px 6px;
 
             border-radius: 4px;
 
             font-size: 11px;
 
-            margin-right: 6px;
+            margin-right: 5px;
+        }
+
+        .timeline-label {
+
+            font-size: 13px;
+
+            line-height: 1.4;
         }
 
         .item-preview {
-
-            font-size: 12px;
-
-            color: #888;
-
-            margin-top: 4px;
-        }
-
-
-        /* =========================
-           视频列表
-        ========================= */
-
-        .video-list {
-
-            list-style: none;
-
-            padding: 0;
-
-            margin: 0;
-
-            overflow-y: auto;
-
-            flex: 1;
-        }
-
-        .video-item {
-
-            padding: 10px;
-
-            border:
-                1px solid #eef2f5;
-
-            border-radius: 6px;
-
-            margin-bottom: 8px;
-
-            cursor: pointer;
-
-            background: #fff;
-
-            transition: 0.2s;
-        }
-
-        .video-item:hover {
-
-            background: #f0f7ff;
-
-            border-color: #007bff;
-        }
-
-        .video-item.active {
-
-            background: #e6f7ff;
-
-            border-color: #1890ff;
-
-            font-weight: bold;
-        }
-
-        .video-id {
 
             font-size: 11px;
 
             color: #999;
 
-            margin-top: 4px;
+            margin-top: 5px;
 
-            word-break: break-all;
+            line-height: 1.4;
         }
 
 
-        /* =========================
-           状态
-        ========================= */
+        /* =====================================================
+           通用
+        ===================================================== */
 
         .loading {
+
+            padding: 20px;
 
             text-align: center;
 
             color: #999;
 
-            padding: 20px;
+            font-size: 13px;
         }
 
         .error {
 
-            color: #d4380d;
-
-            background: #fff2f0;
-
-            border:
-                1px solid #ffccc7;
-
             padding: 12px;
+
+            margin: 8px;
+
+            color: #cf1322;
+
+            background: #fff1f0;
+
+            border: 1px solid #ffa39e;
 
             border-radius: 6px;
 
-            margin: 10px 0;
+            font-size: 12px;
+
+            line-height: 1.5;
+        }
+
+        .empty {
+
+            padding: 20px 10px;
+
+            text-align: center;
+
+            color: #aaa;
+
+            font-size: 13px;
         }
 
 
-        /* =========================
-           移动端
-        ========================= */
+        /* =====================================================
+           滚动条
+        ===================================================== */
 
-        @media (max-width: 900px) {
+        ::-webkit-scrollbar {
+
+            width: 6px;
+
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+
+            background: #ccc;
+
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-track {
+
+            background: transparent;
+        }
+
+
+        /* =====================================================
+           移动端
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            body {
+
+                overflow: auto;
+            }
 
             .main-container {
 
-                flex-direction: column;
+                height: auto;
+
+                min-height: calc(100vh - 56px);
+
+                grid-template-columns:
+                    190px
+                    minmax(300px, 1fr)
+                    240px;
+            }
+        }
+
+
+        @media (max-width: 750px) {
+
+            body {
+
+                overflow: auto;
+            }
+
+            .main-container {
 
                 height: auto;
+
+                display: flex;
+
+                flex-direction: column;
+
+                padding: 8px;
             }
 
-            .video-container {
+            .left-panel {
 
-                height: 56vw;
+                min-height: 300px;
 
-                min-height: 250px;
+                order: 2;
             }
 
-            .sidebar-section {
+            .center-panel {
+
+                order: 1;
+
+                height: 65vh;
+
+                min-height: 400px;
+            }
+
+            .right-panel {
+
+                order: 3;
 
                 min-height: 300px;
             }
+
         }
 
     </style>
@@ -437,19 +736,64 @@
 
 <body>
 
-<h1>
-    🎬 Pororo 英语启蒙互动课堂
-</h1>
 
+<!-- =========================================================
+     顶部
+========================================================= -->
+
+<div class="top-bar">
+
+    <div class="top-title">
+
+        🎬 英语启蒙互动课堂
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     主体
+========================================================= -->
 
 <div class="main-container">
 
 
-    <!-- =========================
-         左侧教学区
-    ========================= -->
+    <!-- =====================================================
+         左侧：系列 + 视频
+    ====================================================== -->
 
-    <div class="teaching-section">
+    <div class="left-panel">
+
+        <div class="panel-header">
+
+            <span class="panel-header-icon">📚</span>
+
+            视频列表
+
+        </div>
+
+        <div
+            class="series-list"
+            id="seriesList"
+        >
+
+            <div class="loading">
+
+                正在读取视频列表...
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         中间：播放器
+    ====================================================== -->
+
+    <div class="center-panel">
 
 
         <!-- 提问栏 -->
@@ -462,11 +806,12 @@
             >
 
                 🟢
+
                 <b>请选择一个视频开始学习</b>
 
                 <br>
 
-                左侧选择视频后，将自动加载 YouTube 视频。
+                从左侧选择视频后，将自动加载 YouTube 视频。
 
             </div>
 
@@ -474,10 +819,12 @@
             <button
                 class="resume-btn"
                 id="resumeBtn"
-                onclick="resumeVideo()"
                 disabled
+                onclick="resumeVideo()"
             >
+
                 继续播放
+
             </button>
 
         </div>
@@ -491,43 +838,32 @@
 
         </div>
 
+
     </div>
 
 
-    <!-- =========================
-         右侧
-    ========================= -->
+    <!-- =====================================================
+         右侧：提问
+    ====================================================== -->
 
-    <div class="sidebar-section">
+    <div class="right-panel">
 
 
-        <div class="sidebar-title">
+        <div class="panel-header">
 
-            🎬 视频列表
+            <span class="panel-header-icon">📌</span>
+
+            提问列表
 
         </div>
 
 
-        <ul
-            class="video-list"
-            id="videoList"
-        >
-
-            <li class="loading">
-
-                正在读取视频列表...
-
-            </li>
-
-        </ul>
-
-
         <div
-            class="sidebar-title"
-            style="margin-top:15px;"
+            class="current-video-title"
+            id="currentVideoTitle"
         >
 
-            📌 当前视频提问点
+            尚未选择视频
 
         </div>
 
@@ -537,13 +873,19 @@
             id="timelineList"
         >
 
+            <li class="empty">
+
+                选择视频后显示提问点
+
+            </li>
+
         </ul>
 
 
     </div>
 
-</div>
 
+</div>
 
 
 <script>
@@ -552,9 +894,22 @@
    GitHub 配置
 ========================================================= */
 
-const GITHUB_USER = "zirconpl";
+/*
+ * 修改成你的 GitHub 信息。
+ *
+ * 例如：
+ *
+ * https://github.com/fox/english-learning
+ *
+ * 就填写：
+ *
+ * GITHUB_USER = "fox"
+ * GITHUB_REPO = "english-learning"
+ */
 
-const GITHUB_REPO = "zirconpl.github.io";
+const GITHUB_USER = "你的GitHub用户名";
+
+const GITHUB_REPO = "你的仓库名";
 
 const GITHUB_BRANCH = "main";
 
@@ -562,23 +917,28 @@ const ID_FOLDER = "id";
 
 
 /* =========================================================
-   GitHub API 地址
+   GitHub API
 ========================================================= */
 
-const GITHUB_API =
-
+const GITHUB_API_ROOT =
     `https://api.github.com/repos/` +
-
     `${GITHUB_USER}/` +
-
     `${GITHUB_REPO}/contents/` +
-
     `${ID_FOLDER}?ref=${GITHUB_BRANCH}`;
 
 
 /* =========================================================
    DOM
 ========================================================= */
+
+const seriesList =
+    document.getElementById("seriesList");
+
+const timelineList =
+    document.getElementById("timelineList");
+
+const currentVideoTitle =
+    document.getElementById("currentVideoTitle");
 
 const quizBar =
     document.getElementById("quiz-bar");
@@ -589,18 +949,18 @@ const quizText =
 const resumeBtn =
     document.getElementById("resumeBtn");
 
-const videoList =
-    document.getElementById("videoList");
-
-const timelineList =
-    document.getElementById("timelineList");
-
 
 /* =========================================================
-   当前视频
+   全局状态
 ========================================================= */
 
+let player = null;
+
+let youtubeApiReady = false;
+
 let currentVideoId = null;
+
+let currentVideoTitleText = "";
 
 let currentStopPoints = [];
 
@@ -608,34 +968,59 @@ let triggeredIndices = new Set();
 
 let isPausedByQuiz = false;
 
-let player = null;
+let monitorTimer = null;
+
+let currentSeries = null;
+
+
+/*
+ * 保存系列展开状态
+ */
+
+const expandedSeries =
+    new Set();
 
 
 /* =========================================================
-   加载 YouTube API
+   YouTube API
 ========================================================= */
 
 function loadYouTubeAPI() {
 
     return new Promise((resolve) => {
 
-        if (window.YT && window.YT.Player) {
+        if (
+            window.YT &&
+            window.YT.Player
+        ) {
+
+            youtubeApiReady = true;
 
             resolve();
 
             return;
         }
 
-        const tag =
+
+        const script =
             document.createElement("script");
 
-        tag.src =
+
+        script.src =
             "https://www.youtube.com/iframe_api";
 
-        window.onYouTubeIframeAPIReady =
-            resolve;
 
-        document.head.appendChild(tag);
+        window.onYouTubeIframeAPIReady =
+            function () {
+
+                youtubeApiReady = true;
+
+                resolve();
+
+            };
+
+
+        document.head.appendChild(script);
 
     });
 
@@ -652,23 +1037,23 @@ async function init() {
 
         await loadYouTubeAPI();
 
-        await loadVideoList();
+        await loadSeriesList();
 
     } catch (error) {
 
         console.error(error);
 
-        videoList.innerHTML = `
+        seriesList.innerHTML = `
 
-            <li class="error">
+            <div class="error">
 
-                视频列表加载失败。
+                视频列表加载失败：
 
-                <br>
+                <br><br>
 
-                ${error.message}
+                ${escapeHtml(error.message)}
 
-            </li>
+            </div>
 
         `;
 
@@ -678,13 +1063,19 @@ async function init() {
 
 
 /* =========================================================
-   从 GitHub 获取 id 文件列表
+   获取 id/ 下的系列目录
 ========================================================= */
 
-async function loadVideoList() {
+async function loadSeriesList() {
 
     const response =
-        await fetch(GITHUB_API);
+        await fetch(
+            GITHUB_API_ROOT,
+            {
+                cache: "no-store"
+            }
+        );
+
 
     if (!response.ok) {
 
@@ -694,253 +1085,742 @@ async function loadVideoList() {
 
     }
 
-    const files =
+
+    const entries =
         await response.json();
 
 
-    const jsonFiles =
-        files
-            .filter(file =>
-                file.type === "file" &&
-                file.name.toLowerCase().endsWith(".json")
+    /*
+     * 只保留目录
+     */
+
+    const directories =
+        entries
+            .filter(
+                item =>
+                    item.type === "dir"
             )
-            .sort((a, b) =>
-                a.name.localeCompare(b.name)
+            .sort(
+                (a, b) =>
+                    a.name.localeCompare(
+                        b.name,
+                        undefined,
+                        {
+                            numeric: true,
+                            sensitivity: "base"
+                        }
+                    )
             );
 
 
-    if (jsonFiles.length === 0) {
+    if (
+        directories.length === 0
+    ) {
 
-        videoList.innerHTML = `
+        seriesList.innerHTML = `
 
-            <li class="loading">
+            <div class="empty">
 
-                id 文件夹中没有 JSON 文件。
+                id 文件夹中没有发现系列目录。
 
-            </li>
+                <br><br>
+
+                请创建例如：
+
+                <br>
+
+                id/pororo/
+
+            </div>
 
         `;
 
         return;
+
     }
 
 
-    videoList.innerHTML = "";
+    seriesList.innerHTML = "";
 
 
-    for (const file of jsonFiles) {
+    /*
+     * 并行读取所有系列
+     */
 
-        const videoId =
-            file.name.replace(/\.json$/i, "");
+    const seriesData =
+        await Promise.all(
 
-        const li =
-            document.createElement("li");
+            directories.map(
+                async directory => {
 
-        li.className =
-            "video-item";
+                    return {
 
-        li.dataset.videoId =
-            videoId;
+                        directory,
 
+                        videos:
+                            await loadSeriesVideos(
+                                directory.name
+                            )
 
-        li.innerHTML = `
+                    };
 
-            <div>
+                }
+            )
 
-                ${videoId}
-
-            </div>
-
-            <div class="video-id">
-
-                ${file.name}
-
-            </div>
-
-        `;
+        );
 
 
-        li.onclick = () => {
+    /*
+     * 渲染
+     */
 
-            loadVideo(videoId);
+    seriesData.forEach(
+        data => {
+
+            renderSeries(
+                data.directory.name,
+                data.videos
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   获取某个系列中的 JSON
+========================================================= */
+
+async function loadSeriesVideos(
+    seriesName
+) {
+
+    const url =
+
+        `https://api.github.com/repos/` +
+
+        `${GITHUB_USER}/` +
+
+        `${GITHUB_REPO}/contents/` +
+
+        `${ID_FOLDER}/` +
+
+        `${encodeURIComponent(seriesName)}` +
+
+        `?ref=${GITHUB_BRANCH}`;
+
+
+    const response =
+        await fetch(
+            url,
+            {
+                cache: "no-store"
+            }
+        );
+
+
+    if (!response.ok) {
+
+        throw new Error(
+            `无法读取系列 ${seriesName}`
+        );
+
+    }
+
+
+    const files =
+        await response.json();
+
+
+    /*
+     * 只处理 JSON
+     */
+
+    const jsonFiles =
+        files
+            .filter(
+                file =>
+                    file.type === "file" &&
+                    file.name
+                        .toLowerCase()
+                        .endsWith(".json")
+            )
+            .sort(
+                (a, b) =>
+                    a.name.localeCompare(
+                        b.name,
+                        undefined,
+                        {
+                            numeric: true,
+                            sensitivity: "base"
+                        }
+                    )
+            );
+
+
+    /*
+     * 读取每个 JSON
+     */
+
+    const videos =
+        await Promise.all(
+
+            jsonFiles.map(
+                async file => {
+
+                    const videoId =
+                        file.name
+                            .replace(
+                                /\.json$/i,
+                                ""
+                            );
+
+
+                    try {
+
+                        const configResponse =
+                            await fetch(
+                                `./id/` +
+                                `${encodeURIComponent(seriesName)}/` +
+                                `${encodeURIComponent(file.name)}`,
+                                {
+                                    cache: "no-store"
+                                }
+                            );
+
+
+                        if (
+                            !configResponse.ok
+                        ) {
+
+                            throw new Error(
+                                "JSON 读取失败"
+                            );
+
+                        }
+
+
+                        const config =
+                            await configResponse.json();
+
+
+                        return {
+
+                            videoId,
+
+                            fileName:
+                                file.name,
+
+                            title:
+                                config.title ||
+                                videoId,
+
+                            stopPoints:
+                                Array.isArray(
+                                    config.stopPoints
+                                )
+                                    ? config.stopPoints
+                                    : []
+
+                        };
+
+                    } catch (error) {
+
+                        console.error(
+                            `读取 ${seriesName}/${file.name} 失败`,
+                            error
+                        );
+
+
+                        return {
+
+                            videoId,
+
+                            fileName:
+                                file.name,
+
+                            title:
+                                videoId,
+
+                            stopPoints: []
+
+                        };
+
+                    }
+
+                }
+            )
+
+        );
+
+
+    return videos;
+
+}
+
+
+/* =========================================================
+   渲染系列
+========================================================= */
+
+function renderSeries(
+    seriesName,
+    videos
+) {
+
+    const seriesItem =
+        document.createElement("div");
+
+
+    seriesItem.className =
+        "series-item";
+
+
+    /*
+     * 系列头
+     */
+
+    const header =
+        document.createElement("div");
+
+
+    header.className =
+        "series-header";
+
+
+    const arrow =
+        document.createElement("span");
+
+
+    arrow.className =
+        "series-arrow";
+
+
+    arrow.textContent =
+        "▶";
+
+
+    const name =
+        document.createElement("span");
+
+
+    name.className =
+        "series-name";
+
+
+    name.textContent =
+        formatSeriesName(seriesName);
+
+
+    const count =
+        document.createElement("span");
+
+
+    count.className =
+        "series-count";
+
+
+    count.textContent =
+        videos.length;
+
+
+    header.appendChild(arrow);
+
+    header.appendChild(name);
+
+    header.appendChild(count);
+
+
+    /*
+     * 视频列表
+     */
+
+    const videoList =
+        document.createElement("div");
+
+
+    videoList.className =
+        "video-list";
+
+
+    videos.forEach(
+        video => {
+
+            const item =
+                createVideoItem(
+                    seriesName,
+                    video
+                );
+
+
+            videoList.appendChild(item);
+
+        }
+    );
+
+
+    /*
+     * 点击系列展开/折叠
+     */
+
+    header.onclick =
+        () => {
+
+            const isOpen =
+                videoList.classList.contains(
+                    "open"
+                );
+
+
+            if (isOpen) {
+
+                videoList.classList.remove(
+                    "open"
+                );
+
+                arrow.classList.remove(
+                    "open"
+                );
+
+                expandedSeries.delete(
+                    seriesName
+                );
+
+            } else {
+
+                videoList.classList.add(
+                    "open"
+                );
+
+                arrow.classList.add(
+                    "open"
+                );
+
+                expandedSeries.add(
+                    seriesName
+                );
+
+            }
 
         };
 
 
-        videoList.appendChild(li);
+    seriesItem.appendChild(
+        header
+    );
 
-    }
+    seriesItem.appendChild(
+        videoList
+    );
+
+
+    seriesList.appendChild(
+        seriesItem
+    );
 
 }
 
 
 /* =========================================================
-   加载某个视频
+   创建视频项目
 ========================================================= */
 
-async function loadVideo(videoId) {
+function createVideoItem(
+    seriesName,
+    video
+) {
 
-    try {
-
-        setActiveVideo(videoId);
-
-        resetQuiz();
-
-        currentVideoId =
-            videoId;
+    const item =
+        document.createElement("div");
 
 
-        /*
-         * 读取：
-         *
-         * id/VIDEO_ID.json
-         */
-
-        const configUrl =
-
-            `./id/${encodeURIComponent(videoId)}.json`;
+    item.className =
+        "video-item";
 
 
-        const response =
-            await fetch(configUrl);
+    item.dataset.videoId =
+        video.videoId;
 
 
-        if (!response.ok) {
+    item.dataset.series =
+        seriesName;
 
-            throw new Error(
-                `无法读取 ${videoId}.json`
+
+    /*
+     * 这里最重要：
+     *
+     * 显示 config.title
+     *
+     * 而不是 videoId
+     */
+
+    item.innerHTML = `
+
+        <div>
+
+            ${escapeHtml(video.title)}
+
+        </div>
+
+        <div class="video-id">
+
+            ${escapeHtml(video.videoId)}
+
+        </div>
+
+    `;
+
+
+    item.onclick =
+        () => {
+
+            loadVideo(
+                seriesName,
+                video
             );
 
-        }
+        };
 
 
-        const config =
-            await response.json();
-
-
-        currentStopPoints =
-            Array.isArray(config.stopPoints)
-                ? config.stopPoints
-                : [];
-
-
-        /*
-         * 如果 JSON 中有 title
-         */
-
-        const title =
-            config.title || videoId;
-
-
-        updateVideoTitle(title);
-
-
-        /*
-         * 渲染提问点
-         */
-
-        renderTimeline();
-
-
-        /*
-         * 加载 YouTube
-         */
-
-        await loadYouTubeVideo(videoId);
-
-
-    } catch (error) {
-
-        console.error(error);
-
-        quizText.innerHTML = `
-
-            <span style="color:#d4380d">
-
-                ❌ 视频加载失败：
-
-                ${error.message}
-
-            </span>
-
-        `;
-
-    }
+    return item;
 
 }
 
 
 /* =========================================================
-   YouTube Player
+   加载视频
 ========================================================= */
 
-function loadYouTubeVideo(videoId) {
+async function loadVideo(
+    seriesName,
+    video
+) {
 
-    return new Promise((resolve) => {
+    currentSeries =
+        seriesName;
 
 
-        if (!player) {
+    currentVideoId =
+        video.videoId;
 
-            player =
-                new YT.Player(
-                    "youtube-player",
-                    {
 
-                        videoId: videoId,
+    currentVideoTitleText =
+        video.title;
 
-                        playerVars: {
 
-                            autoplay: 1,
+    currentStopPoints =
+        [...video.stopPoints]
+            .sort(
+                (a, b) =>
+                    Number(a.time) -
+                    Number(b.time)
+            );
 
-                            rel: 0,
 
-                            modestbranding: 1,
+    triggeredIndices =
+        new Set();
 
-                            playsinline: 1
 
-                        },
+    isPausedByQuiz =
+        false;
 
-                        events: {
 
-                            onReady: () => {
+    /*
+     * 左侧选中状态
+     */
 
-                                startTimeMonitor();
+    document
+        .querySelectorAll(".video-item")
+        .forEach(
+            item => {
 
-                                resolve();
+                item.classList.toggle(
+                    "active",
+
+                    item.dataset.videoId ===
+                    video.videoId
+                );
+
+            }
+        );
+
+
+    /*
+     * 右侧标题
+     */
+
+    currentVideoTitle.textContent =
+        video.title;
+
+
+    /*
+     * 清理提问状态
+     */
+
+    clearQuizUI();
+
+
+    /*
+     * 渲染提问点
+     */
+
+    renderTimeline();
+
+
+    /*
+     * 更新网页标题
+     */
+
+    document.title =
+        `${video.title} - 英语启蒙互动课堂`;
+
+
+    /*
+     * 加载 YouTube
+     */
+
+    await loadYouTubeVideo(
+        video.videoId
+    );
+
+}
+
+
+/* =========================================================
+   加载 YouTube
+========================================================= */
+
+function loadYouTubeVideo(
+    videoId
+) {
+
+    return new Promise(
+        resolve => {
+
+
+            if (!youtubeApiReady) {
+
+                resolve();
+
+                return;
+
+            }
+
+
+            /*
+             * 第一次创建播放器
+             */
+
+            if (!player) {
+
+                player =
+                    new YT.Player(
+                        "youtube-player",
+                        {
+
+                            videoId,
+
+                            playerVars: {
+
+                                /*
+                                 * 自动播放
+                                 */
+
+                                autoplay: 1,
+
+                                /*
+                                 * 尽量简洁
+                                 */
+
+                                controls: 0,
+
+                                /*
+                                 * 不显示相关视频
+                                 */
+
+                                rel: 0,
+
+                                /*
+                                 * 不突出品牌
+                                 */
+
+                                modestbranding: 1,
+
+                                /*
+                                 * 移动端内嵌播放
+                                 */
+
+                                playsinline: 1,
+
+                                /*
+                                 * 隐藏视频信息
+                                 */
+
+                                iv_load_policy: 3
 
                             },
 
-                            onStateChange:
-                                onPlayerStateChange
+                            events: {
+
+                                onReady:
+                                    event => {
+
+                                        startMonitor();
+
+                                        resolve();
+
+                                    },
+
+                                onStateChange:
+                                    onPlayerStateChange
+
+                            }
 
                         }
+                    );
 
-                    }
+
+            } else {
+
+                /*
+                 * 已经存在播放器
+                 */
+
+                player.loadVideoById(
+                    videoId
                 );
 
-        } else {
 
-            player.loadVideoById(videoId);
+                startMonitor();
 
-            resolve();
+
+                resolve();
+
+            }
 
         }
-
-    });
+    );
 
 }
 
 
 /* =========================================================
-   播放状态
+   YouTube 播放状态
 ========================================================= */
 
-function onPlayerStateChange(event) {
+function onPlayerStateChange(
+    event
+) {
 
     if (
         event.data ===
         YT.PlayerState.PLAYING
     ) {
+
+        /*
+         * 如果是从互动暂停恢复
+         */
 
         if (isPausedByQuiz) {
 
@@ -954,73 +1834,121 @@ function onPlayerStateChange(event) {
 
 
 /* =========================================================
-   时间监控
+   开始监控时间
 ========================================================= */
 
-let monitorTimer = null;
-
-
-function startTimeMonitor() {
+function startMonitor() {
 
     if (monitorTimer) {
 
-        clearInterval(monitorTimer);
+        clearInterval(
+            monitorTimer
+        );
 
     }
 
 
     monitorTimer =
-        setInterval(() => {
+        setInterval(
+            checkVideoTime,
+            100
+        );
 
-            if (!player) return;
-
-            if (
-                player.getPlayerState() !==
-                YT.PlayerState.PLAYING
-            ) {
-
-                return;
-
-            }
+}
 
 
-            if (isPausedByQuiz) {
+/* =========================================================
+   检查视频时间
+========================================================= */
 
-                return;
+function checkVideoTime() {
 
-            }
+    if (!player) {
+
+        return;
+
+    }
 
 
-            const currentTime =
-                player.getCurrentTime();
+    if (
+        typeof player.getPlayerState !==
+        "function"
+    ) {
+
+        return;
+
+    }
 
 
-            currentStopPoints.forEach(
-                (point, index) => {
+    /*
+     * 只有播放状态才检测
+     */
 
-                    if (
+    if (
+        player.getPlayerState() !==
+        YT.PlayerState.PLAYING
+    ) {
 
-                        currentTime >= point.time &&
+        return;
 
-                        currentTime <
-                            point.time + 0.5 &&
+    }
 
-                        !triggeredIndices.has(index)
 
-                    ) {
+    if (isPausedByQuiz) {
 
-                        triggerQuiz(
-                            point.question,
-                            index
-                        );
+        return;
 
-                    }
+    }
 
-                }
+
+    const currentTime =
+        player.getCurrentTime();
+
+
+    for (
+        let index = 0;
+        index < currentStopPoints.length;
+        index++
+    ) {
+
+        const point =
+            currentStopPoints[index];
+
+
+        const time =
+            Number(point.time);
+
+
+        if (
+            !Number.isFinite(time)
+        ) {
+
+            continue;
+
+        }
+
+
+        /*
+         * 到达时间点
+         */
+
+        if (
+            currentTime >= time &&
+            currentTime < time + 0.5 &&
+            !triggeredIndices.has(index)
+        ) {
+
+            triggerQuiz(
+                point,
+                index
             );
 
 
-        }, 100);
+            break;
+
+        }
+
+    }
 
 }
 
@@ -1030,43 +1958,65 @@ function startTimeMonitor() {
 ========================================================= */
 
 function triggerQuiz(
-    questionHtml,
+    point,
     index
 ) {
 
-    isPausedByQuiz = true;
+    isPausedByQuiz =
+        true;
 
+
+    /*
+     * 暂停 YouTube
+     */
 
     player.pauseVideo();
 
+
+    /*
+     * 显示提问
+     */
 
     quizBar.className =
         "active";
 
 
     quizText.innerHTML =
-        questionHtml;
+        point.question ||
+        point.label ||
+        "请与孩子进行互动。";
 
 
     resumeBtn.disabled =
         false;
 
 
+    /*
+     * 记录已经触发
+     */
+
     triggeredIndices.add(
         index
     );
 
 
+    /*
+     * 右侧高亮
+     */
+
     document
         .querySelectorAll(".timeline-item")
-        .forEach(item =>
-            item.classList.remove("active")
+        .forEach(
+            item =>
+                item.classList.remove(
+                    "active"
+                )
         );
 
 
     const activeItem =
         document.getElementById(
-            `item-${index}`
+            `timeline-${index}`
         );
 
 
@@ -1076,13 +2026,13 @@ function triggerQuiz(
             "active"
         );
 
-        activeItem.scrollIntoView({
 
-            behavior: "smooth",
-
-            block: "nearest"
-
-        });
+        activeItem.scrollIntoView(
+            {
+                behavior: "smooth",
+                block: "nearest"
+            }
+        );
 
     }
 
@@ -1095,7 +2045,15 @@ function triggerQuiz(
 
 function resumeVideo() {
 
+    if (!player) {
+
+        return;
+
+    }
+
+
     clearQuizUI();
+
 
     player.playVideo();
 
@@ -1108,68 +2066,59 @@ function resumeVideo() {
 
 function clearQuizUI() {
 
-    quizBar.className = "";
+    quizBar.className =
+        "";
 
 
-    quizText.innerHTML = `
+    if (currentVideoId) {
 
-        🟢
+        quizText.innerHTML = `
 
-        <b>视频播放中...</b>
+            🟢
 
-        <br>
+            <b>视频播放中...</b>
 
-        正在等待下一个互动提问点。
+            <br>
 
-    `;
+            正在等待下一个互动提问点。
 
+        `;
 
-    resumeBtn.disabled = true;
+    } else {
 
+        quizText.innerHTML = `
 
-    isPausedByQuiz = false;
+            🟢
 
-}
+            <b>请选择一个视频开始学习</b>
 
+            <br>
 
-/* =========================================================
-   重置
-========================================================= */
+            从左侧选择视频后，将自动加载 YouTube 视频。
 
-function resetQuiz() {
+        `;
 
-    triggeredIndices =
-        new Set();
-
-    isPausedByQuiz =
-        false;
-
-
-    quizBar.className = "";
-
-
-    quizText.innerHTML = `
-
-        🟢
-
-        <b>正在加载视频...</b>
-
-    `;
+    }
 
 
     resumeBtn.disabled =
         true;
 
+
+    isPausedByQuiz =
+        false;
+
 }
 
 
 /* =========================================================
-   渲染提问点
+   渲染右侧提问列表
 ========================================================= */
 
 function renderTimeline() {
 
-    timelineList.innerHTML = "";
+    timelineList.innerHTML =
+        "";
 
 
     if (
@@ -1178,7 +2127,7 @@ function renderTimeline() {
 
         timelineList.innerHTML = `
 
-            <li class="loading">
+            <li class="empty">
 
                 当前视频没有设置提问点。
 
@@ -1203,7 +2152,11 @@ function renderTimeline() {
 
 
             li.id =
-                `item-${index}`;
+                `timeline-${index}`;
+
+
+            const time =
+                Number(point.time);
 
 
             li.innerHTML = `
@@ -1212,11 +2165,17 @@ function renderTimeline() {
 
                     <span class="time-badge">
 
-                        ${formatTime(point.time)}
+                        ${formatTime(time)}
 
                     </span>
 
-                    ${point.label || ""}
+                    <span class="timeline-label">
+
+                        ${escapeHtml(
+                            point.label || ""
+                        )}
+
+                    </span>
 
                 </div>
 
@@ -1229,17 +2188,20 @@ function renderTimeline() {
             `;
 
 
-            li.onclick = () => {
+            li.onclick =
+                () => {
 
-                jumpToTime(
-                    point.time,
-                    index
-                );
+                    jumpToTime(
+                        time,
+                        index
+                    );
 
-            };
+                };
 
 
-            timelineList.appendChild(li);
+            timelineList.appendChild(
+                li
+            );
 
         }
     );
@@ -1256,27 +2218,34 @@ function jumpToTime(
     index
 ) {
 
-    if (!player) return;
+    if (!player) {
+
+        return;
+
+    }
 
 
     clearQuizUI();
 
 
     /*
-     * 删除当前以及之后的触发记录
+     * 跳回之前的时间点时，
+     * 允许该点再次触发。
      *
-     * 这样往回跳以后可以再次触发。
+     * 保留比当前 index 更早的触发记录。
      */
 
     triggeredIndices =
         new Set(
             [...triggeredIndices]
-                .filter(i => i < index)
+                .filter(
+                    i => i < index
+                )
         );
 
 
     player.seekTo(
-        seconds,
+        Number(seconds),
         true
     );
 
@@ -1284,16 +2253,23 @@ function jumpToTime(
     player.playVideo();
 
 
+    /*
+     * 高亮右侧项目
+     */
+
     document
         .querySelectorAll(".timeline-item")
-        .forEach(item =>
-            item.classList.remove("active")
+        .forEach(
+            item =>
+                item.classList.remove(
+                    "active"
+                )
         );
 
 
     const item =
         document.getElementById(
-            `item-${index}`
+            `timeline-${index}`
         );
 
 
@@ -1309,51 +2285,26 @@ function jumpToTime(
 
 
 /* =========================================================
-   设置当前视频
+   格式化时间
 ========================================================= */
 
-function setActiveVideo(
-    videoId
+function formatTime(
+    seconds
 ) {
 
-    document
-        .querySelectorAll(".video-item")
-        .forEach(item => {
-
-            item.classList.toggle(
-                "active",
-                item.dataset.videoId === videoId
-            );
-
-        });
-
-}
-
-
-/* =========================================================
-   修改标题
-========================================================= */
-
-function updateVideoTitle(title) {
-
-    document.title =
-        `${title} - Pororo 英语启蒙互动课堂`;
-
-}
-
-
-/* =========================================================
-   时间格式化
-========================================================= */
-
-function formatTime(seconds) {
-
     seconds =
-        Math.floor(Number(seconds) || 0);
+        Math.max(
+            0,
+            Math.floor(
+                Number(seconds) || 0
+            )
+        );
 
 
     const minutes =
-        Math.floor(seconds / 60);
+        Math.floor(
+            seconds / 60
+        );
 
 
     const secs =
@@ -1362,11 +2313,15 @@ function formatTime(seconds) {
 
     return (
 
-        String(minutes).padStart(2, "0") +
+        String(minutes)
+            .padStart(2, "0")
+
+        +
 
         ":" +
 
-        String(secs).padStart(2, "0")
+        String(secs)
+            .padStart(2, "0")
 
     );
 
@@ -1374,7 +2329,71 @@ function formatTime(seconds) {
 
 
 /* =========================================================
-   空格键控制播放
+   系列名称处理
+========================================================= */
+
+function formatSeriesName(
+    name
+) {
+
+    /*
+     * 如果目录叫：
+     *
+     * pororo
+     *
+     * 就显示：
+     *
+     * Pororo
+     *
+     * 如果你以后希望中文名称，
+     * 可以直接把目录命名成中文。
+     */
+
+    const map = {
+
+        "pororo":
+            "Pororo",
+
+        "peppa-pig":
+            "小猪佩奇",
+
+        "peppa":
+            "小猪佩奇",
+
+        "labrador":
+            "拉布拉多警长"
+
+    };
+
+
+    return map[name] || name;
+
+}
+
+
+/* =========================================================
+   HTML 转义
+========================================================= */
+
+function escapeHtml(
+    value
+) {
+
+    const div =
+        document.createElement("div");
+
+
+    div.textContent =
+        String(value ?? "");
+
+
+    return div.innerHTML;
+
+}
+
+
+/* =========================================================
+   空格键控制
 ========================================================= */
 
 window.addEventListener(
@@ -1392,16 +2411,18 @@ window.addEventListener(
 
 
         /*
-         * 输入框等元素不拦截
+         * 输入框里不要拦截空格
          */
 
         const tag =
-            document.activeElement?.tagName;
+            document.activeElement
+                ?.tagName;
 
 
         if (
             tag === "INPUT" ||
-            tag === "TEXTAREA"
+            tag === "TEXTAREA" ||
+            tag === "SELECT"
         ) {
 
             return;
@@ -1412,7 +2433,11 @@ window.addEventListener(
         event.preventDefault();
 
 
-        if (!player) return;
+        if (!player) {
+
+            return;
+
+        }
 
 
         const state =
@@ -1445,4 +2470,6 @@ init();
 </script>
 
 </body>
+
 </html>
+```
