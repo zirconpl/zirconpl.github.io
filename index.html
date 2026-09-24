@@ -1916,10 +1916,6 @@ function checkVideoTime() {
     }
 
 
-    /*
-     * 只有播放状态才检测
-     */
-
     if (
         player.getPlayerState() !==
         YT.PlayerState.PLAYING
@@ -1964,9 +1960,7 @@ function checkVideoTime() {
         }
 
 
-        /*
-         * 到达时间点
-         */
+   
 
         if (
             currentTime >= time &&
