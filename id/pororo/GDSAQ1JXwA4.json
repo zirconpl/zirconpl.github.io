@@ -1,15 +1,90 @@
 {
-    "title": "Pororo 第2集",
+    "title": "Harry's Singing Passion",
     "stopPoints": [
         {
-            "time": 15,
-            "label": "00:15 场景：Pororo 出门",
-            "question": "<b>提问：</b>'Where is Pororo going?'<br><b>引导：</b>'He is going outside.'"
+            "time": 24,
+            "label": "00:24 场景：清晨的平原与早起提示",
+            "question": "<b>听力与词汇：</b>'What time of day is it now?'<br><b>引导：</b>'It's morning! Look, the sun is coming up.'"
         },
         {
-            "time": 38,
-            "label": "00:38 场景：Pororo 找朋友",
-            "question": "<b>提问：</b>'Who is he looking for?'"
+            "time": 43,
+            "label": "00:43 场景：Poby在床上熟睡",
+            "question": "<b>状态观察：</b>'Is Poby awake or sleeping?'<br><b>引导：</b>'He is still sleeping. He is a sleepy head!'"
+        },
+        {
+            "time": 50,
+            "label": "00:50 场景：大声叫醒Poby",
+            "question": "<b>日常指令：</b>'What should we say to Poby to wake him up?'<br><b>引导：</b>'Wake up, Poby! Time to get up! Let's say it together.'"
+        },
+        {
+            "time": 82,
+            "label": "01:22 场景：Poby醒来后还在打哈欠",
+            "question": "<b>动作模仿（动词）：</b>'What is Poby doing right now?'<br><b>引导：</b>'He is yawning. Can you yawn like Poby? Oh, he is so tired.'"
+        },
+        {
+            "time": 95,
+            "label": "01:35 场景：Harry提议要唱歌",
+            "question": "<b>意图预测：</b>'What is Harry going to do to help Poby wake up?'<br><b>引导：</b>'He wants to sing a song! Do you think he sings well?'"
+        },
+        {
+            "time": 111,
+            "label": "01:51 场景：Harry开始唱歌，声音很难听",
+            "question": "<b>批判思维与情感：</b>'Does Harry sing well?'<br><b>引导：</b>'No, he is not very good at it. The text says \"Don't listen to him!\"'"
+        },
+        {
+            "time": 126,
+            "label": "02:06 场景：Harry学青蛙叫 \"Ribbit\"",
+            "question": "<b>拟声词/动物：</b>'What animal says \"ribbit, ribbit\"?'<br><b>引导：</b>'A frog! Harry is singing like a frog.'"
+        },
+        {
+            "time": 135,
+            "label": "02:15 场景：Harry发现Poby戴着耳塞",
+            "question": "<b>名词与因果：</b>'What is inside Poby's ears?'<br><b>引导：</b>'Earplugs! Poby doesn't want to hear the music because it hurts his ears.'"
+        },
+        {
+            "time": 150,
+            "label": "02:30 场景：Harry生气的离开屋子",
+            "question": "<b>情绪识别：</b>'How does Harry feel now? Is he happy or angry?'<br><b>引导：</b>'He is angry and sad. He left the house!'"
+        },
+        {
+            "time": 164,
+            "label": "02:44 场景：Poby向朋友求助寻找Harry",
+            "question": "<b>社交与求助：</b>'Harry is gone. What are they going to do?'<br><b>引导：</b>'They are going to find him! Let's help them look for Harry.'"
+        },
+        {
+            "time": 180,
+            "label": "03:00 场景：Harry一个人在外面唱歌被Tong Tong听到",
+            "question": "<b>方位与空间：</b>'Is Harry inside the house or outside alone?'<br><b>引导：</b>'He is outside all alone. He thinks Poby hates his singing.'"
+        },
+        {
+            "time": 208,
+            "label": "03:28 场景：Tong Tong安慰Harry并让他继续唱",
+            "question": "<b>情绪支持：</b>'Tong Tong wants to listen to Harry. Is Tong Tong being kind?'<br><b>引导：</b>'Yes, Tong Tong is a good friend. He says \"Take your time.\"'"
+        },
+        {
+            "time": 228,
+            "label": "03:48 场景：Tong Tong夸奖Harry",
+            "question": "<b>礼貌夸奖：</b>'What does Tong Tong say about the song?'<br><b>引导：</b>'He says \"It was nice! You are such a great singer!\"'"
+        },
+        {
+            "time": 242,
+            "label": "04:02 场景：Poby和其它朋友找到了Harry",
+            "question": "<b>人际互动：</b>'Who found Harry in the woods?'<br><b>引导：</b>'Poby and Tong Tong! They came to take him home.'"
+        },
+        {
+            "time": 259,
+            "label": "04:19 场景：Poby违心地说自己喜欢听Harry唱歌",
+            "question": "<b>社交善意谎言（理解）：</b>'Does Poby really love Harry's song, or is he just being nice?'<br><b>引导：</b>'He is being nice because he doesn't want Harry to be sad.'"
+        },
+        {
+            "time": 275,
+            "label": "04:35 场景：Poby提议一起合唱",
+            "question": "<b>合作概念：</b>'What is Poby's idea to make the singing better?'<br><b>引导：</b>'Singing together! \"Let me sing with you.\"'"
+        },
+        {
+            "time": 298,
+            "label": "04:58 场景：大家虽然觉得难听，但都在忍耐",
+            "question": "<b>幽默与总结：</b>'Look at their friends' faces. Are they having a good time or a hard time listening?'<br><b>引导：</b>'They are having a hard time! But they still stay together because they love each other.'"
         }
     ]
 }
