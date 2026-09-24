@@ -915,6 +915,8 @@ const GITHUB_BRANCH = "main";
 
 const ID_FOLDER = "id";
 
+let lastVideoTime = 0;
+
 
 /* =========================================================
    GitHub API
@@ -1862,6 +1864,40 @@ function startMonitor() {
 ========================================================= */
 
 function checkVideoTime() {
+    if (!player || !currentStopPoints.length) return;
+
+    const state = player.getPlayerState();
+    if (state !== YT.PlayerState.PLAYING) return;
+
+    const currentTime = player.getCurrentTime();
+
+    // 如果用户向后拖动了进度条，允许之前的停点再次触发
+    if (currentTime < lastVideoTime - 1) {
+        triggeredIndices = new Set(
+            [...triggeredIndices].filter(
+                i => currentStopPoints[i].time < currentTime
+            )
+        );
+    }
+
+    // 检查是否“跨过”停点，而不是要求刚好落在停点附近
+    for (let i = 0; i < currentStopPoints.length; i++) {
+        const point = currentStopPoints[i];
+
+        if (
+            !triggeredIndices.has(i) &&
+            lastVideoTime < point.time &&
+            currentTime >= point.time
+        ) {
+            triggerQuiz(point, i);
+            break;
+        }
+    }
+
+    lastVideoTime = currentTime;
+}
+/*
+function checkVideoTime() {
 
     if (!player) {
 
@@ -1951,6 +1987,7 @@ function checkVideoTime() {
     }
 
 }
+*/
 
 
 /* =========================================================
