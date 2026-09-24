@@ -738,7 +738,7 @@
 
 <!-- =========================================================
      顶部
-========================================================= -->
+========================================================= 
 
 <div class="top-bar">
 
@@ -749,7 +749,7 @@
     </div>
 
 </div>
-
+-->
 
 <!-- =========================================================
      主体
@@ -794,6 +794,13 @@
 
     <div class="center-panel">
 
+        <!-- YouTube -->
+
+        <div class="video-container">
+
+            <div id="youtube-player"></div>
+
+        </div>
 
         <!-- 提问栏 -->
 
@@ -829,13 +836,7 @@
         </div>
 
 
-        <!-- YouTube -->
 
-        <div class="video-container">
-
-            <div id="youtube-player"></div>
-
-        </div>
 
 
     </div>
@@ -1409,6 +1410,7 @@ function renderSeries(
 
 
     //name.textContent =formatSeriesName(seriesName);
+    name.textContent =seriesName;
 
 
     const count =
