@@ -2134,9 +2134,42 @@ function clearQuizUI() {
 
     isPausedByQuiz =
         false;
-
+renderNextQuestion();
 }
 
+
+function renderNextQuestion() {
+    if (!currentStopPoints.length) {
+        return;
+    }
+
+    const nextIndex =
+        currentStopPoints.findIndex(
+            (_, index) =>
+                !triggeredIndices.has(index)
+        );
+
+    if (nextIndex === -1) {
+        quizText.innerHTML = `
+            🟢
+            <b>All interactions completed</b>
+        `;
+
+        quizBar.className = "";
+        resumeBtn.disabled = true;
+        return;
+    }
+
+    const point =
+        currentStopPoints[nextIndex];
+
+    quizText.innerHTML = `
+        ${point.question || point.label || ""}
+    `;
+
+    quizBar.className = "";
+    resumeBtn.disabled = true;
+}
 
 /* =========================================================
    渲染右侧Interaction Points
