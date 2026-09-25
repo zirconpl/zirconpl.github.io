@@ -1958,8 +1958,7 @@ function checkVideoTime() {
 
         if (
             currentTime >= time &&
-            currentTime < time + 0.5 &&
-            !triggeredIndices.has(index)
+            currentTime < time + 0.5 
         ) {
 
             triggerQuiz(
@@ -2023,7 +2022,6 @@ function triggerQuiz(
     triggeredIndices.add(
         index
     );
-    renderNextQuestion(index + 1);
 
 
     /*
@@ -2139,19 +2137,25 @@ renderNextQuestion();
 }
 
 
-function renderNextQuestion(startIndex = 0) {
+function renderNextQuestion() {
+
     if (!currentStopPoints.length) {
         return;
     }
 
+    const currentTime =
+        player
+            ? player.getCurrentTime()
+            : 0;
+
     const nextIndex =
         currentStopPoints.findIndex(
-            (_, index) =>
-                index >= startIndex &&
-                !triggeredIndices.has(index)
+            point =>
+                Number(point.time) > currentTime
         );
 
     if (nextIndex === -1) {
+
         quizText.innerHTML = `
             🟢
             <b>All interactions completed</b>
@@ -2159,6 +2163,7 @@ function renderNextQuestion(startIndex = 0) {
 
         quizBar.className = "";
         resumeBtn.disabled = true;
+
         return;
     }
 
@@ -2304,6 +2309,7 @@ function jumpToTime(
                     i => i < index
                 )
         );
+        
     clearQuizUI();
 
     player.seekTo(
@@ -2342,7 +2348,6 @@ function jumpToTime(
         );
 
     }
-    renderNextQuestion(index);
 
 }
 
