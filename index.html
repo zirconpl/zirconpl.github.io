@@ -1814,18 +1814,15 @@ function loadYouTubeVideo(
    YouTube player state
 ========================================================= */
 
-function onPlayerStateChange(
-    event
-) {
-
+function onPlayerStateChange(event) {
     if (
         event.data ===
         YT.PlayerState.PLAYING
     ) {
-
-        // 播放恢复后保留“下一个互动问题”的预览
+        if (!isPausedByQuiz) {
+            renderNextQuestion();
+        }
     }
-
 }
 
 
@@ -1880,9 +1877,6 @@ function renderNextQuestion() {
         currentStopPoints[nextIndex];
 
     quizText.innerHTML = `
-        🟡
-        <b>Next interaction · ${formatTime(point.time)}</b>
-        <br>
         ${point.question || point.label || ""}
     `;
 
