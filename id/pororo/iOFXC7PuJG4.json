@@ -1,75 +1,75 @@
 {
-    "title": "Flying Plane",
+    "title": "The New Flying Plane",
     "stopPoints": [
         {
-            "time": 22.193,
-            "label": "00:22 雪天、雪山和雪树",
-            "question": "<b>看画面提问：</b>'Is it snowy?'<br><b>孩子：</b>'Yes!'<br><b>继续：</b>'Is it hot or cold?'<br><b>选项：</b>'Hot or cold?'<br><b>答案：</b>'Cold!'<br><b>动作：</b>老师抱住自己做冷的动作：'Brrr, cold!'，让孩子模仿。"
+            "time": 22.1,
+            "label": "00:22 场景：美丽的雪山和森林",
+            "question": "<b>提问（看图猜天气）：</b>'Look at the trees. Is it sunny ☀️ or snowing ❄️?'<br><b>引导：</b>'It's snowing! There is white snow on the trees.'"
         },
         {
-            "time": 31.403,
-            "label": "00:31 角色还在睡觉",
-            "question": "<b>提问：</b>'Is he sleeping?'<br><b>孩子：</b>'Yes!'<br><b>继续：</b>'Where is he?'<br><b>选项：</b>'In bed or outside?'<br><b>答案：</b>'In bed!'<br><b>动作：</b>老师闭眼睛、双手放脸旁边做睡觉动作，让孩子模仿：'Sleep, sleep.'"
+            "time": 31.4,
+            "label": "00:31 场景：Poby和Harry在睡觉",
+            "question": "<b>提问（Yes/No 问答）：</b>'Are Poby and Harry sleeping?'<br><b>选项/引导：</b>'Yes, they are.' 或者 'No, they aren't.' 引导孩子回答：'Yes!'"
         },
         {
-            "time": 34.624,
-            "label": "00:34 角色做动作",
-            "question": "<b>看动作提问：</b>'What is he doing?'<br><b>选项：</b>'Sleeping or moving?'<br><b>答案：</b>'Moving!'<br><b>动作：</b>老师先模仿画面里的动作，再说：'Can you do it?'<br><b>让孩子：</b>模仿动作。"
+            "time": 34.6,
+            "label": "00:34 场景：Poby打哈欠伸懒腰",
+            "question": "<b>互动（肢体模仿 TPR）：</b>老师大声说：'Wake up! Let's stretch like Poby!' 伸大双臂做伸懒腰的动作。<br><b>引导：</b>引导孩子跟着老师一起做伸懒腰的动作，说出：'Wake up!'"
         },
         {
-            "time": 38.737,
-            "label": "00:38 有人来了",
-            "question": "<b>提问：</b>'Who is coming?'<br><b>选项：</b>'A friend or a plane?'<br><b>答案：</b>'A friend!'<br><b>继续：</b>'Is someone here?'<br><b>孩子：</b>'Yes!'"
+            "time": 38.7,
+            "label": "00:38 场景：小鸟Harry倒立摔倒",
+            "question": "<b>提问（动作认知）：</b>'Oh no, look at Harry! Is he standing up or upside down (倒过来)?'<br><b>引导：</b>'He is upside down! Silly Harry! Can you shake your head like him?' 引导孩子模仿Harry摇晃身体。"
         },
         {
-            "time": 47.065,
-            "label": "00:47 门口有人来找他们",
-            "question": "<b>看画面提问：</b>'Who is at the door?'<br><b>选项：</b>'A friend or a plane?'<br><b>答案：</b>'A friend!'<br><b>动作：</b>老师做敲门动作：'Knock, knock!'<br><b>让孩子：</b>'Knock, knock!'"
+            "time": 47.0,
+            "label": "00:47 场景：小鸟停在Poby的头顶上",
+            "question": "<b>提问（方位选择问答）：</b>'Where is the little bird? Is it under the head or on the head?'<br><b>选项：</b>老师手摸头顶：'A) On the head? B) Under the head?'<br><b>引导：</b>引导孩子说出：'On the head!'"
         },
         {
-            "time": 65.466,
-            "label": "01:05 大家来到外面准备飞机",
-            "question": "<b>提问：</b>'Are they outside?'<br><b>孩子：</b>'Yes!'<br><b>继续：</b>'Are they ready?'<br><b>选项：</b>'Yes or no?'<br><b>引导：</b>'They are ready!'"
+            "time": 65.4,
+            "label": "01:05 场景：朋友们在雪地上集合",
+            "question": "<b>提问（人物数数/认知）：</b>'Wow, so many friends! Let's count, how many friends can you see?'<br><b>引导：</b>老师伸出手指带孩子数一数：'One, two, three, four, five! Five friends!'"
         },
         {
-            "time": 72.277,
-            "label": "01:12 驾驶飞机",
-            "question": "<b>看画面提问：</b>'What is he doing?'<br><b>选项：</b>'Driving or sleeping?'<br><b>答案：</b>'Driving!'<br><b>动作：</b>老师双手握方向盘：'Drive, drive!'<br><b>让孩子：</b>模仿驾驶动作。"
+            "time": 72.2,
+            "label": "01:12 场景：Eddy开着他的灰色小飞机",
+            "question": "<b>提问（物品与颜色）：</b>'What is Eddy driving? Is it a car 🚗 or a plane ✈️?'<br><b>引导：</b>'It's a plane! It has wings!'"
         },
         {
-            "time": 93.021,
-            "label": "01:33 飞机准备起飞",
-            "question": "<b>提问：</b>'Is the plane flying?'<br><b>孩子：</b>'Yes!'<br><b>继续：</b>'Is it going up or down?'<br><b>选项：</b>'Up or down?'<br><b>答案：</b>'Up!'<br><b>动作：</b>老师双手向上：'Up, up, up!'"
+            "time": 93.0,
+            "label": "01:33 场景：Pororo和Crong准备起飞",
+            "question": "<b>提问（Yes/No 问答）：</b>'Are they ready to fly?'<br><b>引导：</b>'Yes! Let's say together: Ready, set, go! 🚀'"
         },
         {
-            "time": 102.948,
-            "label": "01:42 飞机摔下来了",
-            "question": "<b>看画面提问：</b>'What happened?'<br><b>选项：</b>'It is flying or it crashed?'<br><b>答案：</b>'It crashed!'<br><b>动作：</b>老师用手做飞机向下掉：'Down, down, crash!'<br><b>让孩子：</b>跟着做飞机掉下来的动作。"
+            "time": 102.9,
+            "label": "01:42 场景：飞机在空中不稳要摔下来了",
+            "question": "<b>提问（情绪/动作）：</b>'Oh dear! Is the plane flying high or falling down?'<br><b>引导：</b>'It's falling down! Oh no!'"
         },
         {
-            "time": 110.044,
-            "label": "01:50 又从树上摔下来",
-            "question": "<b>提问：</b>'Is the plane up or down?'<br><b>选项：</b>'Up or down?'<br><b>答案：</b>'Down!'<br><b>继续：</b>'Did it crash?'<br><b>孩子：</b>'Yes!'<br><b>动作：</b>老师做飞机坠落动作：'Crash!'"
+            "time": 110.0,
+            "label": "01:50 场景：飞机挂在了树枝上",
+            "question": "<b>提问（位置认知）：</b>'Where is the plane now? Is it in the water or on the tree 🌲?'<br><b>引导：</b>'It's on the tree! It crashed into the tree!'"
         },
         {
-            "time": 114.728,
-            "label": "01:54 角色受伤、身上脏了",
-            "question": "<b>看画面提问：</b>'Is he clean or dirty?'<br><b>选项：</b>'Clean or dirty?'<br><b>答案：</b>'Dirty!'<br><b>继续：</b>'Is he happy?'<br><b>选项：</b>'Yes or no?'<br><b>引导：</b>'He is dirty.'"
+            "time": 114.7,
+            "label": "01:54 场景：Pororo和Crong脸上贴着创可贴",
+            "question": "<b>提问（情绪认知）：</b>'Are they happy or sad?'<br><b>引导：</b>'They look sad 😢. Their faces are dirty and hurt.'"
         },
         {
-            "time": 122.262,
-            "label": "02:02 做了一个更好的飞机",
-            "question": "<b>提问：</b>'What is this?'<br><b>选项：</b>'A car or a plane?'<br><b>答案：</b>'A plane!'<br><b>继续：</b>'Is this plane big or small?'<br><b>选项：</b>'Big or small?'<br><b>引导：</b>'A big plane!'<br><b>互动：</b>老师做飞机飞行动作，让孩子说：'Plane!'"
+            "time": 122.2,
+            "label": "02:02 场景：Eddy展示了一架更棒的蓝色炫酷飞机",
+            "question": "<b>提问（颜色认知）：</b>'Look! What color is this new plane? Is it yellow 💛 or blue 💙?'<br><b>引导：</b>'It's blue! A beautiful blue plane!'"
         },
         {
-            "time": 123.768,
-            "label": "02:03 大家看到新飞机很惊讶",
-            "question": "<b>看表情提问：</b>'Is he surprised?'<br><b>孩子：</b>'Yes!'<br><b>老师：</b>'Wow!'<br><b>让孩子：</b>模仿惊讶表情并说 'Wow!'<br><b>继续：</b>'Are you surprised?'"
+            "time": 123.7,
+            "label": "02:03 场景：朋友们张大嘴巴非常惊讶",
+            "question": "<b>互动（表情模仿 TPR）：</b>'Look at their faces! Wow!'<br><b>引导：</b>老师做出双手捧颊、张大嘴巴的惊讶表情：'Can you make a surprised face like them? Say: Wow!'"
         },
         {
-            "time": 126.805,
-            "label": "02:06 新飞机让大家很开心",
-            "question": "<b>提问：</b>'Do they like the plane?'<br><b>孩子：</b>'Yes!'<br><b>继续：</b>'Are they happy?'<br><b>孩子：</b>'Yes!'<br><b>引导：</b>'They are happy!'<br><b>动作：</b>老师做开心的表情和飞机飞行动作，让孩子一起做。"
+            "time": 126.8,
+            "label": "02:06 场景：Pororo高兴地趴在飞机罩上",
+            "question": "<b>提问（Yes/No 问答）：</b>'Do they like the new blue plane?'<br><b>引导：</b>'Yes! They like it very much! Look at Pororo, he is so happy!'"
         }
     ]
 }
