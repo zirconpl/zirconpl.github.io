@@ -1820,7 +1820,7 @@ function onPlayerStateChange(event) {
         YT.PlayerState.PLAYING
     ) {
         if (!isPausedByQuiz) {
-            renderNextQuestion();
+            clearQuizUI();
         }
     }
 }
@@ -2112,7 +2112,7 @@ function resumeVideo() {
     clearQuizUI();
 
     // 当前问题完成后，显示下一个互动问题
-    renderNextQuestion();
+    //renderNextQuestion();
 
     player.playVideo();
 
@@ -2166,6 +2166,9 @@ function clearQuizUI() {
 
     isPausedByQuiz =
         false;
+
+        // 清除后立即显示下一个互动问题
+    renderNextQuestion();
 
 }
 
