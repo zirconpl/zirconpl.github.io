@@ -1862,7 +1862,7 @@ function startMonitor() {
 /* =========================================================
    检查视频时间
 ========================================================= */
-
+/*
 function checkVideoTime() {
     if (!player || !currentStopPoints.length) return;
 
@@ -1896,8 +1896,8 @@ function checkVideoTime() {
 
     lastVideoTime = currentTime;
 }
-
-/*function checkVideoTime() {
+*/
+function checkVideoTime() {
 
     if (!player) {
 
@@ -1981,7 +1981,7 @@ function checkVideoTime() {
     }
 
 }
-*/
+
 
 
 /* =========================================================
@@ -2426,7 +2426,119 @@ function escapeHtml(
 /* =========================================================
    空格键控制
 ========================================================= */
+window.addEventListener(
+    "keydown",
+    event => {
 
+        /*
+         * 输入框里不要拦截键盘
+         */
+        const tag =
+            document.activeElement?.tagName;
+
+        if (
+            tag === "INPUT" ||
+            tag === "TEXTAREA" ||
+            tag === "SELECT"
+        ) {
+            return;
+        }
+
+
+        /*
+         * 必须有 YouTube 播放器
+         */
+        if (!player) {
+            return;
+        }
+
+
+        /*
+         * 空格：播放 / 暂停
+         */
+        if (
+            event.code === "Space" ||
+            event.keyCode === 32
+        ) {
+
+            event.preventDefault();
+
+            const state =
+                player.getPlayerState();
+
+            if (
+                state ===
+                YT.PlayerState.PLAYING
+            ) {
+
+                player.pauseVideo();
+
+            } else {
+
+                player.playVideo();
+
+            }
+
+            return;
+        }
+
+
+        /*
+         * 左右方向键：后退 / 快进
+         */
+        if (
+            event.code === "ArrowLeft" ||
+            event.code === "ArrowRight"
+        ) {
+
+            event.preventDefault();
+
+            const currentTime =
+                player.getCurrentTime();
+
+            const step = 1;
+
+            let newTime;
+
+            if (
+                event.code === "ArrowLeft"
+            ) {
+
+                newTime =
+                    Math.max(
+                        0,
+                        currentTime - step
+                    );
+
+            } else {
+
+                const duration =
+                    player.getDuration();
+
+                newTime =
+                    Math.min(
+                        duration,
+                        currentTime + step
+                    );
+            }
+
+            player.seekTo(
+                newTime,
+                true
+            );
+
+            /*
+             * 同步停点检测的时间基准，
+             * 避免拖动后误触发旧停点
+             */
+            lastVideoTime = newTime;
+
+            return;
+        }
+
+    }
+);
+/*
 window.addEventListener(
     "keydown",
     event => {
@@ -2441,9 +2553,7 @@ window.addEventListener(
         }
 
 
-        /*
-         * 输入框里不要拦截空格
-         */
+
 
         const tag =
             document.activeElement
@@ -2490,7 +2600,7 @@ window.addEventListener(
 
     }
 );
-
+*/
 
 /* =========================================================
    启动
