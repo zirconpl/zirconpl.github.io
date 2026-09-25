@@ -1815,13 +1815,29 @@ function loadYouTubeVideo(
 ========================================================= */
 
 function onPlayerStateChange(event) {
+
+    // 播放
     if (
         event.data ===
         YT.PlayerState.PLAYING
     ) {
         if (!isPausedByQuiz) {
-            clearQuizUI();
+            renderNextQuestion();
         }
+
+        return;
+    }
+
+    // 用户暂停
+    if (
+        event.data ===
+        YT.PlayerState.PAUSED
+    ) {
+        if (!isPausedByQuiz) {
+            renderNextQuestion();
+        }
+
+        return;
     }
 }
 
@@ -2168,7 +2184,7 @@ function clearQuizUI() {
         false;
 
         // 清除后立即显示下一个互动问题
-    renderNextQuestion();
+    //renderNextQuestion();
 
 }
 
