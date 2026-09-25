@@ -1,0 +1,75 @@
+{
+    "title": "Flying Plane",
+    "stopPoints": [
+        {
+            "time": 22.193,
+            "label": "00:22 雪天、雪山和雪树",
+            "question": "<b>看画面提问：</b>'Is it snowy?'<br><b>孩子：</b>'Yes!'<br><b>继续：</b>'Is it hot or cold?'<br><b>选项：</b>'Hot or cold?'<br><b>答案：</b>'Cold!'<br><b>动作：</b>老师抱住自己做冷的动作：'Brrr, cold!'，让孩子模仿。"
+        },
+        {
+            "time": 31.403,
+            "label": "00:31 角色还在睡觉",
+            "question": "<b>提问：</b>'Is he sleeping?'<br><b>孩子：</b>'Yes!'<br><b>继续：</b>'Where is he?'<br><b>选项：</b>'In bed or outside?'<br><b>答案：</b>'In bed!'<br><b>动作：</b>老师闭眼睛、双手放脸旁边做睡觉动作，让孩子模仿：'Sleep, sleep.'"
+        },
+        {
+            "time": 34.624,
+            "label": "00:34 角色做动作",
+            "question": "<b>看动作提问：</b>'What is he doing?'<br><b>选项：</b>'Sleeping or moving?'<br><b>答案：</b>'Moving!'<br><b>动作：</b>老师先模仿画面里的动作，再说：'Can you do it?'<br><b>让孩子：</b>模仿动作。"
+        },
+        {
+            "time": 38.737,
+            "label": "00:38 有人来了",
+            "question": "<b>提问：</b>'Who is coming?'<br><b>选项：</b>'A friend or a plane?'<br><b>答案：</b>'A friend!'<br><b>继续：</b>'Is someone here?'<br><b>孩子：</b>'Yes!'"
+        },
+        {
+            "time": 47.065,
+            "label": "00:47 门口有人来找他们",
+            "question": "<b>看画面提问：</b>'Who is at the door?'<br><b>选项：</b>'A friend or a plane?'<br><b>答案：</b>'A friend!'<br><b>动作：</b>老师做敲门动作：'Knock, knock!'<br><b>让孩子：</b>'Knock, knock!'"
+        },
+        {
+            "time": 65.466,
+            "label": "01:05 大家来到外面准备飞机",
+            "question": "<b>提问：</b>'Are they outside?'<br><b>孩子：</b>'Yes!'<br><b>继续：</b>'Are they ready?'<br><b>选项：</b>'Yes or no?'<br><b>引导：</b>'They are ready!'"
+        },
+        {
+            "time": 72.277,
+            "label": "01:12 驾驶飞机",
+            "question": "<b>看画面提问：</b>'What is he doing?'<br><b>选项：</b>'Driving or sleeping?'<br><b>答案：</b>'Driving!'<br><b>动作：</b>老师双手握方向盘：'Drive, drive!'<br><b>让孩子：</b>模仿驾驶动作。"
+        },
+        {
+            "time": 93.021,
+            "label": "01:33 飞机准备起飞",
+            "question": "<b>提问：</b>'Is the plane flying?'<br><b>孩子：</b>'Yes!'<br><b>继续：</b>'Is it going up or down?'<br><b>选项：</b>'Up or down?'<br><b>答案：</b>'Up!'<br><b>动作：</b>老师双手向上：'Up, up, up!'"
+        },
+        {
+            "time": 102.948,
+            "label": "01:42 飞机摔下来了",
+            "question": "<b>看画面提问：</b>'What happened?'<br><b>选项：</b>'It is flying or it crashed?'<br><b>答案：</b>'It crashed!'<br><b>动作：</b>老师用手做飞机向下掉：'Down, down, crash!'<br><b>让孩子：</b>跟着做飞机掉下来的动作。"
+        },
+        {
+            "time": 110.044,
+            "label": "01:50 又从树上摔下来",
+            "question": "<b>提问：</b>'Is the plane up or down?'<br><b>选项：</b>'Up or down?'<br><b>答案：</b>'Down!'<br><b>继续：</b>'Did it crash?'<br><b>孩子：</b>'Yes!'<br><b>动作：</b>老师做飞机坠落动作：'Crash!'"
+        },
+        {
+            "time": 114.728,
+            "label": "01:54 角色受伤、身上脏了",
+            "question": "<b>看画面提问：</b>'Is he clean or dirty?'<br><b>选项：</b>'Clean or dirty?'<br><b>答案：</b>'Dirty!'<br><b>继续：</b>'Is he happy?'<br><b>选项：</b>'Yes or no?'<br><b>引导：</b>'He is dirty.'"
+        },
+        {
+            "time": 122.262,
+            "label": "02:02 做了一个更好的飞机",
+            "question": "<b>提问：</b>'What is this?'<br><b>选项：</b>'A car or a plane?'<br><b>答案：</b>'A plane!'<br><b>继续：</b>'Is this plane big or small?'<br><b>选项：</b>'Big or small?'<br><b>引导：</b>'A big plane!'<br><b>互动：</b>老师做飞机飞行动作，让孩子说：'Plane!'"
+        },
+        {
+            "time": 123.768,
+            "label": "02:03 大家看到新飞机很惊讶",
+            "question": "<b>看表情提问：</b>'Is he surprised?'<br><b>孩子：</b>'Yes!'<br><b>老师：</b>'Wow!'<br><b>让孩子：</b>模仿惊讶表情并说 'Wow!'<br><b>继续：</b>'Are you surprised?'"
+        },
+        {
+            "time": 126.805,
+            "label": "02:06 新飞机让大家很开心",
+            "question": "<b>提问：</b>'Do they like the plane?'<br><b>孩子：</b>'Yes!'<br><b>继续：</b>'Are they happy?'<br><b>孩子：</b>'Yes!'<br><b>引导：</b>'They are happy!'<br><b>动作：</b>老师做开心的表情和飞机飞行动作，让孩子一起做。"
+        }
+    ]
+}
