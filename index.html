@@ -1958,7 +1958,8 @@ function checkVideoTime() {
 
         if (
             currentTime >= time &&
-            currentTime < time + 0.5 
+            currentTime < time + 0.5 &&
+            !triggeredIndices.has(index)
         ) {
 
             triggerQuiz(
