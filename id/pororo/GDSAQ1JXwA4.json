@@ -2,7 +2,7 @@
     "title": "Harry's Singing Passion",
     "stopPoints": [
         {
-            "time": 23,
+            "time": 23.5,
             "label": "00:23 场景：画面出现一个大时钟",
             "question": "<b>提问（二选一）：</b>'Look at the clock! Is it morning 🌅 or night 🌃?'<br><b>引导：</b>'It's morning!'"
         },
