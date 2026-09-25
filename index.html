@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
 
@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>英语启蒙互动课堂</title>
+    <title>Interactive English Learning Classroom</title>
 
     <style>
 
@@ -744,7 +744,7 @@
 
     <div class="top-title">
 
-        🎬 英语启蒙互动课堂
+        🎬 Interactive English Learning Classroom
 
     </div>
 
@@ -768,7 +768,7 @@
 
             <span class="panel-header-icon">📚</span>
 
-            视频列表
+            Video Library
 
         </div>
 
@@ -779,7 +779,7 @@
 
             <div class="loading">
 
-                正在读取视频列表...
+                Loading videos...
 
             </div>
 
@@ -813,11 +813,11 @@
 
                 🟢
 
-                <b>请选择一个视频开始学习</b>
+                <b>Select a video to begin</b>
 
                 <br>
 
-                从左侧选择视频后，将自动加载 YouTube 视频。
+                Select a video from the left. The YouTube video will load automatically.
 
             </div>
 
@@ -829,7 +829,7 @@
                 onclick="resumeVideo()"
             >
 
-                继续播放
+                Continue playback
 
             </button>
 
@@ -853,7 +853,7 @@
 
             <span class="panel-header-icon">📌</span>
 
-            提问列表
+            Interaction Points
 
         </div>
 
@@ -863,7 +863,7 @@
             id="currentVideoTitle"
         >
 
-            尚未选择视频
+            No video selected
 
         </div>
 
@@ -875,7 +875,7 @@
 
             <li class="empty">
 
-                选择视频后显示提问点
+                Interaction points will appear here
 
             </li>
 
@@ -1049,7 +1049,7 @@ async function init() {
 
             <div class="error">
 
-                视频列表加载失败：
+                Failed to load the video library:
 
                 <br><br>
 
@@ -1082,7 +1082,7 @@ async function loadSeriesList() {
     if (!response.ok) {
 
         throw new Error(
-            `GitHub API 请求失败：${response.status}`
+            `GitHub API request failed: ${response.status}`
         );
 
     }
@@ -1123,11 +1123,11 @@ async function loadSeriesList() {
 
             <div class="empty">
 
-                id 文件夹中没有发现系列目录。
+                No series folders were found in the id folder.
 
                 <br><br>
 
-                请创建例如：
+                For example, create:
 
                 <br>
 
@@ -1225,7 +1225,7 @@ async function loadSeriesVideos(
     if (!response.ok) {
 
         throw new Error(
-            `无法读取系列 ${seriesName}`
+            `Unable to load series ${seriesName}`
         );
 
     }
@@ -1297,7 +1297,7 @@ async function loadSeriesVideos(
                         ) {
 
                             throw new Error(
-                                "JSON 读取失败"
+                                "Failed to read JSON"
                             );
 
                         }
@@ -1330,7 +1330,7 @@ async function loadSeriesVideos(
                     } catch (error) {
 
                         console.error(
-                            `读取 ${seriesName}/${file.name} 失败`,
+                            `Failed to load ${seriesName}/${file.name}`,
                             error
                         );
 
@@ -1411,8 +1411,7 @@ function renderSeries(
         "series-name";
 
 
-    //name.textContent =formatSeriesName(seriesName);
-    name.textContent =seriesName;
+    name.textContent = formatSeriesName(seriesName);
 
 
     const count =
@@ -1435,7 +1434,7 @@ function renderSeries(
 
 
     /*
-     * 视频列表
+     * Video Library
      */
 
     const videoList =
@@ -1623,6 +1622,7 @@ async function loadVideo(
     triggeredIndices =
         new Set();
 
+    lastVideoTime = 0;
 
     isPausedByQuiz =
         false;
@@ -1669,17 +1669,20 @@ async function loadVideo(
 
     renderTimeline();
 
+    // 播放前先显示第一个即将到来的互动问题，方便老师提前准备
+    renderNextQuestion();
+
 
     /*
      * 更新网页标题
      */
 
     document.title =
-        `${video.title} - 英语启蒙互动课堂`;
+        `${video.title} - Interactive English Learning Classroom`;
 
 
     /*
-     * 加载 YouTube
+     * Load YouTube
      */
 
     await loadYouTubeVideo(
@@ -1690,7 +1693,7 @@ async function loadVideo(
 
 
 /* =========================================================
-   加载 YouTube
+   Load YouTube
 ========================================================= */
 
 function loadYouTubeVideo(
@@ -1808,7 +1811,7 @@ function loadYouTubeVideo(
 
 
 /* =========================================================
-   YouTube 播放状态
+   YouTube player state
 ========================================================= */
 
 function onPlayerStateChange(
@@ -1820,23 +1823,14 @@ function onPlayerStateChange(
         YT.PlayerState.PLAYING
     ) {
 
-        /*
-         * 如果是从互动暂停恢复
-         */
-
-        if (isPausedByQuiz) {
-
-            clearQuizUI();
-
-        }
-
+        // 播放恢复后保留“下一个互动问题”的预览
     }
 
 }
 
 
 /* =========================================================
-   开始监控时间
+   Start time monitoring
 ========================================================= */
 
 function startMonitor() {
@@ -1860,7 +1854,7 @@ function startMonitor() {
 
 
 /* =========================================================
-   检查视频时间
+   Check video time
 ========================================================= */
 /*
 function checkVideoTime() {
@@ -1985,7 +1979,7 @@ function checkVideoTime() {
 
 
 /* =========================================================
-   触发提问
+   Trigger interaction
 ========================================================= */
 
 function triggerQuiz(
@@ -2015,7 +2009,7 @@ function triggerQuiz(
     quizText.innerHTML =
         point.question ||
         point.label ||
-        "请与孩子进行互动。";
+        "Interact with the child.";
 
 
     resumeBtn.disabled =
@@ -2071,7 +2065,7 @@ function triggerQuiz(
 
 
 /* =========================================================
-   继续播放
+   Continue playback
 ========================================================= */
 
 function resumeVideo() {
@@ -2085,6 +2079,8 @@ function resumeVideo() {
 
     clearQuizUI();
 
+    // 当前问题完成后，显示下一个互动问题
+    renderNextQuestion();
 
     player.playVideo();
 
@@ -2092,7 +2088,7 @@ function resumeVideo() {
 
 
 /* =========================================================
-   清除提问状态
+   Clear interaction state
 ========================================================= */
 
 function clearQuizUI() {
@@ -2107,11 +2103,11 @@ function clearQuizUI() {
 
             🟢
 
-            <b>视频播放中...</b>
+            <b>Video playing...</b>
 
             <br>
 
-            正在等待下一个互动提问点。
+            Waiting for the next interaction point.
 
         `;
 
@@ -2121,11 +2117,11 @@ function clearQuizUI() {
 
             🟢
 
-            <b>请选择一个视频开始学习</b>
+            <b>Select a video to begin</b>
 
             <br>
 
-            从左侧选择视频后，将自动加载 YouTube 视频。
+            Select a video from the left. The YouTube video will load automatically.
 
         `;
 
@@ -2143,7 +2139,7 @@ function clearQuizUI() {
 
 
 /* =========================================================
-   渲染右侧提问列表
+   渲染右侧Interaction Points
 ========================================================= */
 
 function renderTimeline() {
@@ -2160,7 +2156,7 @@ function renderTimeline() {
 
             <li class="empty">
 
-                当前视频没有设置提问点。
+                No interaction points are configured for this video.
 
             </li>
 
@@ -2212,7 +2208,7 @@ function renderTimeline() {
 
                 <div class="item-preview">
 
-                    点击跳转到此场景
+                    Click to jump to this scene
 
                 </div>
 
@@ -2241,7 +2237,7 @@ function renderTimeline() {
 
 
 /* =========================================================
-   跳转到提问点
+   Jump to interaction point
 ========================================================= */
 
 function jumpToTime(
@@ -2316,7 +2312,7 @@ function jumpToTime(
 
 
 /* =========================================================
-   格式化时间
+   Format time
 ========================================================= */
 
 function formatTime(
@@ -2360,7 +2356,7 @@ function formatTime(
 
 
 /* =========================================================
-   系列名称处理
+   Format series name
 ========================================================= */
 
 function formatSeriesName(
@@ -2382,17 +2378,10 @@ function formatSeriesName(
 
     const map = {
 
-        "pororo":
-            "Pororo",
-
-        "peppa-pig":
-            "小猪佩奇",
-
-        "peppa":
-            "小猪佩奇",
-
-        "labrador":
-            "拉布拉多警长"
+        "pororo": "Pororo",
+        "peppa-pig": "Peppa Pig",
+        "peppa": "Peppa Pig",
+        "labrador": "Sheriff Labrador"
 
     };
 
@@ -2403,7 +2392,7 @@ function formatSeriesName(
 
 
 /* =========================================================
-   HTML 转义
+   Escape HTML
 ========================================================= */
 
 function escapeHtml(
@@ -2424,7 +2413,7 @@ function escapeHtml(
 
 
 /* =========================================================
-   空格键控制
+   Keyboard controls
 ========================================================= */
 window.addEventListener(
     "keydown",
@@ -2603,7 +2592,7 @@ window.addEventListener(
 */
 
 /* =========================================================
-   启动
+   Start
 ========================================================= */
 
 init();
@@ -2613,4 +2602,3 @@ init();
 </body>
 
 </html>
-```
