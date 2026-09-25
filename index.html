@@ -2023,6 +2023,7 @@ function triggerQuiz(
     triggeredIndices.add(
         index
     );
+    renderNextQuestion(index + 1);
 
 
     /*
@@ -2138,7 +2139,7 @@ renderNextQuestion();
 }
 
 
-function renderNextQuestion() {
+function renderNextQuestion(startIndex = 0) {
     if (!currentStopPoints.length) {
         return;
     }
@@ -2146,6 +2147,7 @@ function renderNextQuestion() {
     const nextIndex =
         currentStopPoints.findIndex(
             (_, index) =>
+                index >= startIndex &&
                 !triggeredIndices.has(index)
         );
 
@@ -2340,6 +2342,7 @@ function jumpToTime(
         );
 
     }
+    renderNextQuestion(index);
 
 }
 
