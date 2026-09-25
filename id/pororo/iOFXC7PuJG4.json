@@ -13,123 +13,161 @@
         },
         {
             "time": 34.6,
-            "label": "Poby yawning and stretching",
-            "question": "<b>Interaction (TPR):</b> 'Wake up! Let's stretch like Poby!' (The teacher opens arms wide and stretches).<br><b>Guidance:</b> Guide the child to copy the action and shout out: 'Wake up!'"
+            "label": "Poby is waking up and stretching",
+            "question": "<b>Question (Action):</b> 'What is Poby doing now?'<br><b>Options:</b> 'A) Sleeping B) Waking up'<br><b>Guidance:</b> 'Good job! Poby is waking up and stretching his arms.'"
         },
         {
             "time": 38.7,
-            "label": "Harry falling upside down",
-            "question": "<b>Question (Action/Position):</b> 'Oh no, look at Harry! Is he standing up or upside down?'<br><b>Guidance:</b> 'He is upside down! Silly Harry! Can you shake your body like him?'"
+            "label": "Harry the little bird is upside down",
+            "question": "<b>Question (Observation):</b> 'Look at Harry! Is he standing up or upside down 🙃?'<br><b>Guidance:</b> 'He is upside down! Silly little bird!'"
         },
         {
             "time": 47.0,
-            "label": "A little bird sitting on Poby's head",
-            "question": "<b>Question (Prepositions):</b> 'Where is the little bird? Is it under the head or on the head?'<br><b>Options:</b> 'A) On the head? B) Under the head?'<br><b>Guidance:</b> Help the child touch their head and say: 'On the head!'"
+            "label": "Harry sits on top of Poby's head",
+            "question": "<b>Question (Preposition):</b> 'Where is Harry sitting?'<br><b>Options:</b> 'A) On Poby's head B) Under the bed'<br><b>Guidance:</b> 'That's right! Harry is sitting on top of Poby's head.'"
         },
         {
             "time": 65.4,
-            "label": "All the friends gathering together on the snow",
-            "question": "<b>Question (Counting):</b> 'Wow, so many friends! Let's count them together. How many friends can you see?'<br><b>Guidance:</b> Point at the screen and count with fingers: 'One, two, three, four, five! Five friends!'"
+            "label": "Pororo and his friends gather in the snow",
+            "question": "<b>Question (Counting):</b> 'How many friends can you see standing in the snow?'<br><b>Guidance:</b> 'Let's count together: 1, 2, 3, 4, 5! There are five friends.'"
         },
         {
             "time": 72.2,
-            "label": "Eddy showing up with his small gray plane",
-            "question": "<b>Question (Object Identification):</b> 'What is Eddy driving? Is it a car 🚗 or a plane ✈️?'<br><b>Guidance:</b> 'It's a plane! It has wings and can fly high!'"
+            "label": "Eddy driving his small grey plane",
+            "question": "<b>Question (Color & Object):</b> 'What is Eddy driving?'<br><b>Options:</b> 'A) A red car B) A grey plane ✈️'<br><b>Guidance:</b> 'It's a grey plane! Eddy is a smart fox.'"
         },
         {
-            "time": 93.6,
-            "label": "Pororo and Crong getting ready to fly",
-            "question": "<b>Interaction (Chant):</b> 'Let's help them take off! Let's countdown together!'<br><b>Guidance:</b> Lead the child to shout: 'Ready, set, go! 🚀'"
+            "time": 93.0,
+            "label": "Pororo and Crong get into the plane",
+            "question": "<b>Question (Yes/No):</b> 'Are Pororo and Crong ready to take off?'<br><b>Guidance:</b> Encourage the child to say: 'Yes, they are in the plane!'"
         },
         {
             "time": 102.9,
-            "label": "The plane shaking and losing balance in the air",
-            "question": "<b>Question (Movement):</b> 'Oh dear! Is the plane flying up high or falling down?'<br><b>Guidance:</b> 'It's falling down! Oh no!'"
+            "label": "The grey plane crashes into the ground",
+            "question": "<b>Question (Outcome):</b> 'Oh no! Did the plane fly high or did it crash💥?'<br><b>Guidance:</b> 'The plane crashed! Poor Pororo and Crong.'"
         },
         {
             "time": 110.0,
-            "label": "The first plane crashing into a tree branch",
-            "question": "<b>Question (Location):</b> 'Where is the plane now? Is it in the water or on the tree 🌲?'<br><b>Guidance:</b> 'It's on the tree! It crashed into the tree!'"
+            "label": "The plane gets stuck in a green pine tree",
+            "question": "<b>Question (Location):</b> 'Where is the plane stuck?'<br><b>Options:</b> 'A) In a tree 🌲 B) In the water'<br><b>Guidance:</b> 'It's stuck high up in the green pine tree!'"
         },
         {
             "time": 114.7,
-            "label": "Pororo and Crong covered in dirt with band-aids",
-            "question": "<b>Question (Emotion):</b> 'Look at Pororo and Crong. Are they happy or sad?'<br><b>Guidance:</b> 'They look sad 😢. Their faces are dirty and they are hurt.'"
+            "label": "Pororo and Crong have bandages on their faces",
+            "question": "<b>Question (Observation):</b> 'What are on Pororo and Crong's faces?'<br><b>Guidance:</b> 'They have white bandages 🩹 because they got a little hurt and dirty.'"
         },
         {
             "time": 122.2,
-            "label": "Eddy showing a brand new powerful blue plane",
-            "question": "<b>Question (Color):</b> 'Look! What color is this new plane? Is it yellow 💛 or blue 💙?'<br><b>Guidance:</b> 'It's blue! A beautiful, big blue plane!'"
+            "label": "Eddy shows a new big blue plane",
+            "question": "<b>Question (Color):</b> 'Look at the brand new plane! What color is it?'<br><b>Options:</b> 'A) Yellow B) Blue 💙'<br><b>Guidance:</b> 'Wonderful! It is a cool blue plane that looks like a bird!'"
         },
         {
             "time": 123.7,
-            "label": "Friends opening their mouths wide in shock",
-            "question": "<b>Interaction (Facial Expressions):</b> 'Look at their faces! Wow!'<br><b>Guidance:</b> Put hands on cheeks, open mouth wide, and encourage the child: 'Can you make a surprised face like them? Say: Wow!'"
+            "label": "The friends look very surprised",
+            "question": "<b>Question (Emotion):</b> 'How do the friends feel when they see the new plane?'<br><b>Options:</b> 'A) Angry B) Surprised 😮'<br><b>Guidance:</b> 'They are very surprised! Their mouths are wide open!'"
         },
         {
             "time": 126.8,
-            "label": "Pororo happily hugging the cockpit window",
-            "question": "<b>Question (Yes/No):</b> 'Do they like the new blue plane?'<br><b>Guidance:</b> 'Yes, they do! They love it! Look at Pororo, he is so happy!'"
+            "label": "Pororo climbs onto the blue plane happily",
+            "question": "<b>Question (Yes/No):</b> 'Do they like the new blue plane?'<br><b>Guidance:</b> Encourage the child to say: 'Yes! They love it very much!'"
         },
         {
-            "time": 133.0,
-            "label": "The blue plane preparing for a second takeoff",
-            "question": "<b>Interaction (TPR):</b> 'The blue plane is going to fly! Zoom!'<br><b>Guidance:</b> Move your hand like a plane flying upward and say: 'Zoom, zoom, zoom! Fly away!'"
+            "time": 136.1,
+            "label": "Big bright fire shoots out from the rocket engine",
+            "question": "<b>Question (Observation):</b> 'What is coming out from the back of the plane?'<br><b>Options:</b> 'A) Water B) Fire 🔥'<br><b>Guidance:</b> 'Wow, it's bright yellow fire! It has a lot of power!'"
+        },
+        {
+            "time": 139.0,
+            "label": "The plane flies incredibly fast in the wind",
+            "question": "<b>Question (Speed):</b> 'Is the plane flying slow or super fast 💨?'<br><b>Guidance:</b> 'It is flying super fast! Look at the big wind blowing!'"
         },
         {
             "time": 147.1,
-            "label": "The blue plane crashing into a snowy mountain",
-            "question": "<b>Question (Object identification):</b> 'Oh no, what did it hit? Did it hit a house 🏠 or a mountain 🏔️?'<br><b>Guidance:</b> 'It hit a big, white mountain. Another crash!'"
+            "label": "Snow and ice flying as they hit something",
+            "question": "<b>Question (Object):</b> 'Oh dear, did they hit a green tree or a white iceberg 🏔️?'<br><b>Guidance:</b> 'They crashed straight into a big white iceberg!'"
         },
         {
-            "time": 160.3,
-            "label": "Eddy launching an even stronger rocket plane",
-            "question": "<b>Question (Size Comparison):</b> 'Wow, look at this super plane! Is it small or big?'<br><b>Guidance:</b> 'It is very big and super strong!'"
+            "time": 154.5,
+            "label": "Pororo and Crong look a bit worried",
+            "question": "<b>Question (Emotion):</b> 'Are they laughing or do they look worried?'<br><b>Guidance:</b> 'They look a bit worried 🥺 because they are about to fly again.'"
         },
         {
-            "time": 172.0,
-            "label": "The rocket plane shooting straight up into outer space",
-            "question": "<b>Question (Location):</b> 'Where is the plane flying now? Is it in the clouds or in outer space with stars ✨?'<br><b>Guidance:</b> 'It's in outer space! Look at the dark sky and stars!'"
+            "time": 160.1,
+            "label": "The blue plane stands straight up on the track",
+            "question": "<b>Question (Direction):</b> 'Is the plane pointing horizontal or straight up ⬆️?'<br><b>Guidance:</b> 'It's pointing straight up to the sky like a real rocket!'"
         },
         {
-            "time": 189.5,
-            "label": "Pororo spotting something strange out the window",
-            "question": "<b>Interaction (TPR):</b> 'Pororo sees something! Point to your eyes and say: Look over there!'<br><b>Guidance:</b> Shield your eyes with one hand, look into the distance, and encourage the child to copy you."
+            "time": 176.3,
+            "label": "The plane reaches outer space above Planet Earth",
+            "question": "<b>Question (Location):</b> 'Where is the blue plane flying now?'<br><b>Options:</b> 'A) Under the snow B) In outer space 🚀'<br><b>Guidance:</b> 'Amazing! They are flying high up in outer space! See the stars!'
         },
         {
-            "time": 203.5,
-            "label": "The friends returning and landing safely",
-            "question": "<b>Question (Yes/No):</b> 'Are they back home on the snow?'<br><b>Guidance:</b> 'Yes! They are back safely! Yay!'"
+            "time": 181.8,
+            "label": "Pororo and Crong spin around and feel dizzy",
+            "question": "<b>Question (Feelings):</b> 'How do they feel after bumping into something?'<br><b>Options:</b> 'A) Hungry B) Dizzy 😵‍💫'<br><b>Guidance:</b> 'They feel very dizzy! Their eyes are spinning round and round!'"
         },
         {
-            "time": 228.9,
-            "label": "New alien friends stepping out of the ship",
-            "question": "<b>Question (Appearance):</b> 'Look at the new friends from space. Do they look the same or different?'<br><b>Guidance:</b> 'They look different! They have funny shapes, but they look friendly!'"
+            "time": 188.3,
+            "label": "A giant purple UFO flying in space",
+            "question": "<b>Question (Color & Object):</b> 'What did they crash into?'<br><b>Options:</b> 'A) A purple UFO 🛸 B) A yellow bird'<br><b>Guidance:</b> 'Correct! It is a giant purple UFO floating in space!'"
         },
         {
-            "time": 242.9,
-            "label": "Eddy checking the broken spaceship parts",
-            "question": "<b>Question (Status):</b> 'Is the alien ship okay or broken?'<br><b>Guidance:</b> 'It's broken because it crashed. Eddy is looking at it.'"
+            "time": 197.8,
+            "label": "The UFO falls down to Earth with grey smoke",
+            "question": "<b>Question (Observation):</b> 'Look at the sky. What is coming out of the mountain?'<br><b>Guidance:</b> 'It's dark grey smoke! The UFO is falling down!'"
         },
         {
-            "time": 248.7,
-            "label": "It gets dark outside and they invite guests home",
-            "question": "<b>Question (Time of day):</b> 'Is it morning ☀️ or night 🌙 now?'<br><b>Guidance:</b> 'It's night! The sky is dark. It's time to go inside.'"
+            "time": 210.6,
+            "label": "The UFO is broken with electric sparks",
+            "question": "<b>Question (Yes/No):</b> 'Is the UFO working fine or is it broken?'<br><b>Guidance:</b> Encourage the child to say: 'It is broken! Look at the blue sparks!'"
         },
         {
-            "time": 263.6,
-            "label": "Serving fresh cookies on a plate inside the house",
-            "question": "<b>Question (Food):</b> 'What is Eddy giving to the friends? Is it pizza 🍕 or cookies 🍪?'<br><b>Guidance:</b> 'Yummy cookies! Everyone loves cookies!'"
+            "time": 222.0,
+            "label": "The friends hide behind forest trees in fear",
+            "question": "<b>Question (Action):</b> 'Why are the friends standing behind the big trees?'<br><b>Options:</b> 'A) Playing hide and seek B) They are scared 😨'<br><b>Guidance:</b> 'They are hiding because they are scared of the alien spaceship.'"
         },
         {
-            "time": 281.9,
-            "label": "The alien friends happily eating the cookies",
-            "question": "<b>Interaction (TPR):</b> 'Are the cookies delicious?'<br><b>Guidance:</b> Rub your tummy and make eating sounds: 'Nom, nom, nom! So yummy!'"
+            "time": 226.2,
+            "label": "Popo the blue alien friend appears",
+            "question": "<b>Question (Color):</b> 'What color is the alien friend Popo?'<br><b>Options:</b> 'A) Blue 💙 B) Pink'<br><b>Guidance:</b> 'Popo is blue! He has big round eyes and yellow legs!'"
         },
         {
-            "time": 301.5,
-            "label": "Everyone laughing and cheering together",
-            "question": "<b>Question (Yes/No):</b> 'Are they all good friends now?'<br><b>Guidance:</b> 'Yes! They became great friends instantly! Let's clap our hands for them! 👏'"
-        }
-    ]
-}
+            "time": 228.6,
+            "label": "Pipi the purple alien friend waves her hand",
+            "question": "<b>Question (Color):</b> 'What color is Popo's friend Pipi?'<br><b>Options:</b> 'A) Green B) Purple 💜'<br><b>Guidance:</b> 'Pipi is purple! She is smiling and waving hello!'"
+        },
+        {
+            "time": 245.8,
+            "label": "Popo looks sad while Pipi looks happy",
+            "question": "<b>Question (Emotion):</b> 'Look at Popo on the left. Is he happy or sad 😢?'<br><b>Guidance:</b> 'Popo is sad and crying, but Pipi is still happy!'"
+        },
+        {
+            "time": 251.5,
+            "label": "Loopy talks kindly to the alien friends",
+            "question": "<b>Question (Action):</b> 'What is the kind pink beaver Loopy doing?'<br><b>Guidance:</b> 'She is inviting the new friends to come to her warm house!'"
+        },
+        {
+            "time": 259.0,
+            "label": "The cozy little wooden house at night",
+            "question": "<b>Question (Time):</b> 'Is it day ☀️ or night 🌙?'<br><b>Guidance:</b> 'It's night time! The sky is dark blue and the house lights are on.'"
+        },
+        {
+            "time": 262.6,
+            "label": "Loopy holds a big plate of baked cookies",
+            "question": "<b>Question (Food):</b> 'Yum! What delicious snack did Loopy make?'<br><b>Options:</b> 'A) Cookies 🍪 B) Ice cream'<br><b>Guidance:</b> 'Perfect! She made a whole plate of yummy golden cookies!'"
+        },
+        {
+            "time": 274.4,
+            "label": "Popo holds a yellow star-shaped cookie",
+            "question": "<b>Question (Shape):</b> 'What shape is the cookie Popo is holding?'<br><b>Options:</b> 'A) Circle B) Star ⭐'<br><b>Guidance:</b> 'It's a beautiful star shape! Just like the stars in space!'"
+        },
+        {
+    "time": 283,
+    "label": "Popo and Pipi chew their cookies happily",
+    "question": "<b>Question (Yes/No):</b> 'Do the alien friends like the sweet cookies?'<br><b>Guidance:</b> Encourage the child to say: 'Yes, they like to eat the cookies!'"
+},
+{
+    "time": 296.7,
+    "label": "All the friends sit in a circle sharing food",
+    "question": "<b>Question (Message):</b> 'Are they fighting or sharing food together?'<br><b>Guidance:</b> 'They are sharing food and eating happily! They are all good friends now!'"
+}]}
