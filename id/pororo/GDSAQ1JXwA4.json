@@ -2,89 +2,84 @@
     "title": "Harry's Singing Passion",
     "stopPoints": [
         {
-            "time": 24,
-            "label": "00:24 场景：清晨的平原与早起提示",
-            "question": "<b>听力与词汇：</b>'What time of day is it now?'<br><b>引导：</b>'It's morning! Look, the sun is coming up.'"
+            "time": 23,
+            "label": "00:23 场景：画面出现一个大时钟",
+            "question": "<b>提问（二选一）：</b>'Look at the clock! Is it morning 🌅 or night 🌃?'<br><b>引导：</b>'It's morning!'"
+        },
+        {
+            "time": 29,
+            "label": "00:29 场景：画面显示闹钟响了",
+            "question": "<b>拟声与互动：</b>'Oh, the alarm clock is ringing! Ring-ring-ring! Can you make the sound of a clock?'<br><b>引导：</b>'Ring-ring! It's time to wake up!'"
+        },
+        {
+            "time": 39,
+            "label": "00:39 场景：Harry起床后伸懒腰",
+            "question": "<b>动作模仿：</b>'Look at Harry! He is stretching his arms. Let's stretch together like Harry! Stretch, stretch!'"
         },
         {
             "time": 43,
-            "label": "00:43 场景：Poby在床上熟睡",
-            "question": "<b>状态观察：</b>'Is Poby awake or sleeping?'<br><b>引导：</b>'He is still sleeping. He is a sleepy head!'"
+            "label": "00:43 场景：Poby还躺在床上睡觉，打呼噜",
+            "question": "<b>状态问答（Yes/No）：</b>'Is Poby awake? Yes or No?'<br><b>引导：</b>'No, he is not. He is sleeping.'"
         },
         {
-            "time": 50,
-            "label": "00:50 场景：大声叫醒Poby",
-            "question": "<b>日常指令：</b>'What should we say to Poby to wake him up?'<br><b>引导：</b>'Wake up, Poby! Time to get up! Let's say it together.'"
+            "time": 48,
+            "label": "00:48 场景：Harry站在Poby的鼻子上准备叫醒他",
+            "question": "<b>身体部位：</b>'Where is Harry standing? Is he on Poby's head or Poby's nose 👃?'<br><b>引导：</b>'Yes! He is standing on Poby's nose!'"
         },
         {
-            "time": 82,
-            "label": "01:22 场景：Poby醒来后还在打哈欠",
-            "question": "<b>动作模仿（动词）：</b>'What is Poby doing right now?'<br><b>引导：</b>'He is yawning. Can you yawn like Poby? Oh, he is so tired.'"
+            "time": 57,
+            "label": "00:57 场景：Poby打了个大喷嚏",
+            "question": "<b>拟声词互动：</b>'Achoo! Poby sneezed! Can you sneeze like Poby? Achoo!'"
         },
         {
-            "time": 95,
-            "label": "01:35 场景：Harry提议要唱歌",
-            "question": "<b>意图预测：</b>'What is Harry going to do to help Poby wake up?'<br><b>引导：</b>'He wants to sing a song! Do you think he sings well?'"
+            "time": 70,
+            "label": "01:10 场景：特写镜头显示Poby的大耳朵",
+            "question": "<b>意图预测（多选一）：</b>'Look at Poby's big ear 👂. How will Harry wake him up?<br>A) Tickle him<br>B) Sing a song 🎵'<br><b>引导：</b>'Harry wants to sing a song!'"
         },
         {
-            "time": 111,
-            "label": "01:51 场景：Harry开始唱歌，声音很难听",
-            "question": "<b>批判思维与情感：</b>'Does Harry sing well?'<br><b>引导：</b>'No, he is not very good at it. The text says \"Don't listen to him!\"'"
+            "time": 77,
+            "label": "01:17 场景：Harry在耳朵旁唱歌并大喊",
+            "question": "<b>声音认知（Yes/No）：</b>'Harry is singing loudly! Is his voice quiet?'<br><b>引导：</b>'No, it's very loud!'"
+        },
+        {
+            "time": 84,
+            "label": "01:24 场景：Poby醒来还在揉眼睛打哈欠",
+            "question": "<b>动作模仿：</b>'Poby is yawning. Let's yawn and rub our eyes together.'"
         },
         {
             "time": 126,
-            "label": "02:06 场景：Harry学青蛙叫 \"Ribbit\"",
-            "question": "<b>拟声词/动物：</b>'What animal says \"ribbit, ribbit\"?'<br><b>引导：</b>'A frog! Harry is singing like a frog.'"
+            "label": "02:06 场景：Harry模仿青蛙唱歌 \"Ribbit\"",
+            "question": "<b>动物常识：</b>'Listen! Harry says \"Ribbit, ribbit!\" What animal says ribbit? Is it a duck 🦆 or a frog 🐸?'<br><b>引导：</b>'A frog!'"
         },
         {
             "time": 135,
-            "label": "02:15 场景：Harry发现Poby戴着耳塞",
-            "question": "<b>名词与因果：</b>'What is inside Poby's ears?'<br><b>引导：</b>'Earplugs! Poby doesn't want to hear the music because it hurts his ears.'"
+            "label": "02:15 场景：Harry发现Poby耳朵里塞了东西",
+            "question": "<b>单词认读（多选一）：</b>'What is inside Poby's ears? Let's guess!<br>A) Candy 🍬<br>B) Earplugs 🔌'<br><b>引导：</b>'They are earplugs!'"
         },
         {
             "time": 150,
-            "label": "02:30 场景：Harry生气的离开屋子",
-            "question": "<b>情绪识别：</b>'How does Harry feel now? Is he happy or angry?'<br><b>引导：</b>'He is angry and sad. He left the house!'"
-        },
-        {
-            "time": 164,
-            "label": "02:44 场景：Poby向朋友求助寻找Harry",
-            "question": "<b>社交与求助：</b>'Harry is gone. What are they going to do?'<br><b>引导：</b>'They are going to find him! Let's help them look for Harry.'"
+            "label": "02:30 场景：Harry伤心地飞出了屋子",
+            "question": "<b>情绪识别（二选一）：</b>'Harry left the house. Is he happy 😊 or sad 😢?'<br><b>引导：</b>'He is sad.'"
         },
         {
             "time": 180,
-            "label": "03:00 场景：Harry一个人在外面唱歌被Tong Tong听到",
-            "question": "<b>方位与空间：</b>'Is Harry inside the house or outside alone?'<br><b>引导：</b>'He is outside all alone. He thinks Poby hates his singing.'"
-        },
-        {
-            "time": 208,
-            "label": "03:28 场景：Tong Tong安慰Harry并让他继续唱",
-            "question": "<b>情绪支持：</b>'Tong Tong wants to listen to Harry. Is Tong Tong being kind?'<br><b>引导：</b>'Yes, Tong Tong is a good friend. He says \"Take your time.\"'"
+            "label": "03:00 场景：Harry独自在森林里伤心，Tong Tong过来了",
+            "question": "<b>方位问答（Yes/No）：</b>'Is Harry inside his house now?'<br><b>引导：</b>'No, he is outside.'"
         },
         {
             "time": 228,
-            "label": "03:48 场景：Tong Tong夸奖Harry",
-            "question": "<b>礼貌夸奖：</b>'What does Tong Tong say about the song?'<br><b>引导：</b>'He says \"It was nice! You are such a great singer!\"'"
-        },
-        {
-            "time": 242,
-            "label": "04:02 场景：Poby和其它朋友找到了Harry",
-            "question": "<b>人际互动：</b>'Who found Harry in the woods?'<br><b>引导：</b>'Poby and Tong Tong! They came to take him home.'"
-        },
-        {
-            "time": 259,
-            "label": "04:19 场景：Poby违心地说自己喜欢听Harry唱歌",
-            "question": "<b>社交善意谎言（理解）：</b>'Does Poby really love Harry's song, or is he just being nice?'<br><b>引导：</b>'He is being nice because he doesn't want Harry to be sad.'"
+            "label": "03:48 场景：Tong Tong听完歌后夸奖Harry",
+            "question": "<b>社交礼貌（Yes/No）：</b>'Tong Tong says \"You are a great singer!\" Is Tong Tong a good friend?'<br><b>引导：</b>'Yes! He is very nice.'"
         },
         {
             "time": 275,
-            "label": "04:35 场景：Poby提议一起合唱",
-            "question": "<b>合作概念：</b>'What is Poby's idea to make the singing better?'<br><b>引导：</b>'Singing together! \"Let me sing with you.\"'"
+            "label": "04:35 场景：Poby提议“Let me sing with you”",
+            "question": "<b>合作概念（二选一）：</b>'What are they going to do? Sing alone or sing together 🎤🎤?'<br><b>引导：</b>'Sing together!'"
         },
         {
             "time": 298,
-            "label": "04:58 场景：大家虽然觉得难听，但都在忍耐",
-            "question": "<b>幽默与总结：</b>'Look at their friends' faces. Are they having a good time or a hard time listening?'<br><b>引导：</b>'They are having a hard time! But they still stay together because they love each other.'"
+            "label": "04:58 场景：朋友们听到两人的合唱，露出痛苦好笑的表情",
+            "question": "<b>幽默总结（二选一）：</b>'Look at their friends' faces! Do they like the song or have a hard time 😵?'<br><b>引导：</b>'They are having a hard time!'"
         }
     ]
 }
