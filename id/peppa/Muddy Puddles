@@ -1,0 +1,105 @@
+{
+  "title": "、Muddy Puddles",
+  "stopPoints": [
+    {
+      "time": 25.5,
+      "label": "Peppa and George looking out the window",
+      "question": "<b>Question (Weather):</b> 'Look at the window. Is it sunny ☀️ or raining 🌧️?'<br><b>Guidance:</b> 'It's raining! They are sad because they can't play outside.'"
+    },
+    {
+      "time": 35.5,
+      "label": "The sun comes out",
+      "question": "<b>Question (Observation):</b> 'Look at the sky now! Did the rain stop?'<br><b>Guidance:</b> 'Yes, it stopped raining! The sun is shining!'"
+    },
+    {
+      "time": 54.0,
+      "label": "Peppa jumps in the mud",
+      "question": "<b>Question (Action):</b> 'What is Peppa jumping in?'<br><b>Options:</b> 'A) A swimming pool. B) A muddy puddle.'<br><b>Guidance:</b> 'She is jumping in a muddy puddle! Splash!'"
+    },
+    {
+      "time": 71.0,
+      "label": "Peppa puts on her boots",
+      "question": "<b>Question (Vocabulary):</b> 'What color are Peppa's boots?'<br><b>Guidance:</b> 'They are yellow! Say: Yellow boots!'"
+    },
+    {
+      "time": 80.5,
+      "label": "Peppa jumping with boots",
+      "question": "<b>Question (Yes/No):</b> 'Is Peppa wearing her yellow boots now?'<br><b>Guidance:</b> 'Yes, she is! Now she can jump in the mud!'"
+    },
+    {
+      "time": 87.5,
+      "label": "George wants to jump",
+      "question": "<b>Question (Comprehension):</b> 'Does George want to jump in the muddy puddles too?'<br><b>Guidance:</b> 'Yes, he does! He loves muddy puddles!'"
+    },
+    {
+      "time": 101.5,
+      "label": "Peppa tells George to wear boots",
+      "question": "<b>Question (Action):</b> 'What must George wear before he jumps?'<br><b>Guidance:</b> 'He must wear his boots!'"
+    },
+    {
+      "time": 112.5,
+      "label": "George puts on his boots",
+      "question": "<b>Question (Colors):</b> 'Look at George's boots. Are they yellow like Peppa's?'<br><b>Options:</b> 'A) Yes. B) No, they are red.'<br><b>Guidance:</b> 'No, they are red! Red boots!'"
+    },
+    {
+      "time": 128.5,
+      "label": "Peppa and George running together",
+      "question": "<b>Question (Observation):</b> 'Are Peppa and George walking slow or running fast?'<br><b>Guidance:</b> 'They are running fast to find more puddles!'"
+    },
+    {
+      "time": 139.5,
+      "label": "Jumping in the puddle together",
+      "question": "<b>Question (Counting):</b> 'How many pigs are jumping in this puddle?'<br><b>Guidance:</b> 'One, two! Two pigs are jumping!'"
+    },
+    {
+      "time": 153.5,
+      "label": "George finds a huge puddle",
+      "question": "<b>Question (Opposites):</b> 'Is the puddle George found small or very BIG?'<br><b>Guidance:</b> 'It is a really BIG puddle!'"
+    },
+    {
+      "time": 165.5,
+      "label": "Peppa stops George",
+      "question": "<b>Question (Action):</b> 'Why did Peppa stop George?'<br><b>Guidance:</b> 'She wants to check if it's safe for her little brother!'"
+    },
+    {
+      "time": 178.5,
+      "label": "Peppa jumps into the big puddle",
+      "question": "<b>Question (Yes/No):</b> 'Is the big puddle safe for George?'<br><b>Guidance:</b> 'Yes, it is safe! Let's say: Jump, George!'"
+    },
+    {
+      "time": 195.0,
+      "label": "Peppa and George covered in mud",
+      "question": "<b>Question (Observation):</b> 'Oh no! Are their clothes clean or dirty now?'<br><b>Guidance:</b> 'They are very dirty! Covered in brown mud!'"
+    },
+    {
+      "time": 208.5,
+      "label": "Running back into the house",
+      "question": "<b>Question (Comprehension):</b> 'Who are they going to show the mud to?'<br><b>Guidance:</b> 'They are going to show Daddy Pig!'"
+    },
+    {
+      "time": 218.0,
+      "label": "Daddy Pig is surprised",
+      "question": "<b>Question (Vocabulary):</b> 'Daddy Pig says: Have you been watching... what?'<br><b>Guidance:</b> 'Have you been watching television? Say: No!'"
+    },
+    {
+      "time": 226.5,
+      "label": "Daddy Pig guesses they had a bath",
+      "question": "<b>Question (Yes/No):</b> 'Did they just have a bath?'<br><b>Guidance:</b> 'No, they didn't have a bath!'"
+    },
+    {
+      "time": 242.0,
+      "label": "Daddy Pig cleaning them",
+      "question": "<b>Question (Vocabulary):</b> 'What is Daddy Pig using to clean Peppa and George?'<br><b>Guidance:</b> 'He is using a yellow sponge! Rub, rub, rub!'"
+    },
+    {
+      "time": 251.5,
+      "label": "The whole family outside",
+      "question": "<b>Question (Counting):</b> 'How many pigs are jumping in the mud now?'<br><b>Guidance:</b> 'Let's count: One, two, three, four! Four pigs!'"
+    },
+    {
+      "time": 272.5,
+      "label": "Daddy Pig falls in the mud",
+      "question": "<b>Question (Action):</b> 'Oh dear! What happened to Daddy Pig?'<br><b>Guidance:</b> 'He fell down in the muddy puddle!'"
+    }
+  ]
+}
