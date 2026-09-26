@@ -1,0 +1,95 @@
+{
+  "title": "Everything looks amazing",
+  "stopPoints": [
+    {
+      "time": 24.9,
+      "label": "Loopy and Petty are drawing a picture with Poby as a model",
+      "question": "<b>Question (Action):</b> 'Look at Loopy and Petty. What are they doing?'<br><b>Options:</b> 'A) They are eating. B) They are drawing.'<br><b>Guidance:</b> Encourage the child to say: 'They are drawing a picture!'"
+    },
+    {
+      "time": 42.2,
+      "label": "Harry is singing on Poby's hand while Poby closes his eyes",
+      "question": "<b>Question (TPR / Song):</b> 'Harry is singing! Can you cover your ears like Poby?'<br><b>Guidance:</b> Act out covering your ears and say: 'Oh, it sounds funny! Cover your ears!'"
+    },
+    {
+      "time": 61.4,
+      "label": "Loopy and Petty are talking about making cookies",
+      "question": "<b>Question (Choice):</b> 'Do they want to draw pictures or make cookies now?'<br><b>Options:</b> 'A) Make cookies 🍪 B) Go to sleep ⏰'<br><b>Guidance:</b> Help the child say: 'Make cookies! Delicious cookies!'"
+    },
+    {
+      "time": 77.5,
+      "label": "Crong accidentally ruined the painting and Pororo looks surprised",
+      "question": "<b>Question (Emotion):</b> 'Look at Pororo's face. Is he happy or surprised?'<br><b>Guidance:</b> Say: 'He is surprised! Crong made a mistake on the drawing!'"
+    },
+    {
+      "time": 92.9,
+      "label": "Pororo invites everyone to go outside and play",
+      "question": "<b>Question (Yes/No):</b> 'Are they going outside to play now?'<br><b>Options:</b> 'A) Yes, they are. B) No, they aren't.'<br><b>Guidance:</b> Encourage the child to say: 'Yes, let's go outside!'"
+    },
+    {
+      "time": 107.0,
+      "label": "All the friends come outside in front of Poby's big log house",
+      "question": "<b>Question (Character / Location):</b> 'Whose house is this? Is it Poby's house or Loopy's house?'<br><b>Guidance:</b> Guide the child to reply: 'It is Poby's log house!'"
+    },
+    {
+      "time": 116.3,
+      "label": "Popo and Pipi are fixing their blue UFO spacecraft",
+      "question": "<b>Question (Object):</b> 'What are they fixing? Is it a car 🚗 or a UFO 🛸?'<br><b>Guidance:</b> Point to the screen and say: 'It's a blue UFO!'"
+    },
+    {
+      "time": 145.4,
+      "label": "The UFO failed to fix and black smoke is coming out",
+      "question": "<b>Question (Color):</b> 'Oh no! Look at the smoke. What color is the smoke?'<br><b>Guidance:</b> Prompt the child with: 'It's black smoke!'"
+    },
+    {
+      "time": 154.8,
+      "label": "Popo and Pipi are hungry and thinking of Loopy's yummy cookies",
+      "question": "<b>Question (Feeling):</b> 'Are Popo and Pipi hungry or thirsty?'<br><b>Guidance:</b> Say: 'They are hungry! They want to eat cookies!'"
+    },
+    {
+      "time": 168.5,
+      "label": "Pororo and friends are playing hide and seek outside",
+      "question": "<b>Question (Game):</b> 'What game are they playing? Are they playing hide and seek?'<br><b>Options:</b> 'A) Yes, they are. B) No, they aren't.'<br><b>Guidance:</b> Encourage the child to say: 'Yes, hide and seek!'"
+    },
+    {
+      "time": 181.8,
+      "label": "Popo and Pipi fly inside the empty house and see cookies on the table",
+      "question": "<b>Question (Observation):</b> 'Is there anyone in the room?'<br><b>Guidance:</b> Help the child observe and say: 'No, nobody is here. But there are cookies!'"
+    },
+    {
+      "time": 195.4,
+      "label": "Popo looks closely at the painting palette and brushes on the desk",
+      "question": "<b>Question (Object Identification):</b> 'What did Popo find? Did he find toys or drawing tools?'<br><b>Guidance:</b> Say: 'Drawing tools! A palette and brushes!'"
+    },
+    {
+      "time": 203.9,
+      "label": "Popo puts the paint brush in his mouth to taste it",
+      "question": "<b>Question (Manners / Safety):</b> 'Can we put paint brushes in our mouth?'<br><b>Options:</b> 'A) Yes, we can. B) No, we can't.'<br><b>Guidance:</b> Shake your head and say: 'No, we can't! That's not food!'"
+    },
+    {
+      "time": 216.2,
+      "label": "The purple paint splashes and ruins the sketch on the easel",
+      "question": "<b>Question (Color):</b> 'Look at the painting! What color is the big splash?'<br><b>Guidance:</b> Point and guide the child to say: 'It's purple!'"
+    },
+    {
+      "time": 233.1,
+      "label": "Popo and Pipi are chasing each other and fall down, hurting themselves",
+      "question": "<b>Question (Action):</b> 'Are they running around and making a mess?'<br><b>Guidance:</b> Say: 'Yes, they are chasing each other! Be careful!'"
+    },
+    {
+      "time": 259.0,
+      "label": "Pororo and all the friends walk through the front door back home",
+      "question": "<b>Question (Counting):</b> 'Let's count the friends coming back. How many friends can you see?'<br><b>Guidance:</b> Count together: 'One, two, three, four, five, six friends!'"
+    },
+    {
+      "time": 272.7,
+      "label": "The friends look shocked to see the living room completely messed up",
+      "question": "<b>Question (State):</b> 'Is the room clean ✨ or messy 🧸?'<br><b>Guidance:</b> Make a shocked face and say: 'It is very messy! Everything is on the floor!'"
+    },
+    {
+      "time": 292.9,
+      "label": "Popo and Pipi are helping clean up and find a water sprayer on the shelf",
+      "question": "<b>Question (Object):</b> 'What is Pipi holding? Is it a ball or a water sprayer?'<br><b>Guidance:</b> Encourage the child to say: 'It's a water sprayer! It sprays water!'"
+    }
+  ]
+}
