@@ -2,104 +2,104 @@
   "title": "Peppa Pig - At the Beach",
   "stopPoints": [
     {
-      "time": 9.5,
-      "label": "Peppa introduces Daddy Pig",
-      "question": "<b>Question (Observation):</b> 'Look at Daddy Pig! What color are his round glasses?'<br><b>Options:</b> 'A) Black 👓 B) Pink 🌸'<br><b>Guidance:</b> Guide the child to say: 'They are black!'"
+      "time": 22.5,
+      "label": "The family in the red car",
+      "question": "<b>Question (Colors):</b> 'What color is the car they are driving?'<br><b>Guidance:</b> 'It is a red car! Let's say: Red car!'"
     },
     {
-      "time": 23.5,
-      "label": "Going to the beach",
-      "question": "<b>Question (Location):</b> 'Where is Peppa's family going today?'<br><b>Guidance:</b> Model the sentence: 'They are going to the beach! 🏖️'"
+      "time": 30.0,
+      "label": "Arriving at the beach",
+      "question": "<b>Question (Vocabulary):</b> 'Who is holding the big umbrella?'<br><b>Guidance:</b> 'That's Daddy Pig! Can you point to Daddy Pig?'"
     },
     {
-      "time": 44.2,
-      "label": "Unpacking beach items",
-      "question": "<b>Question (Vocabulary):</b> 'Mummy Pig has buckets and what?'<br><b>Options:</b> 'A) Spades 🥄 B) Pencils ✏️'<br><b>Guidance:</b> Guide the child: 'Buckets and spades!'"
+      "time": 43.2,
+      "label": "Looking at the beach stuff",
+      "question": "<b>Question (Observation):</b> 'What toy is Mummy Pig holding?'<br><b>Options:</b> 'A) A spotty ball. B) A teddy bear.'<br><b>Guidance:</b> 'It's a spotty ball! Great job!'"
     },
     {
-      "time": 53.8,
-      "label": "Putting on sun cream",
-      "question": "<b>Question (Reason):</b> 'Why do they need sun cream?'<br><b>Guidance:</b> Prompt the child: 'Because the sun is very hot! ☀️'"
+      "time": 54.5,
+      "label": "Applying sun cream",
+      "question": "<b>Question (Action):</b> 'What did Mummy Pig put on Peppa and George's faces?'<br><b>Guidance:</b> 'She put on sun cream because the sun is very hot!'"
     },
     {
-      "time": 63.5,
-      "label": "Daddy Pig tests the ball",
-      "question": "<b>Question (Pattern):</b> 'Look at the ball! Does it have spots or stripes?'<br><b>Guidance:</b> Encourage the child: 'It is a spotty ball! 🔴'"
+      "time": 65.5,
+      "label": "Playing with the spotty ball",
+      "question": "<b>Question (Yes/No):</b> 'Is the spotty ball rolling down the hill?'<br><b>Guidance:</b> 'Yes, it is rolling! Say: Yes, it is!'"
     },
     {
-      "time": 79.8,
-      "label": "George tries to catch the ball",
-      "question": "<b>Question (Yes/No):</b> 'Can George catch the ball?'<br><b>Options:</b> 'A) Yes, he can. B) No, he cannot.'<br><b>Guidance:</b> Say: 'No, he is too little!'"
+      "time": 81.5,
+      "label": "George is crying",
+      "question": "<b>Question (Emotions):</b> 'Oh no, is George happy or sad?'<br><b>Guidance:</b> 'He is sad and crying. Let's say: Don't cry, George!'"
     },
     {
-      "time": 91.2,
-      "label": "Daddy invites them to paddle",
-      "question": "<b>Question (Action):</b> 'Where are Peppa and George going to paddle?'<br><b>Guidance:</b> Prompt the child: 'In the sea! 🌊'"
+      "time": 101.0,
+      "label": "George wearing water wings",
+      "question": "<b>Question (Colors):</b> 'What color are George's water wings?'<br><b>Guidance:</b> 'They are orange! Can you say orange?'"
     },
     {
-      "time": 102.5,
-      "label": "George puts on water wings",
-      "question": "<b>Question (Color):</b> 'Look at George's arms. What color are his water wings?'<br><b>Options:</b> 'A) Yellow 🟡 B) Blue 🔵'<br><b>Guidance:</b> Encourage the child to answer: 'They are yellow!'"
+      "time": 114.5,
+      "label": "Running towards the water",
+      "question": "<b>Question (Action):</b> 'Are Peppa and George running or walking to the water?'<br><b>Guidance:</b> 'They are running! Run, run, run!'"
     },
     {
-      "time": 114.0,
-      "label": "Ready to swim",
-      "question": "<b>Question (Ready):</b> 'Peppa and George have their water wings on. Are they ready to swim?'<br><b>Guidance:</b> Encourage the child: 'Yes, they are ready!'"
+      "time": 121.5,
+      "label": "Daddy Pig testing the water",
+      "question": "<b>Question (Yes/No):</b> 'Is the water cold?'<br><b>Options:</b> 'A) Yes, it is. B) No, it's warm.'<br><b>Guidance:</b> 'No, it's lovely and warm!'"
     },
     {
-      "time": 124.5,
-      "label": "Stepping into the water",
-      "question": "<b>Question (Feeling):</b> 'Is the sea water cold or warm?'<br><b>Guidance:</b> Elicit the line: 'It is lovely and warm!'"
+      "time": 132.0,
+      "label": "Splashing in the sea",
+      "question": "<b>Question (Action):</b> 'Who is splashing water on Daddy Pig?'<br><b>Guidance:</b> 'Peppa is splashing! Splash, splash!'"
     },
     {
-      "time": 146.5,
-      "label": "Splashing Daddy Pig",
-      "question": "<b>Question (Action):</b> 'What are they doing in the water?'<br><b>Guidance:</b> Say: 'They are splashing water! Splash! Splash! 💦'"
+      "time": 140.5,
+      "label": "Daddy Pig floating",
+      "question": "<b>Question (Observation):</b> 'What is Daddy Pig doing in the water?'<br><b>Guidance:</b> 'He is floating on his back!'"
     },
     {
-      "time": 155.0,
-      "label": "Buckets and spades",
-      "question": "<b>Question (Play):</b> 'What do Peppa and George want to play with on the sand?'<br><b>Guidance:</b> Prompt the child: 'Buckets and spades! 🪣'"
+      "time": 149.0,
+      "label": "Sitting on Daddy Pig's tummy",
+      "question": "<b>Question (Prepositions):</b> 'Where are Peppa and George sitting?'<br><b>Guidance:</b> 'They are sitting ON Daddy Pig's tummy!'"
     },
     {
-      "time": 169.0,
-      "label": "Asking Daddy politely",
-      "question": "<b>Question (Polite Manners):</b> 'Peppa asks Daddy to bury him. What polite word does she say?'<br><b>Guidance:</b> Guide the child: 'Please! She says, \"Please, Daddy!\"'"
+      "time": 158.0,
+      "label": "Holding buckets and spades",
+      "question": "<b>Question (Colors):</b> 'Mummy Pig has buckets! What colors are they?'<br><b>Guidance:</b> 'One is green and one is orange!'"
     },
     {
-      "time": 180.8,
-      "label": "Daddy Pig buried in sand",
-      "question": "<b>Question (Body Parts):</b> 'Daddy is covered in sand! Which part of Daddy can you still see?'<br><b>Guidance:</b> Ask the child to touch their own head and say: 'His head!'"
+      "time": 168.0,
+      "label": "Asking to bury Daddy Pig",
+      "question": "<b>Question (Yes/No):</b> 'Do they want to bury Daddy Pig in the sand?'<br><b>Guidance:</b> 'Yes! Let's say: Yes, please!'"
     },
     {
-      "time": 195.5,
-      "label": "Straw hat for Daddy",
-      "question": "<b>Question (Clothing):</b> 'Daddy's head is hot. What kind of hat does he want?'<br><b>Options:</b> 'A) A straw hat 👒 B) A winter hat ❄️'<br><b>Guidance:</b> Guide the child: 'A straw hat!'"
+      "time": 184.0,
+      "label": "Daddy Pig buried in the sand",
+      "question": "<b>Question (Observation):</b> 'Where is Daddy Pig's body?'<br><b>Guidance:</b> 'It's under the sand! We can only see his head!'"
     },
     {
-      "time": 206.0,
-      "label": "Daddy Pig falls asleep",
-      "question": "<b>Question (Yes/No):</b> 'Daddy Pig is snoring! Is he sleeping?'<br><b>Options:</b> 'A) Yes, he is. B) No, he isn't.'<br><b>Guidance:</b> Say: 'Yes, he is having a little sleep! Shh... 😴'"
+      "time": 199.5,
+      "label": "Daddy Pig wearing a hat",
+      "question": "<b>Question (Vocabulary):</b> 'What did Mummy Pig put on Daddy Pig's head?'<br><b>Guidance:</b> 'She put on a hat! A nice straw hat.'"
     },
     {
-      "time": 227.5,
-      "label": "First sandcastle",
-      "question": "<b>Question (Magic Word):</b> 'When the sandcastle is made, what fun word does Peppa say?'<br><b>Guidance:</b> Encourage the child: 'Hey presto! ✨'"
+      "time": 207.5,
+      "label": "Daddy Pig is sleeping",
+      "question": "<b>Question (Action):</b> 'Listen carefully. Is Daddy Pig sleeping?'<br><b>Guidance:</b> 'Yes, he is sleeping! Shhh...'"
     },
     {
-      "time": 238.2,
-      "label": "Two sandcastles",
-      "question": "<b>Question (Count):</b> 'Let's count together! How many sandcastles are there?'<br><b>Guidance:</b> Count together: 'One, two! Two sandcastles! 🏰🏰'"
+      "time": 232.5,
+      "label": "Making sandcastles",
+      "question": "<b>Question (Vocabulary):</b> 'What did Peppa and George build with the sand?'<br><b>Guidance:</b> 'They built sandcastles! How many? One, two!'"
     },
     {
-      "time": 252.5,
-      "label": "Packing up",
-      "question": "<b>Question (Routine):</b> 'Mummy Pig packed the towels and bags. Is it play time or home time?'<br><b>Guidance:</b> Guide the child: 'It is home time! 🚗'"
+      "time": 253.5,
+      "label": "Packing up to go home",
+      "question": "<b>Question (Observation):</b> 'Mummy Pig is thinking. Did they forget something?'<br><b>Guidance:</b> 'Yes, they forgot something very important!'"
     },
     {
-      "time": 266.5,
-      "label": "Who is under the hat?",
-      "question": "<b>Question (Humor):</b> 'Mummy thinks they forgot the hat. But who is sleeping under the hat?'<br><b>Guidance:</b> Prompt with a laugh: 'Daddy Pig! They forgot Daddy Pig! 🐷'"
+      "time": 267.5,
+      "label": "Remembering Daddy Pig",
+      "question": "<b>Question (Comprehension):</b> 'Who did they forget at the beach?'<br><b>Guidance:</b> 'They forgot Daddy Pig! Let's say: Wake up, Daddy Pig!'"
     }
   ]
 }
