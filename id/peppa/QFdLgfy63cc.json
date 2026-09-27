@@ -1,0 +1,75 @@
+{
+  "title": "Muddy Puddles",
+  "stopPoints": [
+    {
+      "time": 31.0,
+      "label": "Looking out the window",
+      "question": "<b>Question (Weather):</b> 'Look out the window! Is it raining 🌧️ or sunny ☀️?'<br><b>Options:</b> 'A) It's raining. B) It's sunny.'<br><b>Guidance:</b> 'The sun is out! It's sunny!'"
+    },
+    {
+      "time": 42.0,
+      "label": "Peppa and George running outside",
+      "question": "<b>Question (Emotion):</b> 'Are Peppa and George happy 😊 or sad 😢?'<br><b>Options:</b> 'A) Happy. B) Sad.'<br><b>Guidance:</b> 'Yes! They are very happy to go outside!'"
+    },
+    {
+      "time": 56.2,
+      "label": "Peppa jumping in the mud",
+      "question": "<b>Question (Action):</b> 'What is Peppa doing?'<br><b>Options:</b> 'A) Sleeping 🛏️ B) Jumping 🦘'<br><b>Guidance:</b> 'She is jumping! Jump, jump, jump!'"
+    },
+    {
+      "time": 75.1,
+      "label": "Peppa wearing her boots",
+      "question": "<b>Question (Clothes):</b> 'What is Peppa wearing on her feet?'<br><b>Options:</b> 'A) Yellow boots 👢 B) Red shoes 👞'<br><b>Guidance:</b> 'She is wearing yellow boots! Can you say \"yellow boots\"?'"
+    },
+    {
+      "time": 87.7,
+      "label": "George wants to jump",
+      "question": "<b>Question (Yes/No):</b> 'Does George have his boots on?'<br><b>Options:</b> 'A) Yes, he does. B) No, he doesn't.'<br><b>Guidance:</b> 'No, he doesn't! He needs his boots to jump!'"
+    },
+    {
+      "time": 104.6,
+      "label": "Finding more puddles",
+      "question": "<b>Question (Observation):</b> 'Who is walking with Peppa?'<br><b>Options:</b> 'A) George 🐷 B) Daddy Pig 👓'<br><b>Guidance:</b> 'It's her little brother, George!'"
+    },
+    {
+      "time": 121.3,
+      "label": "A big muddy puddle",
+      "question": "<b>Question (Size):</b> 'Look at the puddle! Is it big 🐘 or small 🐭?'<br><b>Options:</b> 'A) Big B) Small'<br><b>Guidance:</b> 'Wow! It's a very BIG puddle!'"
+    },
+    {
+      "time": 145.2,
+      "label": "Peppa checks the puddle",
+      "question": "<b>Question (Yes/No):</b> 'Is the puddle safe for George?'<br><b>Options:</b> 'A) Yes, it is! B) No, it isn't.'<br><b>Guidance:</b> 'Yes, it is! Peppa checked it. Let's jump!'"
+    },
+    {
+      "time": 162.8,
+      "label": "Peppa and George are muddy",
+      "question": "<b>Question (Observation):</b> 'Look at Peppa and George! Are they clean ✨ or dirty 🤎?'<br><b>Options:</b> 'A) Clean B) Dirty'<br><b>Guidance:</b> 'They are very dirty! They have mud everywhere!'"
+    },
+    {
+      "time": 181.1,
+      "label": "Running back home",
+      "question": "<b>Question (Action):</b> 'Where are they running to?'<br><b>Options:</b> 'A) To the park 🌳 B) Into the house 🏠'<br><b>Guidance:</b> 'They are running into the house to show Daddy!'"
+    },
+    {
+      "time": 200.9,
+      "label": "Daddy Pig guesses",
+      "question": "<b>Question (Yes/No):</b> 'Did Peppa and George just have a bath? 🛁'<br><b>Options:</b> 'A) Yes, they did. B) No, they didn't.'<br><b>Guidance:</b> 'No, they didn't! They were playing in the mud!'"
+    },
+    {
+      "time": 226.0,
+      "label": "Cleaning up",
+      "question": "<b>Question (Color):</b> 'What color is the sponge Daddy Pig is using?'<br><b>Options:</b> 'A) Blue 🔵 B) Yellow 🟡'<br><b>Guidance:</b> 'It's a yellow sponge! Rub-a-dub-dub!'"
+    },
+    {
+      "time": 256.8,
+      "label": "Family jumping in mud",
+      "question": "<b>Question (Family):</b> 'Who is jumping with Peppa and George now?'<br><b>Options:</b> 'A) Mummy and Daddy Pig 👨‍👩‍👧‍👦 B) Grandpa Pig 👴'<br><b>Guidance:</b> 'Mummy Pig and Daddy Pig are jumping too!'"
+    },
+    {
+      "time": 281.2,
+      "label": "Everyone falls in the mud",
+      "question": "<b>Question (Emotion):</b> 'Are they crying 😭 or laughing 😂?'<br><b>Options:</b> 'A) Crying B) Laughing'<br><b>Guidance:</b> 'They are laughing! Everyone loves muddy puddles!'"
+    }
+  ]
+}
