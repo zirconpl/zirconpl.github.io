@@ -1,0 +1,75 @@
+{
+  "title": "Best Friend",
+  "stopPoints": [
+    {
+      "time": 30.246,
+      "label": "Peppa waits by the window for her best friend Suzy Sheep",
+      "question": "<b>Question (Story):</b> 'Peppa is looking out the window. Who is she waiting for?'<br><b>Options:</b> 'A) Her best friend Suzy Sheep 🐑 B) Danny Dog 🐶'<br><b>Guidance:</b> Encourage the child to say: 'She is waiting for Suzy Sheep!'"
+    },
+    {
+      "time": 49.926,
+      "label": "Suzy arrives and the best friends hold hands happily",
+      "question": "<b>Question (Friendship):</b> 'Suzy has arrived! Are Peppa and Suzy best friends?'<br><b>Options:</b> 'A) Yes, they are! B) No, they aren't.'<br><b>Guidance:</b> Encourage the child to say: 'Yes, they are best friends!'"
+    },
+    {
+      "time": 70.041,
+      "label": "Peppa and Suzy tidy the toys to make room for big girl games",
+      "question": "<b>Question (Story):</b> 'Peppa and Suzy want to play on their own. Where did Mummy Pig tell them to go?'<br><b>Options:</b> 'A) In Peppa's bedroom 🛏️ B) In the garden 🌳'<br><b>Guidance:</b> Encourage the child to say: 'Go play in the bedroom!'"
+    },
+    {
+      "time": 89.136,
+      "label": "Peppa tells George this game is only for big girls",
+      "question": "<b>Question (Feelings):</b> 'Peppa says this game is just for big girls. How does George feel?'<br><b>Options:</b> 'A) He feels sad and left out 😢 B) He feels happy 😊'<br><b>Guidance:</b> Encourage the child to say: 'George feels sad.'"
+    },
+    {
+      "time": 111.300,
+      "label": "Fairy Princess Peppa casts a magic spell on Suzy",
+      "question": "<b>Question (Pretend Play):</b> 'Peppa is a fairy princess! What does she turn Suzy into with her magic wand?'<br><b>Options:</b> 'A) A little green frog 🐸 B) A princess 👑'<br><b>Guidance:</b> Encourage the child to say: 'Turn you into a frog! Ribbit!'"
+    },
+    {
+      "time": 139.157,
+      "label": "Mummy Pig calls George to help make chocolate chip cookies",
+      "question": "<b>Question (Story):</b> 'George feels lonely downstairs. What yummy treat is Mummy Pig baking?'<br><b>Options:</b> 'A) Chocolate chip cookies 🍪 B) Vegetable soup 🍲'<br><b>Guidance:</b> Encourage the child to say: 'Making chocolate chip cookies!'"
+    },
+    {
+      "time": 166.093,
+      "label": "Peppa and Suzy need a sick person for doctors and nurses",
+      "question": "<b>Question (Role Play):</b> 'Suzy is a nurse and Peppa is a doctor. Who do they need to find?'<br><b>Options:</b> 'A) A sick person / patient 🤒 B) A bus driver 🚌'<br><b>Guidance:</b> Encourage the child to say: 'They need a sick person!'"
+    },
+    {
+      "time": 189.968,
+      "label": "Doctor Peppa listens to patient George's chest",
+      "question": "<b>Question (Checkup):</b> 'Doctor Peppa listens to George's chest. What does she tell George to do?'<br><b>Options:</b> 'A) Take a big breath and cough 😷 B) Sing a song 🎵'<br><b>Guidance:</b> Encourage the child to say: 'Take a breath and cough!'"
+    },
+    {
+      "time": 211.481,
+      "label": "Nurse Suzy checks George's temperature with a thermometer",
+      "question": "<b>Question (Health):</b> 'Nurse Suzy reads the thermometer! How does George feel?'<br><b>Options:</b> 'A) Very, very hot 🔥 B) Very cold ❄️'<br><b>Guidance:</b> Encourage the child to say: 'He is very, very hot!'"
+    },
+    {
+      "time": 225.303,
+      "label": "Daddy Pig visits patient George in bed",
+      "question": "<b>Question (Story):</b> 'Daddy Pig comes upstairs to visit. Is George really sick, or is it just a game?'<br><b>Options:</b> 'A) It is only a game! 🎮 B) He is really sick 🏥'<br><b>Guidance:</b> Encourage the child to say: 'It's only a game!'"
+    },
+    {
+      "time": 237.378,
+      "label": "Mummy Pig brings sweet cookies as medicine for George",
+      "question": "<b>Question (Medicine):</b> 'Mummy Pig brings cookies for patient George! What are the cookies for?'<br><b>Options:</b> 'A) They are his medicine to feel better 🍪💊 B) They are toys 🧸'<br><b>Guidance:</b> Encourage the child to say: 'They are his medicine to make him feel better!'"
+    },
+    {
+      "time": 252.458,
+      "label": "Doctor Peppa examines Daddy Pig's sore tummy",
+      "question": "<b>Question (Checkup):</b> 'Daddy Pig says he has a sore tummy! What is Doctor Peppa checking?'<br><b>Options:</b> 'A) Daddy's tummy 🩺 B) Daddy's feet 🦶'<br><b>Guidance:</b> Encourage the child to say: 'She is checking Daddy's tummy!'"
+    },
+    {
+      "time": 263.117,
+      "label": "Peppa diagnoses that Daddy Pig is just hungry",
+      "question": "<b>Question (Diagnosis):</b> 'Peppa hears Daddy's tummy rumbling! What is wrong with Daddy?'<br><b>Options:</b> 'A) He is very hungry! 😋 B) He has a cold 🤧'<br><b>Guidance:</b> Encourage the child to say: 'I think you're hungry, Daddy!'"
+    },
+    {
+      "time": 277.887,
+      "label": "The plate is empty as everyone eats cookies together",
+      "question": "<b>Question (Ending):</b> 'Daddy needs cookies to make him better too! Did everyone enjoy the cookies?'<br><b>Options:</b> 'A) Yes, they ate all the cookies! 🍪😋 B) No, nobody ate them ❌'<br><b>Guidance:</b> Encourage the child to say: 'Yes, they ate all the cookies!'"
+    }
+  ]
+}
