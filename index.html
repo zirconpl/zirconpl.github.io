@@ -1191,175 +1191,82 @@ async function loadSeriesList() {
 
 
 /* =========================================================
-   获取某个系列中的 JSON
+   获取某个文件在 Git 中的最初添加时间
 ========================================================= */
+async function getFileCreatedTime(filePath) {
+    try {
+        // 请求该文件的 commit 列表，不带额外参数默认返回按时间倒序的提交
+        const url = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/commits?path=${encodeURIComponent(filePath)}&sha=${GITHUB_BRANCH}&per_page=100`;
+        const res = await fetch(url);
+        if (!res.ok) return 0;
+        const commits = await res.json();
+        if (Array.isArray(commits) && commits.length > 0) {
+            // 最早的一次提交在数组的最后一位
+            const firstCommit = commits[commits.length - 1];
+            return new Date(firstCommit.commit.committer.date).getTime();
+        }
+    } catch (e) {
+        console.warn(`Failed to fetch commit date for ${filePath}:`, e);
+    }
+    return 0;
+}
 
-async function loadSeriesVideos(
-    seriesName
-) {
+/* =========================================================
+   获取某个系列中的 JSON（自动按 Git 首次添加时间排序）
+========================================================= */
+async function loadSeriesVideos(seriesName) {
+    const url = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${ID_FOLDER}/${encodeURIComponent(seriesName)}?ref=${GITHUB_BRANCH}`;
 
-    const url =
-
-        `https://api.github.com/repos/` +
-
-        `${GITHUB_USER}/` +
-
-        `${GITHUB_REPO}/contents/` +
-
-        `${ID_FOLDER}/` +
-
-        `${encodeURIComponent(seriesName)}` +
-
-        `?ref=${GITHUB_BRANCH}`;
-
-
-    const response =
-        await fetch(
-            url,
-            {
-                cache: "no-store"
-            }
-        );
-
-
+    const response = await fetch(url, { cache: "no-store" });
     if (!response.ok) {
-
-        throw new Error(
-            `Unable to load series ${seriesName}`
-        );
-
+        throw new Error(`Unable to load series ${seriesName}`);
     }
 
+    const files = await response.json();
+    const jsonFiles = files.filter(
+        file => file.type === "file" && file.name.toLowerCase().endsWith(".json")
+    );
 
-    const files =
-        await response.json();
+    const videos = await Promise.all(
+        jsonFiles.map(async file => {
+            const videoId = file.name.replace(/\.json$/i, "");
+            const filePath = `${ID_FOLDER}/${seriesName}/${file.name}`;
 
+            // 并行获取 JSON 内容和 Git 添加时间
+            const [configRes, createdTime] = await Promise.all([
+                fetch(`./id/${encodeURIComponent(seriesName)}/${encodeURIComponent(file.name)}`, { cache: "no-store" }).catch(() => null),
+                getFileCreatedTime(filePath)
+            ]);
 
-    /*
-     * 只处理 JSON
-     */
+            let title = videoId;
+            let stopPoints = [];
 
-    const jsonFiles =
-        files
-            .filter(
-                file =>
-                    file.type === "file" &&
-                    file.name
-                        .toLowerCase()
-                        .endsWith(".json")
-            )
-            .sort(
-                (a, b) =>
-                    a.name.localeCompare(
-                        b.name,
-                        undefined,
-                        {
-                            numeric: true,
-                            sensitivity: "base"
-                        }
-                    )
-            );
-
-
-    /*
-     * 读取每个 JSON
-     */
-
-    const videos =
-        await Promise.all(
-
-            jsonFiles.map(
-                async file => {
-
-                    const videoId =
-                        file.name
-                            .replace(
-                                /\.json$/i,
-                                ""
-                            );
-
-
-                    try {
-
-                        const configResponse =
-                            await fetch(
-                                `./id/` +
-                                `${encodeURIComponent(seriesName)}/` +
-                                `${encodeURIComponent(file.name)}`,
-                                {
-                                    cache: "no-store"
-                                }
-                            );
-
-
-                        if (
-                            !configResponse.ok
-                        ) {
-
-                            throw new Error(
-                                "Failed to read JSON"
-                            );
-
-                        }
-
-
-                        const config =
-                            await configResponse.json();
-
-
-                        return {
-
-                            videoId,
-
-                            fileName:
-                                file.name,
-
-                            title:
-                                config.title ||
-                                videoId,
-
-                            stopPoints:
-                                Array.isArray(
-                                    config.stopPoints
-                                )
-                                    ? config.stopPoints
-                                    : []
-
-                        };
-
-                    } catch (error) {
-
-                        console.error(
-                            `Failed to load ${seriesName}/${file.name}`,
-                            error
-                        );
-
-
-                        return {
-
-                            videoId,
-
-                            fileName:
-                                file.name,
-
-                            title:
-                                videoId,
-
-                            stopPoints: []
-
-                        };
-
-                    }
-
+            if (configRes && configRes.ok) {
+                try {
+                    const config = await configRes.json();
+                    title = config.title || videoId;
+                    stopPoints = Array.isArray(config.stopPoints) ? config.stopPoints : [];
+                } catch (e) {
+                    console.error(`Parse JSON failed: ${file.name}`);
                 }
-            )
+            }
 
-        );
+            return {
+                videoId,
+                fileName: file.name,
+                title,
+                stopPoints,
+                createdTime // 首次提交时间戳
+            };
+        })
+    );
 
+    // 升序排序：创建时间最小（最先添加）的排在最前
+    videos.sort((a, b) => a.createdTime - b.createdTime);
 
     return videos;
-
 }
+
 
 
 /* =========================================================
