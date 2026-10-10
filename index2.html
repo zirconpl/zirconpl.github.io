@@ -2,20 +2,10 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Interactive English Learning Classroom</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive English Classroom</title>
     <style>
-
-
-
         * {
             box-sizing: border-box;
         }
@@ -29,1196 +19,324 @@
         }
 
         body {
-
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Arial,
-                sans-serif;
-
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
             background: #f5f7fa;
-
             color: #333;
-
             overflow: hidden;
         }
 
-
-        /* =====================================================
-           顶部
-        ===================================================== */
-
-        .top-bar {
-
-            height: 56px;
-
-            background: #fff;
-
-            border-bottom: 1px solid #e8e8e8;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            position: relative;
-
-            z-index: 10;
-        }
-
-        .top-title {
-
-            font-size: 20px;
-
-            font-weight: 600;
-
-            color: #1677ff;
-        }
-
-
-        /* =====================================================
-           主体三栏
-        ===================================================== */
-
+        /* 主体双栏布局：左侧列表 + 右侧播放器 */
         .main-container {
-
-            height: calc(100vh - 56px);
-
+            height: 100vh;
             display: grid;
-
-            grid-template-columns:
-                250px
-                minmax(400px, 1fr)
-                300px;
-
+            grid-template-columns: 280px 1fr;
             gap: 12px;
-
             padding: 12px;
-
-            max-width: 1800px;
-
+            max-width: 1920px;
             margin: 0 auto;
         }
 
-
-        /* =====================================================
-           左侧
-        ===================================================== */
-
+        /* 左侧视频库 */
         .left-panel {
-
             background: #fff;
-
             border-radius: 8px;
-
             border: 1px solid #e8e8e8;
-
             overflow: hidden;
-
             display: flex;
-
             flex-direction: column;
-
             min-width: 0;
         }
 
         .panel-header {
-
             height: 48px;
-
             flex-shrink: 0;
-
             display: flex;
-
             align-items: center;
-
             padding: 0 15px;
-
             border-bottom: 1px solid #f0f0f0;
-
             font-size: 15px;
-
             font-weight: 600;
-
             color: #333;
         }
 
         .panel-header-icon {
-
             margin-right: 7px;
         }
 
         .series-list {
-
             flex: 1;
-
             overflow-y: auto;
-
             padding: 8px;
         }
 
-
-        /* =====================================================
-           系列
-        ===================================================== */
-
         .series-item {
-
             margin-bottom: 5px;
         }
 
         .series-header {
-
             min-height: 40px;
-
             display: flex;
-
             align-items: center;
-
             padding: 8px 10px;
-
             border-radius: 6px;
-
             cursor: pointer;
-
             user-select: none;
-
             transition: background 0.15s;
         }
 
         .series-header:hover {
-
             background: #f5f8fc;
         }
 
-        .series-header.active-series {
-
-            background: #f0f7ff;
-        }
-
         .series-arrow {
-
             width: 20px;
-
             color: #777;
-
             font-size: 12px;
-
             transition: transform 0.15s;
         }
 
         .series-arrow.open {
-
             transform: rotate(90deg);
         }
 
         .series-name {
-
             flex: 1;
-
             font-size: 14px;
-
             font-weight: 600;
-
             overflow: hidden;
-
             white-space: nowrap;
-
             text-overflow: ellipsis;
         }
 
         .series-count {
-
             font-size: 11px;
-
             color: #999;
-
             margin-left: 5px;
         }
 
         .video-list {
-
             display: none;
-
             padding: 0 0 4px 20px;
         }
 
         .video-list.open {
-
             display: block;
         }
 
         .video-item {
-
             padding: 9px 10px;
-
             border-radius: 6px;
-
             cursor: pointer;
-
             margin-bottom: 2px;
-
             font-size: 13px;
-
             line-height: 1.4;
-
             color: #555;
-
             transition: all 0.15s;
-
             position: relative;
         }
 
         .video-item:hover {
-
             background: #f5f8fc;
-
             color: #1677ff;
         }
 
         .video-item.active {
-
             background: #e6f4ff;
-
             color: #1677ff;
-
             font-weight: 600;
         }
 
         .video-item.active::before {
-
             content: "";
-
             position: absolute;
-
             left: 0;
-
             top: 7px;
-
             bottom: 7px;
-
             width: 3px;
-
             border-radius: 2px;
-
             background: #1677ff;
         }
 
         .video-id {
-
             font-size: 10px;
-
             color: #aaa;
-
             margin-top: 3px;
-
             font-weight: normal;
-
             word-break: break-all;
         }
 
-
-        /* =====================================================
-           中间播放器
-        ===================================================== */
-
-        .center-panel {
-
-            min-width: 0;
-
-            min-height: 0;
-
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 10px;
-        }
-
-
-        /* 提问栏 */
-
-        #quiz-bar {
-
-            min-height: 86px;
-
-            flex-shrink: 0;
-
-            background: #fff;
-
-            border: 2px dashed #b7eb8f;
-
-            border-radius: 8px;
-
-            padding: 12px 16px;
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 15px;
-
-            box-shadow:
-                0 2px 8px rgba(0,0,0,0.04);
-
-            transition: all 0.2s;
-        }
-
-        #quiz-bar.active {
-
-            background: #f6ffed;
-
-            border-color: #52c41a;
-
-            box-shadow:
-                0 3px 12px rgba(82,196,26,0.12);
-        }
-
-        .quiz-content {
-
-            flex: 1;
-
-            min-width: 0;
-
-            font-size: 15px;
-
-            line-height: 1.55;
-
-            color: #666;
-        }
-
-        #quiz-bar.active .quiz-content {
-
-            color: #333;
-        }
-
-        .resume-btn {
-
-            flex-shrink: 0;
-
-            border: none;
-
-            padding: 9px 18px;
-
-            border-radius: 6px;
-
-            background: #d9d9d9;
-
-            color: #999;
-
-            font-size: 14px;
-
-            font-weight: 600;
-
-            cursor: not-allowed;
-        }
-
-        #quiz-bar.active .resume-btn {
-
-            background: #52c41a;
-
-            color: #fff;
-
-            cursor: pointer;
-        }
-
-        #quiz-bar.active .resume-btn:hover {
-
-            background: #73d13d;
-        }
-
-
-        /* =====================================================
-           视频
-        ===================================================== */
-
+        /* 右侧主播放器容器 */
         .video-container {
-
             flex: 1;
-
-            min-height: 0;
-
+            height: 100%;
             background: #000;
-
             border-radius: 8px;
-
             overflow: hidden;
-
             position: relative;
-
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.12);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
         }
 
         #youtube-player {
-
             position: absolute;
-
             inset: 0;
-
             width: 100%;
-
             height: 100%;
         }
 
         #youtube-player iframe {
-
             width: 100% !important;
-
             height: 100% !important;
         }
 
-
-        /* =====================================================
-           右侧
-        ===================================================== */
-        .point-index {
-    display: inline-block;
-    background: #f0f0f0;
-    color: #666;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 2px 6px;
-    border-radius: 4px;
-    margin-right: 5px;
-}
-
-/* 激活时序号的高亮风格 */
-.timeline-item.active .point-index {
-    background: #bae0ff;
-    color: #0958d9;
-}
-        .right-panel {
-
-            background: #fff;
-
-            border-radius: 8px;
-
-            border: 1px solid #e8e8e8;
-
-            overflow: hidden;
-
-            display: flex;
-
-            flex-direction: column;
-
-            min-width: 0;
-        }
-
-        .current-video-title {
-
-            padding: 10px 15px;
-
-            background: #fafafa;
-
-            border-bottom: 1px solid #f0f0f0;
-
-            font-size: 13px;
-
-            color: #777;
-
-            white-space: nowrap;
-
-            overflow: hidden;
-
-            text-overflow: ellipsis;
-        }
-
-        .timeline-list {
-
-            list-style: none;
-
-            padding: 8px;
-
-            margin: 0;
-
-            overflow-y: auto;
-
-            flex: 1;
-        }
-
-        .timeline-item {
-
-            padding: 10px;
-
-            border: 1px solid #eef2f5;
-
-            border-radius: 6px;
-
-            margin-bottom: 7px;
-
-            cursor: pointer;
-
-            background: #fff;
-
-            transition: all 0.15s;
-        }
-
-        .timeline-item:hover {
-
-            background: #f0f7ff;
-
-            border-color: #91caff;
-        }
-
-        .timeline-item.active {
-
-            background: #e6f4ff;
-
-            border-color: #1677ff;
-
-        }
-
-        .time-badge {
-
-            display: inline-block;
-
-            background: #1677ff;
-
-            color: #fff;
-
-            padding: 2px 6px;
-
-            border-radius: 4px;
-
-            font-size: 11px;
-
-            margin-right: 5px;
-        }
-
-        .timeline-label {
-
-            font-size: 13px;
-
-            line-height: 1.4;
-        }
-
-        .item-preview {
-
-            font-size: 11px;
-
-            color: #999;
-
-            margin-top: 5px;
-
-            line-height: 1.4;
-        }
-
-
-        /* =====================================================
-           通用
-        ===================================================== */
-
-        .loading {
-
-            padding: 20px;
-
+        .loading, .empty {
+            padding: 20px 10px;
             text-align: center;
-
-            color: #999;
-
+            color: #aaa;
             font-size: 13px;
         }
 
         .error {
-
             padding: 12px;
-
             margin: 8px;
-
             color: #cf1322;
-
             background: #fff1f0;
-
             border: 1px solid #ffa39e;
-
             border-radius: 6px;
-
             font-size: 12px;
-
-            line-height: 1.5;
         }
-
-        .empty {
-
-            padding: 20px 10px;
-
-            text-align: center;
-
-            color: #aaa;
-
-            font-size: 13px;
-        }
-
-
-        /* =====================================================
-           滚动条
-        ===================================================== */
 
         ::-webkit-scrollbar {
-
             width: 6px;
-
-            height: 6px;
         }
-
         ::-webkit-scrollbar-thumb {
-
             background: #ccc;
-
             border-radius: 3px;
         }
 
-        ::-webkit-scrollbar-track {
-
-            background: transparent;
-        }
-
-
-        /* =====================================================
-           移动端
-        ===================================================== */
-
-        @media (max-width: 1000px) {
-
+        @media (max-width: 768px) {
             body {
-
                 overflow: auto;
             }
-
             .main-container {
-
                 height: auto;
-
-                min-height: calc(100vh - 56px);
-
-                grid-template-columns:
-                    190px
-                    minmax(300px, 1fr)
-                    240px;
-            }
-        }
-
-
-        @media (max-width: 750px) {
-
-            body {
-
-                overflow: auto;
-            }
-
-            .main-container {
-
-                height: auto;
-
                 display: flex;
-
-                flex-direction: column;
-
+                flex-direction: column-reverse;
                 padding: 8px;
             }
-
+            .video-container {
+                height: 55vh;
+                min-height: 280px;
+            }
             .left-panel {
-
-                min-height: 300px;
-
-                order: 2;
+                min-height: 350px;
             }
-
-            .center-panel {
-
-                order: 1;
-
-                height: 65vh;
-
-                min-height: 400px;
-            }
-
-            .right-panel {
-
-                order: 3;
-
-                min-height: 300px;
-            }
-
         }
-
     </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================================================
-     顶部
-========================================================= 
-
-<div class="top-bar">
-
-    <div class="top-title">
-
-        🎬 Interactive English Learning Classroom
-
-    </div>
-
-</div>
--->
-
-<!-- =========================================================
-     主体
-========================================================= -->
-
 <div class="main-container">
-
-
-    <!-- =====================================================
-         左侧：系列 + 视频
-    ====================================================== -->
-
+    <!-- 左侧：系列与视频列表 -->
     <div class="left-panel">
-
         <div class="panel-header">
-
-            <span class="panel-header-icon">📚</span>
-
-            Video Library
-
+            <span class="panel-header-icon">📚</span> Video Library
         </div>
-
-        <div
-            class="series-list"
-            id="seriesList"
-        >
-
-            <div class="loading">
-
-                Loading videos...
-
-            </div>
-
+        <div class="series-list" id="seriesList">
+            <div class="loading">Loading videos...</div>
         </div>
-
     </div>
 
-
-    <!-- =====================================================
-         中间：播放器
-    ====================================================== -->
-
-    <div class="center-panel">
-
-        <!-- YouTube -->
-
-        <div class="video-container">
-
-            <div id="youtube-player"></div>
-
-        </div>
-
-        <!-- 提问栏 -->
-
-        <div id="quiz-bar">
-
-            <div
-                class="quiz-content"
-                id="quiz-text"
-            >
-
-                🟢
-
-                <b>Select a video to begin</b>
-
-                <br>
-
-                Select a video from the left. The YouTube video will load automatically.
-
-            </div>
-
-
-            <button
-                class="resume-btn"
-                id="resumeBtn"
-                disabled
-                onclick="resumeVideo()"
-            >
-
-                Continue playback
-
-            </button>
-
-        </div>
-
-
-
-
-
+    <!-- 右侧：播放器主体 -->
+    <div class="video-container">
+        <div id="youtube-player"></div>
     </div>
-
-
-    <!-- =====================================================
-         右侧：提问
-    ====================================================== -->
-
-    <div class="right-panel">
-
-
-        <div class="panel-header">
-
-            <span class="panel-header-icon">📌</span>
-
-            Interaction Points
-
-        </div>
-
-
-        <div
-            class="current-video-title"
-            id="currentVideoTitle"
-        >
-
-            No video selected
-
-        </div>
-
-
-        <ul
-            class="timeline-list"
-            id="timelineList"
-        >
-
-            <li class="empty">
-
-                Interaction points will appear here
-
-            </li>
-
-        </ul>
-
-
-    </div>
-
-
 </div>
-
 
 <script>
-
-/* =========================================================
-   GitHub 配置
-========================================================= */
-
-/*
- * 修改成你的 GitHub 信息。
- *
- * 例如：
- *
- * https://github.com/fox/english-learning
- *
- * 就填写：
- *
- * GITHUB_USER = "fox"
- * GITHUB_REPO = "english-learning"
- */
-
 const GITHUB_USER = "zirconpl";
-
 const GITHUB_REPO = "zirconpl.github.io";
-
 const GITHUB_BRANCH = "main";
-
 const ID_FOLDER = "id";
 
-let lastVideoTime = 0;
-
-
-/* =========================================================
-   GitHub API
-========================================================= */
-
 const GITHUB_API_ROOT =
-    `https://api.github.com/repos/` +
-    `${GITHUB_USER}/` +
-    `${GITHUB_REPO}/contents/` +
-    `${ID_FOLDER}?ref=${GITHUB_BRANCH}`;
+    `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${ID_FOLDER}?ref=${GITHUB_BRANCH}`;
 
-
-/* =========================================================
-   DOM
-========================================================= */
-
-const seriesList =
-    document.getElementById("seriesList");
-
-const timelineList =
-    document.getElementById("timelineList");
-
-const currentVideoTitle =
-    document.getElementById("currentVideoTitle");
-
-const quizBar =
-    document.getElementById("quiz-bar");
-
-const quizText =
-    document.getElementById("quiz-text");
-
-const resumeBtn =
-    document.getElementById("resumeBtn");
-
-
-/* =========================================================
-   全局状态
-========================================================= */
+const seriesList = document.getElementById("seriesList");
 
 let player = null;
-
 let youtubeApiReady = false;
-
 let currentVideoId = null;
-
-let currentVideoTitleText = "";
-
-let currentStopPoints = [];
-
-let triggeredIndices = new Set();
-
-let isPausedByQuiz = false;
-
-let monitorTimer = null;
-
-let currentSeries = null;
-
-
-/*
- * 保存系列展开状态
- */
-
-const expandedSeries =
-    new Set();
-
-
-/* =========================================================
-   YouTube API
-========================================================= */
+const expandedSeries = new Set();
 
 function loadYouTubeAPI() {
-
     return new Promise((resolve) => {
-
-        if (
-            window.YT &&
-            window.YT.Player
-        ) {
-
+        if (window.YT && window.YT.Player) {
             youtubeApiReady = true;
-
             resolve();
-
             return;
         }
-
-
-        const script =
-            document.createElement("script");
-
-
-        script.src =
-            "https://www.youtube.com/iframe_api";
-
-
-        window.onYouTubeIframeAPIReady =
-            function () {
-
-                youtubeApiReady = true;
-
-                resolve();
-
-            };
-
-
+        const script = document.createElement("script");
+        script.src = "https://www.youtube.com/iframe_api";
+        window.onYouTubeIframeAPIReady = function () {
+            youtubeApiReady = true;
+            resolve();
+        };
         document.head.appendChild(script);
-
     });
-
 }
-
-
-/* =========================================================
-   初始化
-========================================================= */
 
 async function init() {
-
     try {
-
         await loadYouTubeAPI();
-
         await loadSeriesList();
-
     } catch (error) {
-
         console.error(error);
-
         seriesList.innerHTML = `
-
             <div class="error">
-
-                Failed to load the video library:
-
-                <br><br>
-
+                Failed to load the video library:<br><br>
                 ${escapeHtml(error.message)}
-
             </div>
-
         `;
-
     }
-
 }
-
-
-/* =========================================================
-   获取 id/ 下的系列目录
-========================================================= */
 
 async function loadSeriesList() {
-
-    const response =
-        await fetch(
-            GITHUB_API_ROOT,
-            {
-                cache: "no-store"
-            }
-        );
-
-
+    const response = await fetch(GITHUB_API_ROOT, { cache: "no-store" });
     if (!response.ok) {
-
-        throw new Error(
-            `GitHub API request failed: ${response.status}`
-        );
-
+        throw new Error(`GitHub API request failed: ${response.status}`);
     }
 
+    const entries = await response.json();
+    const directories = entries
+        .filter(item => item.type === "dir")
+        .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: "base" }));
 
-    const entries =
-        await response.json();
-
-
-    /*
-     * 只保留目录
-     */
-
-    const directories =
-        entries
-            .filter(
-                item =>
-                    item.type === "dir"
-            )
-            .sort(
-                (a, b) =>
-                    a.name.localeCompare(
-                        b.name,
-                        undefined,
-                        {
-                            numeric: true,
-                            sensitivity: "base"
-                        }
-                    )
-            );
-
-
-    if (
-        directories.length === 0
-    ) {
-
-        seriesList.innerHTML = `
-
-            <div class="empty">
-
-                No series folders were found in the id folder.
-
-                <br><br>
-
-                For example, create:
-
-                <br>
-
-                id/pororo/
-
-            </div>
-
-        `;
-
+    if (directories.length === 0) {
+        seriesList.innerHTML = `<div class="empty">No series folders found.</div>`;
         return;
-
     }
-
 
     seriesList.innerHTML = "";
-
-
-    /*
-     * 并行读取所有系列
-     */
-
-    const seriesData =
-        await Promise.all(
-
-            directories.map(
-                async directory => {
-
-                    return {
-
-                        directory,
-
-                        videos:
-                            await loadSeriesVideos(
-                                directory.name
-                            )
-
-                    };
-
-                }
-            )
-
-        );
-
-
-    /*
-     * 渲染
-     */
-
-    seriesData.forEach(
-        data => {
-
-            renderSeries(
-                data.directory.name,
-                data.videos
-            );
-
-        }
+    const seriesData = await Promise.all(
+        directories.map(async directory => ({
+            directory,
+            videos: await loadSeriesVideos(directory.name)
+        }))
     );
 
+    seriesData.forEach(data => {
+        renderSeries(data.directory.name, data.videos);
+    });
 }
 
-
-/* =========================================================
-   获取某个文件在 Git 中的最初添加时间
-========================================================= */
 async function getFileCreatedTime(filePath) {
     try {
-        // 请求该文件的 commit 列表，不带额外参数默认返回按时间倒序的提交
         const url = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/commits?path=${encodeURIComponent(filePath)}&sha=${GITHUB_BRANCH}&per_page=100`;
         const res = await fetch(url);
         if (!res.ok) return 0;
         const commits = await res.json();
         if (Array.isArray(commits) && commits.length > 0) {
-            // 最早的一次提交在数组的最后一位
             const firstCommit = commits[commits.length - 1];
             return new Date(firstCommit.commit.committer.date).getTime();
         }
@@ -1228,16 +346,10 @@ async function getFileCreatedTime(filePath) {
     return 0;
 }
 
-/* =========================================================
-   获取某个系列中的 JSON（自动按 Git 首次添加时间排序）
-========================================================= */
 async function loadSeriesVideos(seriesName) {
     const url = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${ID_FOLDER}/${encodeURIComponent(seriesName)}?ref=${GITHUB_BRANCH}`;
-
     const response = await fetch(url, { cache: "no-store" });
-    if (!response.ok) {
-        throw new Error(`Unable to load series ${seriesName}`);
-    }
+    if (!response.ok) throw new Error(`Unable to load series ${seriesName}`);
 
     const files = await response.json();
     const jsonFiles = files.filter(
@@ -1249,20 +361,16 @@ async function loadSeriesVideos(seriesName) {
             const videoId = file.name.replace(/\.json$/i, "");
             const filePath = `${ID_FOLDER}/${seriesName}/${file.name}`;
 
-            // 并行获取 JSON 内容和 Git 添加时间
             const [configRes, createdTime] = await Promise.all([
                 fetch(`./id/${encodeURIComponent(seriesName)}/${encodeURIComponent(file.name)}`, { cache: "no-store" }).catch(() => null),
                 getFileCreatedTime(filePath)
             ]);
 
             let title = videoId;
-            let stopPoints = [];
-
             if (configRes && configRes.ok) {
                 try {
                     const config = await configRes.json();
                     title = config.title || videoId;
-                    stopPoints = Array.isArray(config.stopPoints) ? config.stopPoints : [];
                 } catch (e) {
                     console.error(`Parse JSON failed: ${file.name}`);
                 }
@@ -1272,1259 +380,169 @@ async function loadSeriesVideos(seriesName) {
                 videoId,
                 fileName: file.name,
                 title,
-                stopPoints,
-                createdTime // 首次提交时间戳
+                createdTime
             };
         })
     );
 
-    // 升序排序：创建时间最小（最先添加）的排在最前
     videos.sort((a, b) => a.createdTime - b.createdTime);
-
     return videos;
 }
 
+function renderSeries(seriesName, videos) {
+    const seriesItem = document.createElement("div");
+    seriesItem.className = "series-item";
 
+    const header = document.createElement("div");
+    header.className = "series-header";
 
-/* =========================================================
-   渲染系列
-========================================================= */
+    const arrow = document.createElement("span");
+    arrow.className = "series-arrow";
+    arrow.textContent = "▶";
 
-function renderSeries(
-    seriesName,
-    videos
-) {
-
-    const seriesItem =
-        document.createElement("div");
-
-
-    seriesItem.className =
-        "series-item";
-
-
-    /*
-     * 系列头
-     */
-
-    const header =
-        document.createElement("div");
-
-
-    header.className =
-        "series-header";
-
-
-    const arrow =
-        document.createElement("span");
-
-
-    arrow.className =
-        "series-arrow";
-
-
-    arrow.textContent =
-        "▶";
-
-
-    const name =
-        document.createElement("span");
-
-
-    name.className =
-        "series-name";
-
-
+    const name = document.createElement("span");
+    name.className = "series-name";
     name.textContent = formatSeriesName(seriesName);
 
-
-    const count =
-        document.createElement("span");
-
-
-    count.className =
-        "series-count";
-
-
-    count.textContent =
-        videos.length;
-
+    const count = document.createElement("span");
+    count.className = "series-count";
+    count.textContent = videos.length;
 
     header.appendChild(arrow);
-
     header.appendChild(name);
-
     header.appendChild(count);
 
+    const videoList = document.createElement("div");
+    videoList.className = "video-list";
 
-    /*
-     * Video Library
-     */
+    videos.forEach(video => {
+        const item = createVideoItem(seriesName, video);
+        videoList.appendChild(item);
+    });
 
-    const videoList =
-        document.createElement("div");
-
-
-    videoList.className =
-        "video-list";
-
-
-    videos.forEach(
-        video => {
-
-            const item =
-                createVideoItem(
-                    seriesName,
-                    video
-                );
-
-
-            videoList.appendChild(item);
-
+    header.onclick = () => {
+        const isOpen = videoList.classList.contains("open");
+        if (isOpen) {
+            videoList.classList.remove("open");
+            arrow.classList.remove("open");
+            expandedSeries.delete(seriesName);
+        } else {
+            videoList.classList.add("open");
+            arrow.classList.add("open");
+            expandedSeries.add(seriesName);
         }
-    );
+    };
 
-
-    /*
-     * 点击系列展开/折叠
-     */
-
-    header.onclick =
-        () => {
-
-            const isOpen =
-                videoList.classList.contains(
-                    "open"
-                );
-
-
-            if (isOpen) {
-
-                videoList.classList.remove(
-                    "open"
-                );
-
-                arrow.classList.remove(
-                    "open"
-                );
-
-                expandedSeries.delete(
-                    seriesName
-                );
-
-            } else {
-
-                videoList.classList.add(
-                    "open"
-                );
-
-                arrow.classList.add(
-                    "open"
-                );
-
-                expandedSeries.add(
-                    seriesName
-                );
-
-            }
-
-        };
-
-
-    seriesItem.appendChild(
-        header
-    );
-
-    seriesItem.appendChild(
-        videoList
-    );
-
-
-    seriesList.appendChild(
-        seriesItem
-    );
-
+    seriesItem.appendChild(header);
+    seriesItem.appendChild(videoList);
+    seriesList.appendChild(seriesItem);
 }
 
-
-/* =========================================================
-   创建视频项目
-========================================================= */
-
-function createVideoItem(
-    seriesName,
-    video
-) {
-
-    const item =
-        document.createElement("div");
-
-
-    item.className =
-        "video-item";
-
-
-    item.dataset.videoId =
-        video.videoId;
-
-
-    item.dataset.series =
-        seriesName;
-
-
-    /*
-     * 这里最重要：
-     *
-     * 显示 config.title
-     *
-     * 而不是 videoId
-     */
+function createVideoItem(seriesName, video) {
+    const item = document.createElement("div");
+    item.className = "video-item";
+    item.dataset.videoId = video.videoId;
+    item.dataset.series = seriesName;
 
     item.innerHTML = `
-
-        <div>
-
-            ${escapeHtml(video.title)}
-
-        </div>
-
-        <div class="video-id">
-
-            ${escapeHtml(video.videoId)}
-
-        </div>
-
+        <div>${escapeHtml(video.title)}</div>
+        <div class="video-id">${escapeHtml(video.videoId)}</div>
     `;
 
-
-    item.onclick =
-        () => {
-
-            loadVideo(
-                seriesName,
-                video
-            );
-
-        };
-
-
+    item.onclick = () => loadVideo(seriesName, video);
     return item;
-
 }
 
+async function loadVideo(seriesName, video) {
+    currentVideoId = video.videoId;
 
-/* =========================================================
-   加载视频
-========================================================= */
+    document.querySelectorAll(".video-item").forEach(item => {
+        item.classList.toggle("active", item.dataset.videoId === video.videoId);
+    });
 
-async function loadVideo(
-    seriesName,
-    video
-) {
-
-    currentSeries =
-        seriesName;
-
-
-    currentVideoId =
-        video.videoId;
-
-
-    currentVideoTitleText =
-        video.title;
-
-
-    currentStopPoints =
-        [...video.stopPoints]
-            .sort(
-                (a, b) =>
-                    Number(a.time) -
-                    Number(b.time)
-            );
-
-
-    triggeredIndices =
-        new Set();
-
-    lastVideoTime = 0;
-
-    isPausedByQuiz =
-        false;
-
-
-    /*
-     * 左侧选中状态
-     */
-
-    document
-        .querySelectorAll(".video-item")
-        .forEach(
-            item => {
-
-                item.classList.toggle(
-                    "active",
-
-                    item.dataset.videoId ===
-                    video.videoId
-                );
-
-            }
-        );
-
-
-    /*
-     * 右侧标题
-     */
-
-    currentVideoTitle.textContent =
-        video.title;
-
-
-    /*
-     * 清理提问状态
-     */
-
-    clearQuizUI();
-
-
-    /*
-     * 渲染提问点
-     */
-
-    renderTimeline();
-
-    // 播放前先显示第一个即将到来的互动问题，方便老师提前准备
-    //renderNextQuestion();
-
-
-    /*
-     * 更新网页标题
-     */
-
-    document.title =
-        `${video.title} - Interactive English Learning Classroom`;
-
-
-    /*
-     * Load YouTube
-     */
-
-    await loadYouTubeVideo(
-        video.videoId
-    );
-
+    document.title = `${video.title} - English Learning Classroom`;
+    await loadYouTubeVideo(video.videoId);
 }
 
-
-/* =========================================================
-   Load YouTube
-========================================================= */
-
-function loadYouTubeVideo(
-    videoId
-) {
-
-    return new Promise(
-        resolve => {
-
-
-            if (!youtubeApiReady) {
-
-                resolve();
-
-                return;
-
-            }
-
-
-            /*
-             * 第一次创建播放器
-             */
-
-            if (!player) {
-
-                player =
-                    new YT.Player(
-                        "youtube-player",
-                        {
-
-                            videoId,
-
-                            playerVars: {
-
-                                /*
-                                 * 自动播放
-                                 */
-
-                                autoplay: 1,
-
-                                /*
-                                 * 尽量简洁
-                                 */
-
-                                controls: 0,
-
-                                /*
-                                 * 不显示相关视频
-                                 */
-
-                                rel: 0,
-
-                                /*
-                                 * 不突出品牌
-                                 */
-
-                                modestbranding: 1,
-
-                                /*
-                                 * 移动端内嵌播放
-                                 */
-
-                                playsinline: 1,
-
-                                /*
-                                 * 隐藏视频信息
-                                 */
-
-                                iv_load_policy: 3
-
-                            },
-
-                            events: {
-
-                                onReady:
-                                    event => {
-
-                                        startMonitor();
-
-                                        resolve();
-
-                                    },
-
-                                onStateChange:
-                                    onPlayerStateChange
-
-                            }
-
-                        }
-                    );
-
-
-            } else {
-
-                /*
-                 * 已经存在播放器
-                 */
-
-                player.loadVideoById(
-                    videoId
-                );
-
-
-                startMonitor();
-
-
-                resolve();
-
-            }
-
-        }
-    );
-
-}
-
-
-/* =========================================================
-   YouTube player state
-========================================================= */
-
-function onPlayerStateChange(
-    event
-) {
-
-    if (
-        event.data ===
-        YT.PlayerState.PLAYING
-    ) {
-
-         if (isPausedByQuiz) {clearQuizUI();}
-    }
-
-}
-
-
-/* =========================================================
-   Start time monitoring
-========================================================= */
-
-function startMonitor() {
-
-    if (monitorTimer) {
-
-        clearInterval(
-            monitorTimer
-        );
-
-    }
-
-
-    monitorTimer =
-        setInterval(
-            checkVideoTime,
-            100
-        );
-
-}
-
-
-/* =========================================================
-   Check video time
-========================================================= */
-/*
-function checkVideoTime() {
-    if (!player || !currentStopPoints.length) return;
-
-    const state = player.getPlayerState();
-    if (state !== YT.PlayerState.PLAYING) return;
-
-    const currentTime = player.getCurrentTime();
-
-    // 如果用户向后拖动了进度条，允许之前的停点再次触发
-    if (currentTime < lastVideoTime - 1) {
-        triggeredIndices = new Set(
-            [...triggeredIndices].filter(
-                i => currentStopPoints[i].time < currentTime
-            )
-        );
-    }
-
-    // 检查是否“跨过”停点，而不是要求刚好落在停点附近
-    for (let i = 0; i < currentStopPoints.length; i++) {
-        const point = currentStopPoints[i];
-
-        if (
-            !triggeredIndices.has(i) &&
-            lastVideoTime < point.time &&
-            currentTime >= point.time
-        ) {
-            triggerQuiz(point, i);
-            break;
-        }
-    }
-
-    lastVideoTime = currentTime;
-}
-*/
-function checkVideoTime() {
-
-    if (!player) {
-
-        return;
-
-    }
-
-
-    if (
-        typeof player.getPlayerState !==
-        "function"
-    ) {
-
-        return;
-
-    }
-
-
-    if (
-        player.getPlayerState() !==
-        YT.PlayerState.PLAYING
-    ) {
-
-        return;
-
-    }
-
-
-    if (isPausedByQuiz) {
-
-        return;
-
-    }
-
-
-    const currentTime =
-        player.getCurrentTime();
-
-
-    for (
-        let index = 0;
-        index < currentStopPoints.length;
-        index++
-    ) {
-
-        const point =
-            currentStopPoints[index];
-
-
-        const time =
-            Number(point.time);
-
-
-        if (
-            !Number.isFinite(time)
-        ) {
-
-            continue;
-
+function loadYouTubeVideo(videoId) {
+    return new Promise(resolve => {
+        if (!youtubeApiReady) {
+            resolve();
+            return;
         }
 
-
-   
-
-        if (
-            currentTime >= time &&
-            currentTime < time + 0.5 &&
-            !triggeredIndices.has(index)
-        ) {
-
-            triggerQuiz(
-                point,
-                index
-            );
-
-
-            break;
-
+        if (!player) {
+            player = new YT.Player("youtube-player", {
+                videoId,
+                playerVars: {
+                    autoplay: 1,
+                    controls: 1,       // 允许老师使用原生控制栏（如果需要）
+                    rel: 0,
+                    modestbranding: 1,
+                    playsinline: 1,
+                    iv_load_policy: 3
+                },
+                events: {
+                    onReady: () => resolve()
+                }
+            });
+        } else {
+            player.loadVideoById(videoId);
+            resolve();
         }
-
-    }
-
-}
-
-
-
-/* =========================================================
-   Trigger interaction
-========================================================= */
-
-function triggerQuiz(
-    point,
-    index
-) {
-
-    isPausedByQuiz =
-        true;
-
-
-    /*
-     * 暂停 YouTube
-     */
-
-    player.pauseVideo();
-
-
-    /*
-     * 显示提问
-     */
-
-    quizBar.className =
-        "active";
-
-
-    quizText.innerHTML =
-        point.question ||
-        point.label ||
-        "Interact with the child.";
-
-
-    resumeBtn.disabled =
-        false;
-
-
-    /*
-     * 记录已经触发
-     */
-
-    triggeredIndices.add(
-        index
-    );
-
-
-    /*
-     * 右侧高亮
-     */
-
-    document
-        .querySelectorAll(".timeline-item")
-        .forEach(
-            item =>
-                item.classList.remove(
-                    "active"
-                )
-        );
-
-
-    const activeItem =
-        document.getElementById(
-            `timeline-${index}`
-        );
-
-
-    if (activeItem) {
-
-        activeItem.classList.add(
-            "active"
-        );
-
-
-        activeItem.scrollIntoView(
-            {
-                behavior: "smooth",
-                block: "nearest"
-            }
-        );
-
-    }
-
-}
-
-
-/* =========================================================
-   Continue playback
-========================================================= */
-
-function resumeVideo() {
-
-    if (!player) {
-
-        return;
-
-    }
-
-
-    clearQuizUI();
-
-    // 当前问题完成后，显示下一个互动问题
-    //renderNextQuestion();
-
-    player.playVideo();
-
-}
-
-
-/* =========================================================
-   Clear interaction state
-========================================================= */
-
-function clearQuizUI() {
-
-    quizBar.className =
-        "";
-
-
-    if (currentVideoId) {
-
-        quizText.innerHTML = `
-
-            🟢
-
-            <b>Video playing...</b>
-
-            <br>
-
-            Waiting for the next interaction point.
-
-        `;
-
-    } else {
-
-        quizText.innerHTML = `
-
-            🟢
-
-            <b>Select a video to begin</b>
-
-            <br>
-
-            Select a video from the left. The YouTube video will load automatically.
-
-        `;
-
-    }
-
-
-    resumeBtn.disabled =
-        true;
-
-
-    isPausedByQuiz =
-        false;
-renderNextQuestion();
-}
-
-
-function renderNextQuestion() {
-
-    if (!currentStopPoints.length) {
-        return;
-    }
-
-    const currentTime =
-        player
-            ? player.getCurrentTime()
-            : 0;
-
-    const nextIndex =
-        currentStopPoints.findIndex(
-            point =>
-                Number(point.time) > currentTime
-        );
-
-    if (nextIndex === -1) {
-
-        quizText.innerHTML = `
-            🟢
-            <b>All interactions completed</b>
-        `;
-
-        quizBar.className = "";
-        resumeBtn.disabled = true;
-
-        return;
-    }
-
-    const point =
-        currentStopPoints[nextIndex];
-
-    quizText.innerHTML = `
-        ${point.question || point.label || ""}
-    `;
-
-    quizBar.className = "";
-    resumeBtn.disabled = true;
-}
-
-/* =========================================================
-   渲染右侧Interaction Points
-========================================================= */
-
-/* =========================================================
-   渲染右侧Interaction Points（带序号与总数）
-========================================================= */
-function renderTimeline() {
-    timelineList.innerHTML = "";
-
-    // 1. 同步更新面板标题，直观展示总点位数量
-    const panelHeader = document.querySelector(".right-panel .panel-header");
-    if (panelHeader) {
-        panelHeader.innerHTML = `<span class="panel-header-icon">📌</span> Interaction Points (${currentStopPoints.length})`;
-    }
-
-    if (currentStopPoints.length === 0) {
-        timelineList.innerHTML = `
-            <li class="empty">
-                No interaction points are configured for this video.
-            </li>
-        `;
-        return;
-    }
-
-    currentStopPoints.forEach((point, index) => {
-        const li = document.createElement("li");
-        li.className = "timeline-item";
-        li.id = `timeline-${index}`;
-
-        const time = Number(point.time);
-
-        // 2. 在时间徽章前面加上序号（index + 1）
-        li.innerHTML = `
-            <div>
-                <span class="point-index">${index + 1}</span>
-                <span class="time-badge">
-                    ${formatTime(time)}
-                </span>
-                <span class="timeline-label">
-                    ${escapeHtml(point.label || "")}
-                </span>
-            </div>
-            <div class="item-preview">
-                Click to jump to this scene
-            </div>
-        `;
-
-        li.onclick = () => {
-            jumpToTime(time, index);
-        };
-
-        timelineList.appendChild(li);
     });
 }
 
-
-
-/* =========================================================
-   Jump to interaction point
-========================================================= */
-
-function jumpToTime(
-    seconds,
-    index
-) {
-
-    if (!player) {
-
-        return;
-
-    }
-
-
-
-
-
-    /*
-     * 跳回之前的时间点时，
-     * 允许该点再次触发。
-     *
-     * 保留比当前 index 更早的触发记录。
-     */
-
-    triggeredIndices =
-        new Set(
-            [...triggeredIndices]
-                .filter(
-                    i => i < index
-                )
-        );
-        
-    clearQuizUI();
-
-    player.seekTo(
-        Number(seconds),
-        true
-    );
-
-
-    player.playVideo();
-
-
-    /*
-     * 高亮右侧项目
-     */
-
-    document
-        .querySelectorAll(".timeline-item")
-        .forEach(
-            item =>
-                item.classList.remove(
-                    "active"
-                )
-        );
-
-
-    const item =
-        document.getElementById(
-            `timeline-${index}`
-        );
-
-
-    if (item) {
-
-        item.classList.add(
-            "active"
-        );
-
-    }
-
-}
-
-
-/* =========================================================
-   Format time
-========================================================= */
-
-function formatTime(
-    seconds
-) {
-
-    seconds =
-        Math.max(
-            0,
-            Math.floor(
-                Number(seconds) || 0
-            )
-        );
-
-
-    const minutes =
-        Math.floor(
-            seconds / 60
-        );
-
-
-    const secs =
-        seconds % 60;
-
-
-    return (
-
-        String(minutes)
-            .padStart(2, "0")
-
-        +
-
-        ":" +
-
-        String(secs)
-            .padStart(2, "0")
-
-    );
-
-}
-
-
-/* =========================================================
-   Format series name
-========================================================= */
-
-function formatSeriesName(
-    name
-) {
-
-    /*
-     * 如果目录叫：
-     *
-     * pororo
-     *
-     * 就显示：
-     *
-     * Pororo
-     *
-     * 如果你以后希望中文名称，
-     * 可以直接把目录命名成中文。
-     */
-
+function formatSeriesName(name) {
     const map = {
-
         "pororo": "Pororo",
         "peppa-pig": "Peppa Pig",
         "peppa": "Peppa Pig",
         "labrador": "Sheriff Labrador"
-
     };
-
-
     return map[name] || name;
-
 }
 
-
-/* =========================================================
-   Escape HTML
-========================================================= */
-
-function escapeHtml(
-    value
-) {
-
-    const div =
-        document.createElement("div");
-
-
-    div.textContent =
-        String(value ?? "");
-
-
+function escapeHtml(value) {
+    const div = document.createElement("div");
+    div.textContent = String(value ?? "");
     return div.innerHTML;
-
 }
 
-
-/* =========================================================
-   Keyboard controls
-========================================================= */
-window.addEventListener(
-    "keydown",
-    event => {
-
-        /*
-         * 输入框里不要拦截键盘
-         */
-        const tag =
-            document.activeElement?.tagName;
-
-        if (
-            tag === "INPUT" ||
-            tag === "TEXTAREA" ||
-            tag === "SELECT"
-        ) {
-            return;
-        }
-
-
-        /*
-         * 必须有 YouTube 播放器
-         */
-        if (!player) {
-            return;
-        }
-
-
-        /*
-         * 空格：播放 / 暂停
-         */
-        if (
-            event.code === "Space" ||
-            event.keyCode === 32
-        ) {
-
-            event.preventDefault();
-
-            const state =
-                player.getPlayerState();
-
-            if (
-                state ===
-                YT.PlayerState.PLAYING
-            ) {
-
-                player.pauseVideo();
-
-            } else {
-
-                player.playVideo();
-
-            }
-
-            return;
-        }
-
-
-        /*
-         * 左右方向键：后退 / 快进
-         */
-        if (
-            event.code === "ArrowLeft" ||
-            event.code === "ArrowRight"
-        ) {
-
-            event.preventDefault();
-
-            const currentTime =
-                player.getCurrentTime();
-
-            const step = 0.5;
-
-            let newTime;
-
-            if (
-                event.code === "ArrowLeft"
-            ) {
-
-                newTime =
-                    Math.max(
-                        0,
-                        currentTime - step
-                    );
-
-            } else {
-
-                const duration =
-                    player.getDuration();
-
-                newTime =
-                    Math.min(
-                        duration,
-                        currentTime + step
-                    );
-            }
-
-            player.seekTo(
-                newTime,
-                true
-            );
-
-            /*
-             * 同步停点检测的时间基准，
-             * 避免拖动后误触发旧停点
-             */
-            lastVideoTime = newTime;
-
-            return;
-        }
-
+/* 键盘操作：空格暂停/播放，左右方向键快进/快退 1 秒 */
+window.addEventListener("keydown", event => {
+    const tag = document.activeElement?.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") {
+        return;
     }
-);
-/*
-window.addEventListener(
-    "keydown",
-    event => {
+    if (!player || typeof player.getPlayerState !== "function") {
+        return;
+    }
 
-        if (
-            event.code !== "Space" &&
-            event.keyCode !== 32
-        ) {
-
-            return;
-
-        }
-
-
-
-
-        const tag =
-            document.activeElement
-                ?.tagName;
-
-
-        if (
-            tag === "INPUT" ||
-            tag === "TEXTAREA" ||
-            tag === "SELECT"
-        ) {
-
-            return;
-
-        }
-
-
+    if (event.code === "Space" || event.keyCode === 32) {
         event.preventDefault();
-
-
-        if (!player) {
-
-            return;
-
-        }
-
-
-        const state =
-            player.getPlayerState();
-
-
-        if (
-            state ===
-            YT.PlayerState.PLAYING
-        ) {
-
+        const state = player.getPlayerState();
+        if (state === YT.PlayerState.PLAYING) {
             player.pauseVideo();
-
         } else {
-
             player.playVideo();
-
         }
-
+        return;
     }
-);
-*/
 
-/* =========================================================
-   Start
-========================================================= */
+    if (event.code === "ArrowLeft" || event.code === "ArrowRight") {
+        event.preventDefault();
+        const currentTime = player.getCurrentTime();
+        const step = 1.0;
+        let newTime = event.code === "ArrowLeft" 
+            ? Math.max(0, currentTime - step)
+            : Math.min(player.getDuration(), currentTime + step);
+        player.seekTo(newTime, true);
+    }
+});
 
 init();
-
 </script>
 
 </body>
-
 </html>
