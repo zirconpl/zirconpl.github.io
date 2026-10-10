@@ -28,7 +28,7 @@
         .main-container {
             height: 100vh;
             display: grid;
-            grid-template-columns: 340px 1fr;
+            grid-template-columns: 320px 1fr;
             gap: 12px;
             padding: 12px;
             max-width: 1920px;
@@ -119,15 +119,18 @@
         }
 
         .video-item {
-            padding: 8px 10px;
+            padding: 10px 12px;
             border-radius: 6px;
             cursor: pointer;
             margin-bottom: 4px;
             font-size: 13px;
             line-height: 1.4;
-            color: #555;
+            color: #444;
             transition: all 0.15s;
             position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .video-item:hover {
@@ -145,34 +148,11 @@
             content: "";
             position: absolute;
             left: 0;
-            top: 6px;
-            bottom: 6px;
+            top: 8px;
+            bottom: 8px;
             width: 3px;
             border-radius: 2px;
             background: #1677ff;
-        }
-
-        .ep-badge {
-            display: inline-block;
-            background: #f0f0f0;
-            color: #555;
-            font-size: 11px;
-            font-weight: bold;
-            padding: 1px 6px;
-            border-radius: 4px;
-            margin-right: 6px;
-        }
-
-        .video-item.active .ep-badge {
-            background: #bae0ff;
-            color: #0958d9;
-        }
-
-        .video-id {
-            font-size: 10px;
-            color: #aaa;
-            margin-top: 2px;
-            font-family: monospace;
         }
 
         .video-container {
@@ -195,6 +175,18 @@
         #youtube-player iframe {
             width: 100% !important;
             height: 100% !important;
+        }
+
+        /* 顶部/中部点击遮罩，防止 iframe 捕获焦点导致快捷键失效 */
+        .video-click-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 48px);
+            z-index: 2;
+            cursor: pointer;
+            background: transparent;
         }
 
         .completion-banner {
@@ -256,6 +248,8 @@
 
     <div class="video-container">
         <div id="youtube-player"></div>
+        <!-- 点击该透明遮罩切换播放/暂停，并使键盘焦点停留在外层网页 -->
+        <div class="video-click-overlay" onclick="togglePlayPause()"></div>
         <div id="completionBanner" class="completion-banner">Playback finished. Waiting for teacher selection.</div>
     </div>
 </div>
@@ -268,7 +262,7 @@ const GITHUB_USER = "zirconpl";
 const GITHUB_REPO = "zirconpl.github.io";
 const GITHUB_BRANCH = "main";
 
-// 仅在此处列出系列名称和对应 JSON 路径，所有参数与视频列表均在 JSON 内维护
+// 对应仓库内的 JSON 配置文件路径
 const SERIES_MAP = {
     "Peppa Pig": "data/peppa.json",
     "Pororo": "data/pororo.json"
@@ -307,7 +301,7 @@ async function init() {
 }
 
 /* =========================================================
-   从 GitHub 读取 JSON 并解析出片头片尾参数及单集视频
+   从 GitHub 读取 JSON 列表
 ========================================================= */
 async function loadLibraryFromGitHub() {
     seriesList.innerHTML = "";
@@ -327,7 +321,6 @@ async function loadLibraryFromGitHub() {
             console.warn(`加载系列 ${seriesName} 失败:`, e);
         }
 
-        // 兼容处理：支持 videos 字段或直接传入数组
         const videoList = Array.isArray(config.videos) ? config.videos : (Array.isArray(config) ? config : []);
         renderSeries(seriesName, config, videoList);
     }
@@ -359,19 +352,13 @@ function renderSeries(seriesName, seriesConfig, videos) {
     const videoList = document.createElement("div");
     videoList.className = "video-list";
 
-    videos.forEach((video, index) => {
+    videos.forEach((video) => {
         const row = document.createElement("div");
         row.className = "video-item";
         row.dataset.id = video.id;
 
-        const epNum = index + 1;
-        row.innerHTML = `
-            <div>
-                <span class="ep-badge">#${epNum}</span>
-                <span>${escapeHtml(video.title)}</span>
-            </div>
-            <div class="video-id">${escapeHtml(video.id)}</div>
-        `;
+        // 仅保留标题，去除序号与 ID 显示
+        row.textContent = video.title || "";
 
         row.onclick = () => loadSingleVideo(video, seriesConfig, row);
         videoList.appendChild(row);
@@ -402,7 +389,7 @@ function renderSeries(seriesName, seriesConfig, videos) {
 }
 
 /* =========================================================
-   播放单独选中的视频（绑定该 JSON 中指定的跳过时间）
+   播放选中的视频
 ========================================================= */
 function loadSingleVideo(video, seriesConfig, element) {
     currentSeriesConfig = seriesConfig;
@@ -434,10 +421,28 @@ function loadSingleVideo(video, seriesConfig, element) {
         player.loadVideoById(video.id);
     }
 
+    window.focus();
     startTimeMonitor();
 }
 
+/* =========================================================
+   画面透明层点击：播放/暂停并锁定页面焦点
+========================================================= */
+function togglePlayPause() {
+    if (!player || typeof player.getPlayerState !== "function") return;
+    const state = player.getPlayerState();
+    if (state === YT.PlayerState.PLAYING) {
+        player.pauseVideo();
+    } else {
+        player.playVideo();
+    }
+    window.focus();
+}
+
 function handlePlayerStateChange(event) {
+    // 每次状态变更（点击控件暂停/播放），夺回键盘焦点，防止微调快捷键失效
+    window.focus();
+
     if (event.data === YT.PlayerState.ENDED) {
         stopPlayback();
         return;
@@ -446,7 +451,6 @@ function handlePlayerStateChange(event) {
     if (event.data === YT.PlayerState.PLAYING) {
         hideCompletionBanner();
 
-        // 根据该系列 JSON 配置的 skipIntro 跳过片头
         const introSeconds = Number(currentSeriesConfig?.skipIntro) || 0;
         if (!skipIntroApplied && introSeconds > 0) {
             const currentTime = player.getCurrentTime();
@@ -463,7 +467,7 @@ function handlePlayerStateChange(event) {
 }
 
 /* =========================================================
-   时间监听：按 JSON 中的 mainDuration 或 skipOutro 自动停止
+   时间监听：到点停止
 ========================================================= */
 function startTimeMonitor() {
     if (timeMonitorTimer) clearInterval(timeMonitorTimer);
@@ -479,13 +483,13 @@ function startTimeMonitor() {
         const currentTime = player.getCurrentTime();
         const duration = player.getDuration();
 
-        // 1. 若配置了固定正片时长（如 15s + 270s = 285s 即刻停止）
+        // 达到固定正片时长直接停止
         if (mainDuration > 0 && currentTime >= introSeconds + mainDuration) {
             stopPlayback();
             return;
         }
 
-        // 2. 若配置了片尾倒数秒数，在还剩 outroSeconds 时停止
+        // 距离片尾还剩指定秒数时停止
         if (outroSeconds > 0 && duration > 0 && currentTime >= duration - outroSeconds) {
             stopPlayback();
             return;
@@ -507,7 +511,9 @@ function hideCompletionBanner() {
     completionBanner.style.display = "none";
 }
 
-/* 键盘快捷键：空格暂停/播放，左右方向键微调 0.5 秒 */
+/* =========================================================
+   键盘快捷键：空格暂停/播放，左右方向键微调 0.5 秒
+========================================================= */
 window.addEventListener("keydown", event => {
     const tag = document.activeElement?.tagName;
     if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") {
@@ -544,12 +550,6 @@ window.addEventListener("keydown", event => {
         player.seekTo(newTime, true);
     }
 });
-
-function escapeHtml(value) {
-    const div = document.createElement("div");
-    div.textContent = String(value ?? "");
-    return div.innerHTML;
-}
 
 init();
 </script>
