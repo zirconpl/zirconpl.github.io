@@ -28,7 +28,7 @@
         .main-container {
             height: 100vh;
             display: grid;
-            grid-template-columns: 320px 1fr;
+            grid-template-columns: 340px 1fr;
             gap: 12px;
             padding: 12px;
             max-width: 1920px;
@@ -65,7 +65,7 @@
         }
 
         .series-item {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .series-header {
@@ -111,7 +111,7 @@
 
         .video-list {
             display: none;
-            padding: 0 0 4px 16px;
+            padding: 0 0 4px 12px;
         }
 
         .video-list.open {
@@ -122,7 +122,7 @@
             padding: 8px 10px;
             border-radius: 6px;
             cursor: pointer;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
             font-size: 13px;
             line-height: 1.4;
             color: #555;
@@ -152,35 +152,27 @@
             background: #1677ff;
         }
 
-        .badge {
+        .ep-badge {
             display: inline-block;
-            font-size: 10px;
-            padding: 1px 4px;
-            border-radius: 3px;
-            margin-right: 4px;
-            font-weight: normal;
+            background: #f0f0f0;
+            color: #555;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 1px 6px;
+            border-radius: 4px;
+            margin-right: 6px;
         }
 
-        .badge-playlist {
-            background: #ffe7ba;
-            color: #d46b08;
-        }
-
-        .badge-video {
-            background: #e6f4ff;
-            color: #1677ff;
-        }
-
-        .badge-filter {
-            background: #fff1f0;
-            color: #cf1322;
+        .video-item.active .ep-badge {
+            background: #bae0ff;
+            color: #0958d9;
         }
 
         .video-id {
             font-size: 10px;
             color: #aaa;
             margin-top: 2px;
-            word-break: break-all;
+            font-family: monospace;
         }
 
         .video-container {
@@ -270,49 +262,16 @@
 
 <script>
 /* =========================================================
-   配置区域：
-   - 支持直接在播放列表中配置 exclude 或 only
-   - 格式支持：
-       exclude: "1-5"        // 排除播放列表里的第 1 到第 5 个视频
-       exclude: "1-5, 8, 12" // 排除 1~5 集、第 8 集、第 12 集
-       only: "6-20"          // 仅播放播放列表中的第 6 到 20 集
+   GitHub 基础配置与系列文件映射
 ========================================================= */
-const SERIES_CONFIG = {
-    "Peppa Pig": {
-        skipIntro: 15,       // 跳过片头 15 秒
-        mainDuration: 270,   // 正片固定 4分30秒 (270s)
-        items: [
-            {
-                title: "Peppa Pig 经典合集 (排除 1-5 集)",
-                id: "PLhBNaOObFw5k5iVOeruWfUTX8mnaFdYtQ",
-                type: "playlist",
-                exclude: "1-5" // 👈 排除这个播放列表里的第 1 到第 5 个视频
-            },
-            {
-                title: "Peppa Pig 选播版 (仅播 6-10 集)",
-                id: "PLhBNaOObFw5k5iVOeruWfUTX8mnaFdYtQ",
-                type: "playlist",
-                only: "6-10"   // 👈 只播该列表里的第 6 到第 10 个视频
-            },
-            {
-                title: "Muddy Puddles (单集)",
-                id: "m4Z0fQvAeqk",
-                type: "video"
-            }
-        ]
-    },
-    "Pororo": {
-        skipIntro: 20,
-        mainDuration: 0,
-        skipOutro: 15,
-        items: [
-            {
-                title: "Pororo 英文启蒙季",
-                id: "dQw4w9WgXcQ",
-                type: "video"
-            }
-        ]
-    }
+const GITHUB_USER = "zirconpl";
+const GITHUB_REPO = "zirconpl.github.io";
+const GITHUB_BRANCH = "main";
+
+// 仅在此处列出系列名称和对应 JSON 路径，所有参数与视频列表均在 JSON 内维护
+const SERIES_MAP = {
+    "Peppa Pig": "data/peppa.json",
+    "Pororo": "data/pororo.json"
 };
 
 const seriesList = document.getElementById("seriesList");
@@ -320,80 +279,10 @@ const completionBanner = document.getElementById("completionBanner");
 
 let player = null;
 let youtubeApiReady = false;
-let currentItem = null;
 let currentSeriesConfig = null;
 let skipIntroApplied = false;
 let timeMonitorTimer = null;
 const expandedSeries = new Set();
-
-/* =========================================================
-   解析 "1-5, 8, 11-13" 格式的数字范围
-========================================================= */
-function parseRangeString(rangeStr) {
-    if (!rangeStr || typeof rangeStr !== "string") return new Set();
-    const result = new Set();
-    const parts = rangeStr.split(",");
-    for (let part of parts) {
-        part = part.trim();
-        if (!part) continue;
-        if (part.includes("-")) {
-            const [startStr, endStr] = part.split("-");
-            const start = parseInt(startStr, 10);
-            const end = parseInt(endStr, 10);
-            if (!isNaN(start) && !isNaN(end)) {
-                for (let i = Math.min(start, end); i <= Math.max(start, end); i++) {
-                    result.add(i);
-                }
-            }
-        } else {
-            const num = parseInt(part, 10);
-            if (!isNaN(num)) result.add(num);
-        }
-    }
-    return result;
-}
-
-/* =========================================================
-   拉取播放列表中的视频 ID 清单并执行序号过滤
-========================================================= */
-async function getFilteredPlaylistVideoIds(playlistId, excludeStr, onlyStr) {
-    try {
-        // 利用 YouTube 公开 RSS Feed 获取该播放列表内的具体视频 ID 列表
-        const feedUrl = `https://www.youtube.com/feeds/videos.xml?playlist_id=${playlistId}`;
-        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(feedUrl)}`;
-        
-        const res = await fetch(proxyUrl);
-        if (!res.ok) throw new Error("Fetch feed failed");
-        
-        const xmlText = await res.text();
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xmlText, "text/xml");
-        const videoIdNodes = xmlDoc.getElementsByTagName("yt:videoId");
-
-        const allIds = [];
-        for (let i = 0; i < videoIdNodes.length; i++) {
-            allIds.push(videoIdNodes[i].textContent.trim());
-        }
-
-        if (allIds.length === 0) return null; // 解析失败时回退
-
-        const excludeSet = parseRangeString(excludeStr);
-        const onlySet = parseRangeString(onlyStr);
-
-        const filteredIds = [];
-        allIds.forEach((id, index) => {
-            const seq = index + 1; // 序号从 1 开始
-            if (excludeSet.size > 0 && excludeSet.has(seq)) return;
-            if (onlySet.size > 0 && !onlySet.has(seq)) return;
-            filteredIds.push(id);
-        });
-
-        return filteredIds;
-    } catch (e) {
-        console.warn("无法解析播放列表明细，将采用默认播放：", e);
-        return null;
-    }
-}
 
 function loadYouTubeAPI() {
     return new Promise((resolve) => {
@@ -414,113 +303,122 @@ function loadYouTubeAPI() {
 
 async function init() {
     await loadYouTubeAPI();
-    renderLibrary();
+    await loadLibraryFromGitHub();
 }
 
-function renderLibrary() {
+/* =========================================================
+   从 GitHub 读取 JSON 并解析出片头片尾参数及单集视频
+========================================================= */
+async function loadLibraryFromGitHub() {
     seriesList.innerHTML = "";
 
-    Object.keys(SERIES_CONFIG).forEach(seriesName => {
-        const seriesData = SERIES_CONFIG[seriesName];
-        const items = seriesData.items || [];
-
-        const seriesItem = document.createElement("div");
-        seriesItem.className = "series-item";
-
-        const header = document.createElement("div");
-        header.className = "series-header";
-
-        const arrow = document.createElement("span");
-        arrow.className = "series-arrow";
-        arrow.textContent = "▶";
-
-        const name = document.createElement("span");
-        name.className = "series-name";
-        name.textContent = seriesName;
-
-        const count = document.createElement("span");
-        count.className = "series-count";
-        count.textContent = items.length;
-
-        header.appendChild(arrow);
-        header.appendChild(name);
-        header.appendChild(count);
-
-        const videoList = document.createElement("div");
-        videoList.className = "video-list";
-
-        items.forEach(item => {
-            const row = document.createElement("div");
-            row.className = "video-item";
-            row.dataset.id = item.id;
-
-            const isPlaylist = item.type === "playlist";
-            const badgeClass = isPlaylist ? "badge-playlist" : "badge-video";
-            const badgeText = isPlaylist ? "Playlist" : "Video";
-            
-            let filterTip = "";
-            if (item.exclude) filterTip = `<span class="badge badge-filter">排除 ${item.exclude}</span>`;
-            if (item.only) filterTip = `<span class="badge badge-filter">仅播 ${item.only}</span>`;
-
-            row.innerHTML = `
-                <div>
-                    <span class="badge ${badgeClass}">${badgeText}</span>
-                    ${filterTip}
-                    <span>${escapeHtml(item.title)}</span>
-                </div>
-                <div class="video-id">${escapeHtml(item.id)}</div>
-            `;
-
-            row.onclick = () => loadMedia(item, seriesData, row);
-            videoList.appendChild(row);
-        });
-
-        header.onclick = () => {
-            const isOpen = videoList.classList.contains("open");
-            if (isOpen) {
-                videoList.classList.remove("open");
-                arrow.classList.remove("open");
-                expandedSeries.delete(seriesName);
+    for (const [seriesName, jsonPath] of Object.entries(SERIES_MAP)) {
+        let config = { videos: [], skipIntro: 0, mainDuration: 0, skipOutro: 0 };
+        try {
+            const url = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${jsonPath}`;
+            const res = await fetch(url, { cache: "no-store" });
+            if (res.ok) {
+                config = await res.json();
             } else {
-                videoList.classList.add("open");
-                arrow.classList.add("open");
-                expandedSeries.add(seriesName);
+                const localRes = await fetch(`./${jsonPath}`, { cache: "no-store" });
+                if (localRes.ok) config = await localRes.json();
             }
-        };
+        } catch (e) {
+            console.warn(`加载系列 ${seriesName} 失败:`, e);
+        }
 
-        if (expandedSeries.size === 0) {
+        // 兼容处理：支持 videos 字段或直接传入数组
+        const videoList = Array.isArray(config.videos) ? config.videos : (Array.isArray(config) ? config : []);
+        renderSeries(seriesName, config, videoList);
+    }
+}
+
+function renderSeries(seriesName, seriesConfig, videos) {
+    const seriesItem = document.createElement("div");
+    seriesItem.className = "series-item";
+
+    const header = document.createElement("div");
+    header.className = "series-header";
+
+    const arrow = document.createElement("span");
+    arrow.className = "series-arrow";
+    arrow.textContent = "▶";
+
+    const name = document.createElement("span");
+    name.className = "series-name";
+    name.textContent = seriesName;
+
+    const count = document.createElement("span");
+    count.className = "series-count";
+    count.textContent = `${videos.length} eps`;
+
+    header.appendChild(arrow);
+    header.appendChild(name);
+    header.appendChild(count);
+
+    const videoList = document.createElement("div");
+    videoList.className = "video-list";
+
+    videos.forEach((video, index) => {
+        const row = document.createElement("div");
+        row.className = "video-item";
+        row.dataset.id = video.id;
+
+        const epNum = index + 1;
+        row.innerHTML = `
+            <div>
+                <span class="ep-badge">#${epNum}</span>
+                <span>${escapeHtml(video.title)}</span>
+            </div>
+            <div class="video-id">${escapeHtml(video.id)}</div>
+        `;
+
+        row.onclick = () => loadSingleVideo(video, seriesConfig, row);
+        videoList.appendChild(row);
+    });
+
+    header.onclick = () => {
+        const isOpen = videoList.classList.contains("open");
+        if (isOpen) {
+            videoList.classList.remove("open");
+            arrow.classList.remove("open");
+            expandedSeries.delete(seriesName);
+        } else {
             videoList.classList.add("open");
             arrow.classList.add("open");
             expandedSeries.add(seriesName);
         }
+    };
 
-        seriesItem.appendChild(header);
-        seriesItem.appendChild(videoList);
-        seriesList.appendChild(seriesItem);
-    });
+    if (expandedSeries.size === 0) {
+        videoList.classList.add("open");
+        arrow.classList.add("open");
+        expandedSeries.add(seriesName);
+    }
+
+    seriesItem.appendChild(header);
+    seriesItem.appendChild(videoList);
+    seriesList.appendChild(seriesItem);
 }
 
-async function loadMedia(item, seriesData, element) {
-    currentItem = item;
-    currentSeriesConfig = seriesData;
+/* =========================================================
+   播放单独选中的视频（绑定该 JSON 中指定的跳过时间）
+========================================================= */
+function loadSingleVideo(video, seriesConfig, element) {
+    currentSeriesConfig = seriesConfig;
     skipIntroApplied = false;
     hideCompletionBanner();
 
     document.querySelectorAll(".video-item").forEach(el => el.classList.remove("active"));
     if (element) element.classList.add("active");
 
-    document.title = `${item.title} - English Learning Classroom`;
+    document.title = `${video.title} - English Classroom`;
 
     if (!youtubeApiReady) return;
 
-    // 如果指定了播放列表并且设置了 exclude 或 only，则先动态获取过滤后的视频 ID 数组
-    let filteredVideoIds = null;
-    if (item.type === "playlist" && (item.exclude || item.only)) {
-        filteredVideoIds = await getFilteredPlaylistVideoIds(item.id, item.exclude, item.only);
-    }
-
     if (!player) {
-        const playerConfig = {
+        player = new YT.Player("youtube-player", {
+            videoId: video.id,
             playerVars: {
                 autoplay: 1,
                 controls: 1,
@@ -531,40 +429,9 @@ async function loadMedia(item, seriesData, element) {
             events: {
                 onStateChange: handlePlayerStateChange
             }
-        };
-
-        if (filteredVideoIds && filteredVideoIds.length > 0) {
-            // 用过滤后的视频列表数组直接初始化播放列表
-            player = new YT.Player("youtube-player", {
-                ...playerConfig,
-                events: {
-                    ...playerConfig.events,
-                    onReady: (e) => {
-                        e.target.loadPlaylist(filteredVideoIds, 0);
-                    }
-                }
-            });
-        } else if (item.type === "playlist") {
-            playerConfig.playerVars.listType = "playlist";
-            playerConfig.playerVars.list = item.id;
-            player = new YT.Player("youtube-player", playerConfig);
-        } else {
-            playerConfig.videoId = item.id;
-            player = new YT.Player("youtube-player", playerConfig);
-        }
+        });
     } else {
-        if (filteredVideoIds && filteredVideoIds.length > 0) {
-            // 直接给现有播放器喂过滤后的纯净视频 ID 数组
-            player.loadPlaylist(filteredVideoIds, 0);
-        } else if (item.type === "playlist") {
-            player.loadPlaylist({
-                list: item.id,
-                listType: "playlist",
-                index: 0
-            });
-        } else {
-            player.loadVideoById(item.id);
-        }
+        player.loadVideoById(video.id);
     }
 
     startTimeMonitor();
@@ -572,14 +439,15 @@ async function loadMedia(item, seriesData, element) {
 
 function handlePlayerStateChange(event) {
     if (event.data === YT.PlayerState.ENDED) {
-        stopAutoPlay();
+        stopPlayback();
         return;
     }
 
     if (event.data === YT.PlayerState.PLAYING) {
         hideCompletionBanner();
 
-        const introSeconds = currentSeriesConfig?.skipIntro || 0;
+        // 根据该系列 JSON 配置的 skipIntro 跳过片头
+        const introSeconds = Number(currentSeriesConfig?.skipIntro) || 0;
         if (!skipIntroApplied && introSeconds > 0) {
             const currentTime = player.getCurrentTime();
             if (currentTime < introSeconds) {
@@ -594,6 +462,9 @@ function handlePlayerStateChange(event) {
     }
 }
 
+/* =========================================================
+   时间监听：按 JSON 中的 mainDuration 或 skipOutro 自动停止
+========================================================= */
 function startTimeMonitor() {
     if (timeMonitorTimer) clearInterval(timeMonitorTimer);
 
@@ -601,26 +472,28 @@ function startTimeMonitor() {
         if (!player || typeof player.getPlayerState !== "function") return;
         if (player.getPlayerState() !== YT.PlayerState.PLAYING) return;
 
-        const introSeconds = currentSeriesConfig?.skipIntro || 0;
-        const mainDuration = currentSeriesConfig?.mainDuration || 0;
-        const outroSeconds = currentSeriesConfig?.skipOutro || 0;
+        const introSeconds = Number(currentSeriesConfig?.skipIntro) || 0;
+        const mainDuration = Number(currentSeriesConfig?.mainDuration) || 0;
+        const outroSeconds = Number(currentSeriesConfig?.skipOutro) || 0;
 
         const currentTime = player.getCurrentTime();
         const duration = player.getDuration();
 
+        // 1. 若配置了固定正片时长（如 15s + 270s = 285s 即刻停止）
         if (mainDuration > 0 && currentTime >= introSeconds + mainDuration) {
-            stopAutoPlay();
+            stopPlayback();
             return;
         }
 
+        // 2. 若配置了片尾倒数秒数，在还剩 outroSeconds 时停止
         if (outroSeconds > 0 && duration > 0 && currentTime >= duration - outroSeconds) {
-            stopAutoPlay();
+            stopPlayback();
             return;
         }
     }, 250);
 }
 
-function stopAutoPlay() {
+function stopPlayback() {
     if (!player) return;
     player.pauseVideo();
     showCompletionBanner();
@@ -634,7 +507,7 @@ function hideCompletionBanner() {
     completionBanner.style.display = "none";
 }
 
-/* 快捷键：空格暂停/播放，左右键微调 0.5 秒 */
+/* 键盘快捷键：空格暂停/播放，左右方向键微调 0.5 秒 */
 window.addEventListener("keydown", event => {
     const tag = document.activeElement?.tagName;
     if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") {
