@@ -1,0 +1,9 @@
+{
+  "skipIntro": 20,
+  "mainDuration": 0,
+  "skipOutro": 15,
+  "videos": [
+    { "_comment": "如果不要某一集，直接删掉该行即可", "id": "dQw4w9WgXcQ", "title": "Episode 1 - We are Friends" },
+    { "id": "3JZ_D3ELwOQ", "title": "Episode 2 - It's Okay" }
+  ]
+}
