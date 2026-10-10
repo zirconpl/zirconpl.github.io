@@ -152,17 +152,6 @@
             background: #1677ff;
         }
 
-        .index-badge {
-            display: inline-block;
-            background: #f0f0f0;
-            color: #666;
-            font-size: 10px;
-            font-weight: 600;
-            padding: 1px 5px;
-            border-radius: 3px;
-            margin-right: 4px;
-        }
-
         .badge {
             display: inline-block;
             font-size: 10px;
@@ -180,6 +169,11 @@
         .badge-video {
             background: #e6f4ff;
             color: #1677ff;
+        }
+
+        .badge-filter {
+            background: #fff1f0;
+            color: #cf1322;
         }
 
         .video-id {
@@ -277,36 +271,32 @@
 <script>
 /* =========================================================
    配置区域：
-   - exclude: 排除的序号，支持范围如 "1-5", "2, 4-6, 10"（从 1 开始计数）
-   - only: 仅播放这些序号，支持如 "1-10", "12, 15-20"（二者选其一即可）
-   - skipIntro: 跳过片头秒数
-   - mainDuration: 固定正片时长（秒数，播完即停，例如 270 秒）
+   - 支持直接在播放列表中配置 exclude 或 only
+   - 格式支持：
+       exclude: "1-5"        // 排除播放列表里的第 1 到第 5 个视频
+       exclude: "1-5, 8, 12" // 排除 1~5 集、第 8 集、第 12 集
+       only: "6-20"          // 仅播放播放列表中的第 6 到 20 集
 ========================================================= */
 const SERIES_CONFIG = {
     "Peppa Pig": {
-        skipIntro: 15,
-        mainDuration: 270,    // 固定 4分30秒 后暂停
-        exclude: "1-3, 5", // 示例：排除第 1 到第 3 集和第 5 集
-        // only: "1-10",     // 示例：只保留第 1 到第 10 集
+        skipIntro: 15,       // 跳过片头 15 秒
+        mainDuration: 270,   // 正片固定 4分30秒 (270s)
         items: [
             {
-                title: "Peppa Pig 经典合集 (播放列表)",
+                title: "Peppa Pig 经典合集 (排除 1-5 集)",
                 id: "PLhBNaOObFw5k5iVOeruWfUTX8mnaFdYtQ",
-                type: "playlist"
+                type: "playlist",
+                exclude: "1-5" // 👈 排除这个播放列表里的第 1 到第 5 个视频
+            },
+            {
+                title: "Peppa Pig 选播版 (仅播 6-10 集)",
+                id: "PLhBNaOObFw5k5iVOeruWfUTX8mnaFdYtQ",
+                type: "playlist",
+                only: "6-10"   // 👈 只播该列表里的第 6 到第 10 个视频
             },
             {
                 title: "Muddy Puddles (单集)",
                 id: "m4Z0fQvAeqk",
-                type: "video"
-            },
-            {
-                title: "Mr Dinosaur is Lost (单集)",
-                id: "2bcfB5m-mO4",
-                type: "video"
-            },
-            {
-                title: "Best Friend (单集)",
-                id: "K6kK30x53Gk",
                 type: "video"
             }
         ]
@@ -337,7 +327,7 @@ let timeMonitorTimer = null;
 const expandedSeries = new Set();
 
 /* =========================================================
-   辅助函数：解析 "1-5, 8, 11-13" 格式的数字范围
+   解析 "1-5, 8, 11-13" 格式的数字范围
 ========================================================= */
 function parseRangeString(rangeStr) {
     if (!rangeStr || typeof rangeStr !== "string") return new Set();
@@ -361,6 +351,48 @@ function parseRangeString(rangeStr) {
         }
     }
     return result;
+}
+
+/* =========================================================
+   拉取播放列表中的视频 ID 清单并执行序号过滤
+========================================================= */
+async function getFilteredPlaylistVideoIds(playlistId, excludeStr, onlyStr) {
+    try {
+        // 利用 YouTube 公开 RSS Feed 获取该播放列表内的具体视频 ID 列表
+        const feedUrl = `https://www.youtube.com/feeds/videos.xml?playlist_id=${playlistId}`;
+        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(feedUrl)}`;
+        
+        const res = await fetch(proxyUrl);
+        if (!res.ok) throw new Error("Fetch feed failed");
+        
+        const xmlText = await res.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+        const videoIdNodes = xmlDoc.getElementsByTagName("yt:videoId");
+
+        const allIds = [];
+        for (let i = 0; i < videoIdNodes.length; i++) {
+            allIds.push(videoIdNodes[i].textContent.trim());
+        }
+
+        if (allIds.length === 0) return null; // 解析失败时回退
+
+        const excludeSet = parseRangeString(excludeStr);
+        const onlySet = parseRangeString(onlyStr);
+
+        const filteredIds = [];
+        allIds.forEach((id, index) => {
+            const seq = index + 1; // 序号从 1 开始
+            if (excludeSet.size > 0 && excludeSet.has(seq)) return;
+            if (onlySet.size > 0 && !onlySet.has(seq)) return;
+            filteredIds.push(id);
+        });
+
+        return filteredIds;
+    } catch (e) {
+        console.warn("无法解析播放列表明细，将采用默认播放：", e);
+        return null;
+    }
 }
 
 function loadYouTubeAPI() {
@@ -390,23 +422,7 @@ function renderLibrary() {
 
     Object.keys(SERIES_CONFIG).forEach(seriesName => {
         const seriesData = SERIES_CONFIG[seriesName];
-        const rawItems = seriesData.items || [];
-
-        // 序号过滤（按序号 1, 2, 3... 对应）
-        const excludeSet = parseRangeString(seriesData.exclude);
-        const onlySet = parseRangeString(seriesData.only);
-
-        const items = [];
-        rawItems.forEach((item, idx) => {
-            const itemNumber = idx + 1; // 序号从 1 开始
-            if (excludeSet.size > 0 && excludeSet.has(itemNumber)) {
-                return; // 被排除，跳过
-            }
-            if (onlySet.size > 0 && !onlySet.has(itemNumber)) {
-                return; // 不在指定范围内，跳过
-            }
-            items.push({ ...item, originalIndex: itemNumber });
-        });
+        const items = seriesData.items || [];
 
         const seriesItem = document.createElement("div");
         seriesItem.className = "series-item";
@@ -441,11 +457,15 @@ function renderLibrary() {
             const isPlaylist = item.type === "playlist";
             const badgeClass = isPlaylist ? "badge-playlist" : "badge-video";
             const badgeText = isPlaylist ? "Playlist" : "Video";
+            
+            let filterTip = "";
+            if (item.exclude) filterTip = `<span class="badge badge-filter">排除 ${item.exclude}</span>`;
+            if (item.only) filterTip = `<span class="badge badge-filter">仅播 ${item.only}</span>`;
 
             row.innerHTML = `
                 <div>
-                    <span class="index-badge">#${item.originalIndex}</span>
                     <span class="badge ${badgeClass}">${badgeText}</span>
+                    ${filterTip}
                     <span>${escapeHtml(item.title)}</span>
                 </div>
                 <div class="video-id">${escapeHtml(item.id)}</div>
@@ -480,7 +500,7 @@ function renderLibrary() {
     });
 }
 
-function loadMedia(item, seriesData, element) {
+async function loadMedia(item, seriesData, element) {
     currentItem = item;
     currentSeriesConfig = seriesData;
     skipIntroApplied = false;
@@ -492,6 +512,12 @@ function loadMedia(item, seriesData, element) {
     document.title = `${item.title} - English Learning Classroom`;
 
     if (!youtubeApiReady) return;
+
+    // 如果指定了播放列表并且设置了 exclude 或 only，则先动态获取过滤后的视频 ID 数组
+    let filteredVideoIds = null;
+    if (item.type === "playlist" && (item.exclude || item.only)) {
+        filteredVideoIds = await getFilteredPlaylistVideoIds(item.id, item.exclude, item.only);
+    }
 
     if (!player) {
         const playerConfig = {
@@ -507,16 +533,30 @@ function loadMedia(item, seriesData, element) {
             }
         };
 
-        if (item.type === "playlist") {
+        if (filteredVideoIds && filteredVideoIds.length > 0) {
+            // 用过滤后的视频列表数组直接初始化播放列表
+            player = new YT.Player("youtube-player", {
+                ...playerConfig,
+                events: {
+                    ...playerConfig.events,
+                    onReady: (e) => {
+                        e.target.loadPlaylist(filteredVideoIds, 0);
+                    }
+                }
+            });
+        } else if (item.type === "playlist") {
             playerConfig.playerVars.listType = "playlist";
             playerConfig.playerVars.list = item.id;
+            player = new YT.Player("youtube-player", playerConfig);
         } else {
             playerConfig.videoId = item.id;
+            player = new YT.Player("youtube-player", playerConfig);
         }
-
-        player = new YT.Player("youtube-player", playerConfig);
     } else {
-        if (item.type === "playlist") {
+        if (filteredVideoIds && filteredVideoIds.length > 0) {
+            // 直接给现有播放器喂过滤后的纯净视频 ID 数组
+            player.loadPlaylist(filteredVideoIds, 0);
+        } else if (item.type === "playlist") {
             player.loadPlaylist({
                 list: item.id,
                 listType: "playlist",
@@ -594,7 +634,7 @@ function hideCompletionBanner() {
     completionBanner.style.display = "none";
 }
 
-/* 快捷键：空格暂停/播放，左右键步进 0.5 秒 */
+/* 快捷键：空格暂停/播放，左右键微调 0.5 秒 */
 window.addEventListener("keydown", event => {
     const tag = document.activeElement?.tagName;
     if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") {
