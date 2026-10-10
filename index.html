@@ -138,6 +138,7 @@
             color: #1677ff;
         }
 
+        /* 选中播放时的状态 */
         .video-item.active {
             background: #e6f4ff;
             color: #1677ff;
@@ -153,6 +154,26 @@
             width: 3px;
             border-radius: 2px;
             background: #1677ff;
+        }
+
+        /* 看过 (watched: true) 的标红样式 */
+        .video-item.watched {
+            color: #cf1322 !important;
+            font-weight: 500;
+        }
+
+        .video-item.watched:hover {
+            background: #fff1f0;
+            color: #f5222d !important;
+        }
+
+        .video-item.watched.active {
+            background: #ffe8e6;
+            color: #cf1322 !important;
+        }
+
+        .video-item.watched.active::before {
+            background: #cf1322;
         }
 
         .video-container {
@@ -234,7 +255,6 @@
         </div>
     </div>
 
-    <!-- 播放器主体：彻底移除遮挡时间轴的浮层 -->
     <div class="video-container" id="videoBox">
         <div id="youtube-player"></div>
         <div id="completionBanner" class="completion-banner">Playback finished. Waiting for teacher selection.</div>
@@ -343,6 +363,12 @@ function renderSeries(seriesName, seriesConfig, videos) {
         const row = document.createElement("div");
         row.className = "video-item";
         row.dataset.id = video.id;
+
+        // 如果配置了 watched: true，添加 watched class 样式标红
+        if (video.watched === true) {
+            row.classList.add("watched");
+        }
+
         row.textContent = video.title || "";
 
         row.onclick = () => loadSingleVideo(video, seriesConfig, row);
@@ -411,7 +437,6 @@ function loadSingleVideo(video, seriesConfig, element) {
 }
 
 function handlePlayerStateChange(event) {
-    // 点击控件播放/暂停后，延迟 100ms 自动将键盘焦点夺回给页面
     setTimeout(() => {
         window.focus();
     }, 100);
@@ -439,9 +464,7 @@ function handlePlayerStateChange(event) {
     }
 }
 
-/* =========================================================
-   鼠标离开播放器区域时，自动聚焦回主网页
-========================================================= */
+/* 焦点自动捕获 */
 videoBox.addEventListener("mouseleave", () => {
     window.focus();
 });
@@ -494,9 +517,7 @@ function hideCompletionBanner() {
     completionBanner.style.display = "none";
 }
 
-/* =========================================================
-   键盘快捷键：空格暂停/播放，左右方向键微调 0.5 秒
-========================================================= */
+/* 键盘快捷键：空格暂停/播放，左右方向键微调 0.5 秒 */
 window.addEventListener("keydown", event => {
     const tag = document.activeElement?.tagName;
     if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") {
