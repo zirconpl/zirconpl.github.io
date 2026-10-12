@@ -1383,7 +1383,7 @@ function createVideoItem(
     item.innerHTML = `
 
         <div>
-            ${watchedIcon}<span class="video-title-text">${escapeHtml(video.title)}</span>
+            <span class="video-title-text">${escapeHtml(video.title)}</span>
         </div>
 
         <div class="video-id">
@@ -1507,7 +1507,7 @@ function loadYouTubeVideo(
 
                                 autoplay: 1,
 
-                                controls: 1,
+                                controls: 0,
 
                                 rel: 0,
 
