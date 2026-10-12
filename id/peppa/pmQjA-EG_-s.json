@@ -1,0 +1,90 @@
+{
+  "title": "The Rainbow",
+  "stopPoints": [
+    {
+      "time": 21.3,
+      "label": "Driving to the mountains",
+      "question": "<b>Question (Observation):</b> 'Where are they going for a drive?'<br><b>Guidance:</b> 'They are going to the mountains!'"
+    },
+    {
+      "time": 43.6,
+      "label": "George's favorite color",
+      "question": "<b>Question (Colors):</b> 'What is George's favorite color?'<br><b>Guidance:</b> 'His favorite color is blue!'"
+    },
+    {
+      "time": 54.4,
+      "label": "Candy Cat's car",
+      "question": "<b>Question (Observation):</b> 'What color is Candy Cat's car?'<br><b>Guidance:</b> 'It is a green car.'"
+    },
+    {
+      "time": 68.5,
+      "label": "Danny Dog's truck",
+      "question": "<b>Question (Colors):</b> 'Look at Danny Dog's truck. Is it red or orange?'<br><b>Guidance:</b> 'It is orange!'"
+    },
+    {
+      "time": 86.0,
+      "label": "Suzy Sheep's car",
+      "question": "<b>Question (Yes/No):</b> 'Is Suzy Sheep in a blue car?'<br><b>Options:</b> 'A) Yes, she is. B) No, she isn\\'t.'<br><b>Guidance:</b> 'Yes, she is! George wins this time.'"
+    },
+    {
+      "time": 103.9,
+      "label": "Daddy Pig's car",
+      "question": "<b>Question (Colors):</b> 'What color is the car they are sitting in?'<br><b>Guidance:</b> 'It is a red car! Daddy Pig wins.'"
+    },
+    {
+      "time": 117.3,
+      "label": "Arriving at the top",
+      "question": "<b>Question (Action):</b> 'They made it to the top! Can you say Hooray?'<br><b>Guidance:</b> Encourage the child to cheer: 'Hooray!'"
+    },
+    {
+      "time": 125.3,
+      "label": "Weather changes",
+      "question": "<b>Question (Weather):</b> 'Oh no! Is it sunny or is it raining?'<br><b>Guidance:</b> 'It is raining now.'"
+    },
+    {
+      "time": 133.8,
+      "label": "Miss Rabbit's stall",
+      "question": "<b>Question (Observation):</b> 'Who is selling ice cream in the rain?'<br><b>Guidance:</b> 'It is Miss Rabbit!'"
+    },
+    {
+      "time": 145.5,
+      "label": "Buying ice creams",
+      "question": "<b>Question (Counting):</b> 'How many ice creams did they buy?'<br><b>Guidance:</b> 'Let\\'s count: one, two, three, four! Four ice creams.'"
+    },
+    {
+      "time": 166.5,
+      "label": "George's ice cream",
+      "question": "<b>Question (Colors):</b> 'What color is George's ice cream?'<br><b>Guidance:</b> 'It is blue! Yum, yum, yummy.'"
+    },
+    {
+      "time": 172.8,
+      "label": "The sun is back",
+      "question": "<b>Question (Weather):</b> 'Look up! Is it still raining?'<br><b>Guidance:</b> 'No, the sun has come out!'"
+    },
+    {
+      "time": 176.4,
+      "label": "A beautiful rainbow",
+      "question": "<b>Question (Observation):</b> 'What beautiful thing has come out in the sky?'<br><b>Guidance:</b> 'A rainbow!'"
+    },
+    {
+      "time": 205.0,
+      "label": "Treasure hunt",
+      "question": "<b>Question (Listening):</b> 'What can you find at the end of a rainbow?'<br><b>Guidance:</b> 'You can find treasure!'"
+    },
+    {
+      "time": 247.3,
+      "label": "Catching the rainbow",
+      "question": "<b>Question (Observation):</b> 'Did they catch the rainbow?'<br><b>Guidance:</b> 'No, the cheeky rainbow moved away!'"
+    },
+    {
+      "time": 260.8,
+      "label": "The rainbow is gone",
+      "question": "<b>Question (Yes/No):</b> 'Can you still see the rainbow?'<br><b>Guidance:</b> 'No, it stopped raining and the rainbow is gone.'"
+    },
+    {
+      "time": 276.4,
+      "label": "The best treasure",
+      "question": "<b>Question (Observation):</b> 'What did they find? What is the rainbow\\'s treasure?'<br><b>Guidance:</b> 'A big muddy puddle!'"
+    }
+  ]
+}

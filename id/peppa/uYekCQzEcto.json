@@ -1,0 +1,105 @@
+{
+  "title": "The Campervan",
+  "stopPoints": [
+    {
+      "time": 24.6,
+      "label": "Going on holiday",
+      "question": "<b>Question (Observation):</b> 'Where are Peppa and George going?'<br><b>Guidance:</b> 'They are going on a holiday!'"
+    },
+    {
+      "time": 29.8,
+      "label": "A secret surprise",
+      "question": "<b>Question (Vocabulary):</b> 'What is Daddy Pig bringing?'<br><b>Guidance:</b> 'He is bringing a secret surprise!'"
+    },
+    {
+      "time": 38.1,
+      "label": "The camper van",
+      "question": "<b>Question (Observation):</b> 'What did they borrow for the holiday?'<br><b>Guidance:</b> 'A camper van!'"
+    },
+    {
+      "time": 46.3,
+      "label": "Working the sink",
+      "question": "<b>Question (Action):</b> 'What does this button do?'<br><b>Guidance:</b> 'It works the sink! Can you pretend to wash your hands?'"
+    },
+    {
+      "time": 51.4,
+      "label": "Working the TV",
+      "question": "<b>Question (Observation):</b> 'What turned on when Peppa pressed the button?'<br><b>Guidance:</b> 'The TV!'"
+    },
+    {
+      "time": 62.1,
+      "label": "Ready to go",
+      "question": "<b>Question (Yes/No):</b> 'Are they ready to go on holiday?'<br><b>Options:</b> 'A) Yes. B) No.'<br><b>Guidance:</b> 'Yes, they are! Let\\'s go!'"
+    },
+    {
+      "time": 89.2,
+      "label": "Are we lost?",
+      "question": "<b>Question (Emotion):</b> 'Oh no! Did Daddy Pig get lost?'<br><b>Guidance:</b> 'Yes, he is lost.'"
+    },
+    {
+      "time": 93.8,
+      "label": "Meeting Granddad Dog",
+      "question": "<b>Question (Observation):</b> 'Who did they meet on the road?'<br><b>Guidance:</b> 'They met Granddad Dog and Danny Dog!'"
+    },
+    {
+      "time": 122.9,
+      "label": "The talking van",
+      "question": "<b>Question (Listening):</b> 'Listen! Who is talking?'<br><b>Guidance:</b> 'The camper van is talking!'"
+    },
+    {
+      "time": 136.6,
+      "label": "Greeting the van",
+      "question": "<b>Question (Manners):</b> 'What did Daddy Pig say to the van?'<br><b>Guidance:</b> 'He said: Hello, Mrs. Camper Van!'"
+    },
+    {
+      "time": 161.3,
+      "label": "Danger warning",
+      "question": "<b>Question (Listening):</b> 'What did the warning say?'<br><b>Guidance:</b> 'Danger! Danger! Oil is low.'"
+    },
+    {
+      "time": 178.7,
+      "label": "Oil is gone",
+      "question": "<b>Question (Observation):</b> 'Did the oil run out?'<br><b>Guidance:</b> 'Yes, the oil is gone! Oh dear.'"
+    },
+    {
+      "time": 194.5,
+      "label": "Missing engine",
+      "question": "<b>Question (Observation):</b> 'What is missing under the hood?'<br><b>Guidance:</b> 'The engine is gone!'"
+    },
+    {
+      "time": 200.2,
+      "label": "Meeting Mummy Sheep",
+      "question": "<b>Question (Observation):</b> 'Who came to help?'<br><b>Guidance:</b> 'Mummy Sheep and Suzy Sheep!'"
+    },
+    {
+      "time": 226.6,
+      "label": "Engine at the back",
+      "question": "<b>Question (Observation):</b> 'Where was the engine hiding?'<br><b>Guidance:</b> 'It is at the back!'"
+    },
+    {
+      "time": 233.7,
+      "label": "Saying thank you",
+      "question": "<b>Question (Manners):</b> 'What do we say when someone helps us?'<br><b>Guidance:</b> 'We say: Thank you!'"
+    },
+    {
+      "time": 250.3,
+      "label": "Time for bed",
+      "question": "<b>Question (Action):</b> 'They arrived! What time is it now?'<br><b>Guidance:</b> 'It is time for bed!'"
+    },
+    {
+      "time": 264.0,
+      "label": "No upstairs",
+      "question": "<b>Question (Yes/No):</b> 'Is there an upstairs in the van?'<br><b>Guidance:</b> 'No, there isn\\'t!'"
+    },
+    {
+      "time": 271.0,
+      "label": "Roof lifting up",
+      "question": "<b>Question (Observation):</b> 'Wow! What happened to the roof?'<br><b>Guidance:</b> 'The roof is lifting up!'"
+    },
+    {
+      "time": 287.1,
+      "label": "Good night",
+      "question": "<b>Question (Manners):</b> 'What do we say before we sleep?'<br><b>Guidance:</b> 'We say: Good night!'"
+    }
+  ]
+}
