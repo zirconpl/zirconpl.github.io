@@ -3,93 +3,83 @@
   "stopPoints": [
     {
       "time": 24.8,
-      "label": "Having a music lesson",
-      "question": "<b>Question (Observation):</b> 'What are Peppa and her friends doing?'<br><b>Guidance:</b> 'They are having a music lesson!'"
+      "label": "Madame Gazelle playing guitar",
+      "question": "<b>Question (Instrument):</b> 'What instrument is Madame Gazelle playing?'<br><b>Options:</b> 'A) A guitar 🎸<br>B) A drum 🥁'<br><b>Guidance:</b> Encourage the child to say: 'A guitar!'"
     },
     {
       "time": 35.8,
-      "label": "Pedro has a cough",
-      "question": "<b>Question (Listening):</b> 'Oh no, what happened to Pedro?'<br><b>Guidance:</b> 'He has a cough. Can you say cough?'"
+      "label": "Pedro is sick with a cough",
+      "question": "<b>Question (Sickness):</b> 'Oh no, what is wrong with Pedro?'<br><b>Options:</b> 'A) He is sleepy 😴<br>B) He has a cough 🤧'<br><b>Guidance:</b> Encourage the child to say: 'He has a cough!'"
     },
     {
-      "time": 45.0,
-      "label": "Calling the doctor",
-      "question": "<b>Question (Observation):</b> 'Who is Madame Gazelle calling on the phone?'<br><b>Guidance:</b> 'She is calling Dr. Brown Bear! He is a doctor.'"
+      "time": 47.8,
+      "label": "Madame Gazelle makes a phone call",
+      "question": "<b>Question (Calling):</b> 'Who is Madame Gazelle calling on the phone?'<br><b>Options:</b> 'A) Dr. Brown Bear 🐻<br>B) Peppa's Mummy 🐷'<br><b>Guidance:</b> Encourage the child to say: 'Dr. Brown Bear!'"
     },
     {
-      "time": 65.9,
-      "label": "Pedro talks to the doctor",
-      "question": "<b>Question (Comprehension):</b> 'Why is Pedro seeing the doctor?'<br><b>Guidance:</b> 'Because he has a bad cough.'"
+      "time": 59.5,
+      "label": "Dr. Brown Bear drives his car",
+      "question": "<b>Question (Color):</b> 'What color is Dr. Brown Bear's car?'<br><b>Options:</b> 'A) White 🚗<br>B) Red 🚒'<br><b>Guidance:</b> Encourage the child to say: 'White!'"
     },
     {
-      "time": 76.4,
-      "label": "Showing the cough",
-      "question": "<b>Question (Action):</b> 'Can you cough like Pedro?'<br><b>Guidance:</b> Encourage the child to pretend to cough: '*Cough, cough!*'"
+      "time": 75.8,
+      "label": "Pedro coughing",
+      "question": "<b>Question (Action):</b> 'What is Pedro doing?'<br><b>Options:</b> 'A) Laughing 😂<br>B) Coughing 🤧'<br><b>Guidance:</b> Encourage the child to say: 'Coughing!'"
     },
     {
-      "time": 96.2,
-      "label": "Catching cough",
-      "question": "<b>Question (Comprehension):</b> 'What happens if someone has a catching cough?'<br><b>Guidance:</b> 'Other people might get the cough too!'"
+      "time": 103.6,
+      "label": "Dr. Brown Bear gives Pedro medicine",
+      "question": "<b>Question (Object):</b> 'What is Dr. Brown Bear giving Pedro on a spoon?'<br><b>Options:</b> 'A) Soup 🍲<br>B) Medicine 🥄'<br><b>Guidance:</b> Encourage the child to say: 'Medicine!'"
     },
     {
       "time": 108.2,
-      "label": "Taking medicine",
-      "question": "<b>Question (Yes/No):</b> 'Does the medicine taste nice?'<br><b>Options:</b> 'A) Yes. B) No.'<br><b>Guidance:</b> 'No, it doesn\\'t! It tastes like an old shoe!'"
-    },
-    {
-      "time": 113.0,
-      "label": "Saying goodbye",
-      "question": "<b>Question (Manners):</b> 'What do they say to Dr. Brown Bear?'<br><b>Guidance:</b> 'They say: Thank you, goodbye!'"
+      "label": "Pedro reacts to the medicine",
+      "question": "<b>Question (Taste):</b> 'Did Pedro like the taste of the medicine?'<br><b>Options:</b> 'A) Yes, it was yummy 😋<br>B) No, it tasted bad 🤢'<br><b>Guidance:</b> Encourage the child to say: 'No, it tasted bad!'"
     },
     {
       "time": 123.7,
-      "label": "Others get the cough",
-      "question": "<b>Question (Observation):</b> 'Who else has a cough now?'<br><b>Guidance:</b> 'Danny Dog and Suzy Sheep have a cough too.'"
-    },
-    {
-      "time": 133.5,
-      "label": "More medicine",
-      "question": "<b>Question (Observation):</b> 'What are they eating from the spoon?'<br><b>Guidance:</b> 'They are taking medicine!'"
+      "label": "Danny and Suzy are coughing",
+      "question": "<b>Question (Characters):</b> 'Who caught Pedro's cough now?'<br><b>Options:</b> 'A) Danny Dog and Suzy Sheep 🐶🐑<br>B) Peppa and George 🐷🐷'<br><b>Guidance:</b> Encourage the child to say: 'Danny Dog and Suzy Sheep!'"
     },
     {
       "time": 149.2,
-      "label": "Doctor's secret",
-      "question": "<b>Question (Yes/No):</b> 'Does Dr. Brown Bear get ill?'<br><b>Guidance:</b> 'No, he is never ill. He eats an apple a day!'"
+      "label": "Dr. Brown Bear holds an apple",
+      "question": "<b>Question (Food):</b> 'What does Dr. Brown Bear eat every day to stay healthy?'<br><b>Options:</b> 'A) An apple 🍏<br>B) A banana 🍌'<br><b>Guidance:</b> Encourage the child to say: 'An apple!'"
     },
     {
-      "time": 160.8,
-      "label": "Parents arrive",
-      "question": "<b>Question (Observation):</b> 'Who is here to pick up the children?'<br><b>Guidance:</b> 'Their mummies and daddies!'"
+      "time": 157.5,
+      "label": "Parents arrive to pick up the children",
+      "question": "<b>Question (Vehicles):</b> 'What are the parents driving to pick up the kids?'<br><b>Options:</b> 'A) Bicycles 🚲<br>B) Cars 🚙'<br><b>Guidance:</b> Encourage the child to say: 'Cars!'"
     },
     {
       "time": 188.9,
-      "label": "Grown-ups coughing",
-      "question": "<b>Question (Listening):</b> 'Oh no! Do the grown-ups have a cough now?'<br><b>Guidance:</b> 'Yes, they all caught the cough!'"
+      "label": "The grown-ups catch the cough",
+      "question": "<b>Question (People):</b> 'Who is coughing now?'<br><b>Options:</b> 'A) The children 👦👧<br>B) All the grown-ups 👩👨'<br><b>Guidance:</b> Encourage the child to say: 'All the grown-ups!'"
     },
     {
-      "time": 201.1,
-      "label": "Peppa calls the doctor",
-      "question": "<b>Question (Comprehension):</b> 'Who is Peppa calling for help?'<br><b>Guidance:</b> 'She is calling Dr. Brown Bear again!'"
+      "time": 196.4,
+      "label": "Peppa uses the phone to call the doctor",
+      "question": "<b>Question (Action):</b> 'What is Peppa doing?'<br><b>Options:</b> 'A) Calling the doctor 📞<br>B) Playing a game 🎮'<br><b>Guidance:</b> Encourage the child to say: 'Calling the doctor!'"
     },
     {
-      "time": 222.0,
-      "label": "Grown-ups take medicine",
-      "question": "<b>Question (Action):</b> 'What do the grown-ups need to do?'<br><b>Guidance:</b> 'They need to open wide. Can you open your mouth wide? Ahh!'"
+      "time": 216.9,
+      "label": "The grown-ups stand in line for medicine",
+      "question": "<b>Question (Action):</b> 'What are the grown-ups doing?'<br><b>Options:</b> 'A) Standing in line 🧍🧍‍♂️<br>B) Sitting in a circle ⭕'<br><b>Guidance:</b> Encourage the child to say: 'Standing in line!'"
     },
     {
       "time": 240.6,
-      "label": "Doctor gets ill",
-      "question": "<b>Question (Observation):</b> 'Listen! Who is coughing now?'<br><b>Guidance:</b> 'Dr. Brown Bear has a cough! He is ill.'"
+      "label": "Dr. Brown Bear gets sick",
+      "question": "<b>Question (Sickness):</b> 'Oh no! Who caught the cough now?'<br><b>Options:</b> 'A) Madame Gazelle 🎸<br>B) Dr. Brown Bear 🐻'<br><b>Guidance:</b> Encourage the child to say: 'Dr. Brown Bear!'"
     },
     {
       "time": 264.8,
-      "label": "Visiting the doctor",
-      "question": "<b>Question (Comprehension):</b> 'Who came to look after Dr. Brown Bear?'<br><b>Guidance:</b> 'Peppa and her friends came to help him!'"
+      "label": "The children visit Dr. Brown Bear",
+      "question": "<b>Question (Location):</b> 'Where is Dr. Brown Bear resting?'<br><b>Options:</b> 'A) In his car 🚗<br>B) In his bed 🛏️'<br><b>Guidance:</b> Encourage the child to say: 'In his bed!'"
     },
     {
-      "time": 271.9,
-      "label": "Bringing things",
-      "question": "<b>Question (Observation):</b> 'What did they bring for the doctor?'<br><b>Guidance:</b> 'They brought fruit, cushions, and medicine!'"
+      "time": 269.7,
+      "label": "The children bring fruit and cushions",
+      "question": "<b>Question (Object):</b> 'What did the children bring to Dr. Brown Bear?'<br><b>Options:</b> 'A) Fruit and cushions 🍎🛋️<br>B) Toys and games 🧸🪁'<br><b>Guidance:</b> Encourage the child to say: 'Fruit and cushions!'"
     }
   ]
 }
