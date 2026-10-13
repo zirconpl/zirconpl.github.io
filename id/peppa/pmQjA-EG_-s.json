@@ -2,89 +2,94 @@
   "title": "The Rainbow",
   "stopPoints": [
     {
-      "time": 21.3,
-      "label": "Driving to the mountains",
-      "question": "<b>Question (Observation):</b> 'Where are they going for a drive?'<br><b>Guidance:</b> 'They are going to the mountains!'"
+      "time": 21.5,
+      "label": "Peppa and her family are driving in their car",
+      "question": "<b>Question (Destination):</b> 'Where is Peppa's family driving to?'<br><b>Options:</b> 'A) To the mountains 🏔️<br>B) To the beach 🏖️'<br><b>Guidance:</b> Encourage the child to say: 'To the mountains!'"
     },
     {
-      "time": 43.6,
-      "label": "George's favorite color",
-      "question": "<b>Question (Colors):</b> 'What is George's favorite color?'<br><b>Guidance:</b> 'His favorite color is blue!'"
+      "time": 35.8,
+      "label": "Daddy Pig talks about his favourite colour",
+      "question": "<b>Question (Color):</b> 'Daddy Pig loves this colour. What is his favourite colour?'<br><b>Options:</b> 'A) Green 🍏<br>B) Pink 🌸'<br><b>Guidance:</b> Encourage the child to say: 'Green! His favourite colour is green!'"
     },
     {
-      "time": 54.4,
-      "label": "Candy Cat's car",
-      "question": "<b>Question (Observation):</b> 'What color is Candy Cat's car?'<br><b>Guidance:</b> 'It is a green car.'"
+      "time": 37.8,
+      "label": "Mummy Pig talks about her favourite colour",
+      "question": "<b>Question (Color):</b> 'What is Mummy Pig's favourite colour?'<br><b>Options:</b> 'A) Orange 🍊<br>B) Purple 🍇'<br><b>Guidance:</b> Encourage the child to say: 'Orange!'"
     },
     {
-      "time": 68.5,
-      "label": "Danny Dog's truck",
-      "question": "<b>Question (Colors):</b> 'Look at Danny Dog's truck. Is it red or orange?'<br><b>Guidance:</b> 'It is orange!'"
+      "time": 46.0,
+      "label": "George smiles and says his favourite colour",
+      "question": "<b>Question (Color):</b> 'What is George's favourite colour?'<br><b>Options:</b> 'A) Blue 🌊<br>B) Yellow ☀️'<br><b>Guidance:</b> Encourage the child to say: 'Blue!'"
     },
     {
-      "time": 86.0,
-      "label": "Suzy Sheep's car",
-      "question": "<b>Question (Yes/No):</b> 'Is Suzy Sheep in a blue car?'<br><b>Options:</b> 'A) Yes, she is. B) No, she isn\\'t.'<br><b>Guidance:</b> 'Yes, she is! George wins this time.'"
+      "time": 53.9,
+      "label": "Candy Cat drives by in her green car",
+      "question": "<b>Question (Vehicle & Color):</b> 'Look at Candy Cat's car! What colour is it?'<br><b>Options:</b> 'A) Green 🚗<br>B) Red 🚗'<br><b>Guidance:</b> Encourage the child to say: 'It is green!'"
     },
     {
-      "time": 103.9,
-      "label": "Daddy Pig's car",
-      "question": "<b>Question (Colors):</b> 'What color is the car they are sitting in?'<br><b>Guidance:</b> 'It is a red car! Daddy Pig wins.'"
+      "time": 70.8,
+      "label": "Danny Dog arrives in Granddad Dog's breakdown truck",
+      "question": "<b>Question (Color):</b> 'What colour is the big breakdown truck?'<br><b>Options:</b> 'A) Orange 🚚<br>B) Blue 🚚'<br><b>Guidance:</b> Encourage the child to say: 'It is orange! Mummy Pig wins!'"
     },
     {
-      "time": 117.3,
-      "label": "Arriving at the top",
-      "question": "<b>Question (Action):</b> 'They made it to the top! Can you say Hooray?'<br><b>Guidance:</b> Encourage the child to cheer: 'Hooray!'"
+      "time": 77.0,
+      "label": "Suzy Sheep arrives in a blue car",
+      "question": "<b>Question (Animal & Friend):</b> 'Who is in the blue car with Mummy Sheep?'<br><b>Options:</b> 'A) Suzy Sheep 🐑<br>B) Pedro Pony 🐴'<br><b>Guidance:</b> Encourage the child to say: 'Suzy Sheep!'"
     },
     {
-      "time": 125.3,
-      "label": "Weather changes",
-      "question": "<b>Question (Weather):</b> 'Oh no! Is it sunny or is it raining?'<br><b>Guidance:</b> 'It is raining now.'"
+      "time": 93.0,
+      "label": "Peppa looks sad because she hasn't seen a red car",
+      "question": "<b>Question (Emotion):</b> 'How does Peppa feel now?'<br><b>Options:</b> 'A) Sad 😢<br>B) Happy 😊'<br><b>Guidance:</b> Encourage the child to say: 'She feels sad.'"
     },
     {
-      "time": 133.8,
-      "label": "Miss Rabbit's stall",
-      "question": "<b>Question (Observation):</b> 'Who is selling ice cream in the rain?'<br><b>Guidance:</b> 'It is Miss Rabbit!'"
+      "time": 104.2,
+      "label": "Peppa realizes their own car is red",
+      "question": "<b>Question (Observation):</b> 'What colour is Peppa's family car?'<br><b>Options:</b> 'A) Red 🚗<br>B) Black 🚗'<br><b>Guidance:</b> Encourage the child to say: 'It is red! Peppa wins!'"
     },
     {
-      "time": 145.5,
-      "label": "Buying ice creams",
-      "question": "<b>Question (Counting):</b> 'How many ice creams did they buy?'<br><b>Guidance:</b> 'Let\\'s count: one, two, three, four! Four ice creams.'"
+      "time": 121.5,
+      "label": "The family arrives at the mountaintop and it starts raining",
+      "question": "<b>Question (Weather):</b> 'Oh dear! What is the weather like now?'<br><b>Options:</b> 'A) It is rainy 🌧️<br>B) It is snowy ❄️'<br><b>Guidance:</b> Encourage the child to say: 'It is rainy! It has started to rain!'"
     },
     {
-      "time": 166.5,
-      "label": "George's ice cream",
-      "question": "<b>Question (Colors):</b> 'What color is George's ice cream?'<br><b>Guidance:</b> 'It is blue! Yum, yum, yummy.'"
+      "time": 134.0,
+      "label": "Daddy Pig points towards Miss Rabbit's ice cream stall",
+      "question": "<b>Question (Food):</b> 'What delicious food is Miss Rabbit selling?'<br><b>Options:</b> 'A) Ice cream 🍦<br>B) Pizza 🍕'<br><b>Guidance:</b> Encourage the child to say: 'Ice cream!'"
     },
     {
-      "time": 172.8,
-      "label": "The sun is back",
-      "question": "<b>Question (Weather):</b> 'Look up! Is it still raining?'<br><b>Guidance:</b> 'No, the sun has come out!'"
+      "time": 147.2,
+      "label": "Miss Rabbit hands four ice creams to Daddy Pig",
+      "question": "<b>Question (Counting):</b> 'How many ice creams does Daddy Pig buy for the family?'<br><b>Options:</b> 'A) 4 ice creams 🍦<br>B) 2 ice creams 🍦'<br><b>Guidance:</b> Encourage the child to say: 'Four ice creams!'"
     },
     {
-      "time": 176.4,
-      "label": "A beautiful rainbow",
-      "question": "<b>Question (Observation):</b> 'What beautiful thing has come out in the sky?'<br><b>Guidance:</b> 'A rainbow!'"
+      "time": 169.5,
+      "label": "Peppa shows her ice cream flavour",
+      "question": "<b>Question (Flavor & Color):</b> 'What flavour and colour is Peppa's ice cream?'<br><b>Options:</b> 'A) Strawberry red 🍓<br>B) Chocolate brown 🍫'<br><b>Guidance:</b> Encourage the child to say: 'Strawberry red!'"
     },
     {
-      "time": 205.0,
-      "label": "Treasure hunt",
-      "question": "<b>Question (Listening):</b> 'What can you find at the end of a rainbow?'<br><b>Guidance:</b> 'You can find treasure!'"
+      "time": 176.5,
+      "label": "A beautiful rainbow appears across the sky",
+      "question": "<b>Question (Nature):</b> 'Look at the sky! What came out after the rain?'<br><b>Options:</b> 'A) A rainbow 🌈<br>B) A moon 🌙'<br><b>Guidance:</b> Encourage the child to say: 'A rainbow!'"
     },
     {
-      "time": 247.3,
-      "label": "Catching the rainbow",
-      "question": "<b>Question (Observation):</b> 'Did they catch the rainbow?'<br><b>Guidance:</b> 'No, the cheeky rainbow moved away!'"
+      "time": 185.8,
+      "label": "Daddy Pig explains when rainbows appear",
+      "question": "<b>Question (Science & Weather):</b> 'When does a rainbow appear?'<br><b>Options:</b> 'A) When it is rainy and sunny at the same time 🌦️<br>B) When it is night time 🌌'<br><b>Guidance:</b> Encourage the child to say: 'Rainy and sunny at the same time!'"
     },
     {
-      "time": 260.8,
-      "label": "The rainbow is gone",
-      "question": "<b>Question (Yes/No):</b> 'Can you still see the rainbow?'<br><b>Guidance:</b> 'No, it stopped raining and the rainbow is gone.'"
+      "time": 204.8,
+      "label": "Mummy Pig tells them what is at the end of a rainbow",
+      "question": "<b>Question (Story):</b> 'What do you find at the end of a rainbow?'<br><b>Options:</b> 'A) Treasure 💎<br>B) Books 📚'<br><b>Guidance:</b> Encourage the child to say: 'Treasure!'"
     },
     {
-      "time": 276.4,
-      "label": "The best treasure",
-      "question": "<b>Question (Observation):</b> 'What did they find? What is the rainbow\\'s treasure?'<br><b>Guidance:</b> 'A big muddy puddle!'"
+      "time": 261.5,
+      "label": "The rainbow is gone and George cries",
+      "question": "<b>Question (Emotion):</b> 'Why is George crying?'<br><b>Options:</b> 'A) The rainbow is gone 😢<br>B) He dropped his ice cream 🍦'<br><b>Guidance:</b> Encourage the child to say: 'Because the rainbow is gone!'"
+    },
+    {
+      "time": 277.5,
+      "label": "Daddy Pig finds a big muddy puddle",
+      "question": "<b>Question (Action & Fun):</b> 'What is the rainbow treasure?'<br><b>Options:</b> 'A) A big muddy puddle! 🥾<br>B) A box of gold 🪙'<br><b>Guidance:</b> Encourage the child to say: 'A big muddy puddle!'"
     }
   ]
 }
