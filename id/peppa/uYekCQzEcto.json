@@ -2,104 +2,99 @@
   "title": "The Campervan",
   "stopPoints": [
     {
-      "time": 24.6,
-      "label": "Going on holiday",
-      "question": "<b>Question (Observation):</b> 'Where are Peppa and George going?'<br><b>Guidance:</b> 'They are going on a holiday!'"
-    },
-    {
-      "time": 29.8,
-      "label": "A secret surprise",
-      "question": "<b>Question (Vocabulary):</b> 'What is Daddy Pig bringing?'<br><b>Guidance:</b> 'He is bringing a secret surprise!'"
-    },
-    {
-      "time": 38.1,
-      "label": "The camper van",
-      "question": "<b>Question (Observation):</b> 'What did they borrow for the holiday?'<br><b>Guidance:</b> 'A camper van!'"
+      "time": 38.0,
+      "label": "Daddy Pig shows the family the camper van[span_0](start_span)[span_0](end_span)",
+      "question": "<b>Question (Color):</b> 'What color is the camper van?'<br><b>Options:</b> 'A) Yellow and white 💛🤍<br>B) Red and blue ❤️💙'<br><b>Guidance:</b> Encourage the child to say: 'Yellow and white!'"
     },
     {
       "time": 46.3,
-      "label": "Working the sink",
-      "question": "<b>Question (Action):</b> 'What does this button do?'<br><b>Guidance:</b> 'It works the sink! Can you pretend to wash your hands?'"
+      "label": "Peppa pushes a red button[span_1](start_span)[span_1](end_span)",
+      "question": "<b>Question (Object):</b> 'What did the red button turn on?'<br><b>Options:</b> 'A) The sink 🚰<br>B) The shower 🚿'<br><b>Guidance:</b> Encourage the child to say: 'The sink!'"
     },
     {
-      "time": 51.4,
-      "label": "Working the TV",
-      "question": "<b>Question (Observation):</b> 'What turned on when Peppa pressed the button?'<br><b>Guidance:</b> 'The TV!'"
+      "time": 51.3,
+      "label": "George pushes a button[span_2](start_span)[span_2](end_span)",
+      "question": "<b>Question (Action):</b> 'What did the button turn on for George?'<br><b>Options:</b> 'A) The TV 📺<br>B) A toy car 🚗'<br><b>Guidance:</b> Encourage the child to say: 'The TV!'"
     },
     {
-      "time": 62.1,
-      "label": "Ready to go",
-      "question": "<b>Question (Yes/No):</b> 'Are they ready to go on holiday?'<br><b>Options:</b> 'A) Yes. B) No.'<br><b>Guidance:</b> 'Yes, they are! Let\\'s go!'"
+      "time": 72.0,
+      "label": "The family sets off on their holiday[span_3](start_span)[span_3](end_span)",
+      "question": "<b>Question (Characters):</b> 'Who is driving the camper van?'<br><b>Options:</b> 'A) Mummy Pig 🐷<br>B) Daddy Pig 👓'<br><b>Guidance:</b> Encourage the child to say: 'Daddy Pig!'"
     },
     {
-      "time": 89.2,
-      "label": "Are we lost?",
-      "question": "<b>Question (Emotion):</b> 'Oh no! Did Daddy Pig get lost?'<br><b>Guidance:</b> 'Yes, he is lost.'"
+      "time": 75.1,
+      "label": "Daddy Pig looking at a map[span_4](start_span)[span_4](end_span)",
+      "question": "<b>Question (Object):</b> 'What is Daddy Pig holding to find the way?'<br><b>Options:</b> 'A) A map 🗺️<br>B) A book 📖'<br><b>Guidance:</b> Encourage the child to say: 'A map!'"
     },
     {
-      "time": 93.8,
-      "label": "Meeting Granddad Dog",
-      "question": "<b>Question (Observation):</b> 'Who did they meet on the road?'<br><b>Guidance:</b> 'They met Granddad Dog and Danny Dog!'"
+      "time": 95.1,
+      "label": "Granddad Dog drives by in a tow truck[span_5](start_span)[span_5](end_span)",
+      "question": "<b>Question (Characters):</b> 'Who is driving the big orange truck?'<br><b>Options:</b> 'A) Granddad Dog 🐶<br>B) Madame Gazelle 🦌'<br><b>Guidance:</b> Encourage the child to say: 'Granddad Dog!'"
+    },
+    {
+      "time": 113.6,
+      "label": "The car's computer screen turns on[span_6](start_span)[span_6](end_span)",
+      "question": "<b>Question (Color):</b> 'What color is the bright screen of the computer?'<br><b>Options:</b> 'A) Green 🟩<br>B) Purple 🟪'<br><b>Guidance:</b> Encourage the child to say: 'It is green!'"
     },
     {
       "time": 122.9,
-      "label": "The talking van",
-      "question": "<b>Question (Listening):</b> 'Listen! Who is talking?'<br><b>Guidance:</b> 'The camper van is talking!'"
+      "label": "The camper van talks to the family[span_7](start_span)[span_7](end_span)",
+      "question": "<b>Question (Yes/No):</b> 'Can the camper van talk?'<br><b>Options:</b> 'A) Yes, it can! 🗣️<br>B) No, it cannot 🤐'<br><b>Guidance:</b> Encourage the child to say: 'Yes, it can talk!'"
     },
     {
-      "time": 136.6,
-      "label": "Greeting the van",
-      "question": "<b>Question (Manners):</b> 'What did Daddy Pig say to the van?'<br><b>Guidance:</b> 'He said: Hello, Mrs. Camper Van!'"
+      "time": 159.7,
+      "label": "A warning flashes on the screen[span_8](start_span)[span_8](end_span)",
+      "question": "<b>Question (Object):</b> 'What picture is flashing in red on the screen?'<br><b>Options:</b> 'A) An oil can 🛢️<br>B) An apple 🍎'<br><b>Guidance:</b> Encourage the child to say: 'An oil can!'"
     },
     {
-      "time": 161.3,
-      "label": "Danger warning",
-      "question": "<b>Question (Listening):</b> 'What did the warning say?'<br><b>Guidance:</b> 'Danger! Danger! Oil is low.'"
+      "time": 178.6,
+      "label": "The oil is completely gone[span_9](start_span)[span_9](end_span)",
+      "question": "<b>Question (Emotion):</b> 'How does Daddy Pig feel because the oil is gone?'<br><b>Options:</b> 'A) Happy 😄<br>B) Worried 😟'<br><b>Guidance:</b> Encourage the child to say: 'He looks worried!'"
     },
     {
-      "time": 178.7,
-      "label": "Oil is gone",
-      "question": "<b>Question (Observation):</b> 'Did the oil run out?'<br><b>Guidance:</b> 'Yes, the oil is gone! Oh dear.'"
+      "time": 184.2,
+      "label": "Daddy Pig finds a spare can of oil[span_10](start_span)[span_10](end_span)",
+      "question": "<b>Question (Action):</b> 'What is Daddy Pig holding in his hands?'<br><b>Options:</b> 'A) A can of oil 🛢️<br>B) A cup of juice 🧃'<br><b>Guidance:</b> Encourage the child to say: 'A can of oil!'"
     },
     {
-      "time": 194.5,
-      "label": "Missing engine",
-      "question": "<b>Question (Observation):</b> 'What is missing under the hood?'<br><b>Guidance:</b> 'The engine is gone!'"
+      "time": 194.4,
+      "label": "Daddy Pig opens the front of the van[span_11](start_span)[span_11](end_span)",
+      "question": "<b>Question (Yes/No):</b> 'Is the engine inside the front of the camper van?'<br><b>Options:</b> 'A) Yes, it is 🚐<br>B) No, it is empty! 🕳️'<br><b>Guidance:</b> Encourage the child to say: 'No, it is empty!'"
     },
     {
-      "time": 200.2,
-      "label": "Meeting Mummy Sheep",
-      "question": "<b>Question (Observation):</b> 'Who came to help?'<br><b>Guidance:</b> 'Mummy Sheep and Suzy Sheep!'"
+      "time": 200.1,
+      "label": "Mummy Sheep pulls up in her car[span_12](start_span)[span_12](end_span)",
+      "question": "<b>Question (Vehicle):</b> 'What color is the car that Mummy Sheep is driving?'<br><b>Options:</b> 'A) Blue 🚙<br>B) Pink 🚗'<br><b>Guidance:</b> Encourage the child to say: 'Blue!'"
     },
     {
       "time": 226.6,
-      "label": "Engine at the back",
-      "question": "<b>Question (Observation):</b> 'Where was the engine hiding?'<br><b>Guidance:</b> 'It is at the back!'"
+      "label": "Mummy Sheep points out the engine[span_13](start_span)[span_13](end_span)",
+      "question": "<b>Question (Location):</b> 'Where is the camper van's engine?'<br><b>Options:</b> 'A) At the back 🔙<br>B) On the roof 🔝'<br><b>Guidance:</b> Encourage the child to say: 'At the back!'"
     },
     {
-      "time": 233.7,
-      "label": "Saying thank you",
-      "question": "<b>Question (Manners):</b> 'What do we say when someone helps us?'<br><b>Guidance:</b> 'We say: Thank you!'"
+      "time": 231.5,
+      "label": "Daddy Pig pours the oil[span_14](start_span)[span_14](end_span)",
+      "question": "<b>Question (Action):</b> 'What is Daddy Pig pouring into the engine?'<br><b>Options:</b> 'A) Water 💧<br>B) Oil 🛢️'<br><b>Guidance:</b> Encourage the child to say: 'Oil!'"
     },
     {
-      "time": 250.3,
-      "label": "Time for bed",
-      "question": "<b>Question (Action):</b> 'They arrived! What time is it now?'<br><b>Guidance:</b> 'It is time for bed!'"
+      "time": 241.2,
+      "label": "The family reaches their destination at night[span_15](start_span)[span_15](end_span)",
+      "question": "<b>Question (Environment):</b> 'Look at the sky! Is it daytime or nighttime?'<br><b>Options:</b> 'A) Daytime ☀️<br>B) Nighttime 🌙'<br><b>Guidance:</b> Encourage the child to say: 'Nighttime! Look at the moon!'"
     },
     {
-      "time": 264.0,
-      "label": "No upstairs",
-      "question": "<b>Question (Yes/No):</b> 'Is there an upstairs in the van?'<br><b>Guidance:</b> 'No, there isn\\'t!'"
+      "time": 263.9,
+      "label": "Mummy Pig says Peppa and George will sleep upstairs[span_16](start_span)[span_16](end_span)",
+      "question": "<b>Question (Yes/No):</b> 'Is there an upstairs in the camper van right now?'<br><b>Options:</b> 'A) Yes, there is 🏠<br>B) No, there isn't! 🚐'<br><b>Guidance:</b> Encourage the child to say: 'No, there isn't!'"
     },
     {
-      "time": 271.0,
-      "label": "Roof lifting up",
-      "question": "<b>Question (Observation):</b> 'Wow! What happened to the roof?'<br><b>Guidance:</b> 'The roof is lifting up!'"
+      "time": 270.9,
+      "label": "The roof of the camper van lifts up[span_17](start_span)[span_17](end_span)",
+      "question": "<b>Question (Action):</b> 'Wow! What happened to the camper van?'<br><b>Options:</b> 'A) The roof lifted up ⬆️<br>B) The doors fell off 🚪'<br><b>Guidance:</b> Encourage the child to say: 'The roof lifted up!'"
     },
     {
-      "time": 287.1,
-      "label": "Good night",
-      "question": "<b>Question (Manners):</b> 'What do we say before we sleep?'<br><b>Guidance:</b> 'We say: Good night!'"
+      "time": 287.0,
+      "label": "Peppa and George sleeping in their beds[span_18](start_span)[span_18](end_span)",
+      "question": "<b>Question (Action):</b> 'What are Peppa and George doing now?'<br><b>Options:</b> 'A) Jumping up and down 🦘<br>B) Sleeping in their bed 😴'<br><b>Guidance:</b> Encourage the child to say: 'Sleeping in their bed! Good night!'"
     }
   ]
 }
