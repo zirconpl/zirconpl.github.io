@@ -1,0 +1,105 @@
+{
+  "title": "Camping Holiday",
+  "stopPoints": [
+    {
+      "time": 29.3,
+      "label": "Good morning",
+      "question": "<b>Question (Greeting):</b> 'Who says Good morning to Peppa and George?'<br><b>Guidance:</b> 'It is Daddy Pig!'"
+    },
+    {
+      "time": 36.7,
+      "label": "Looking at nature",
+      "question": "<b>Question (Listening):</b> 'What is Daddy Pig going to look at today?'<br><b>Guidance:</b> 'He wants to look at nature!'"
+    },
+    {
+      "time": 44.8,
+      "label": "Nature program",
+      "question": "<b>Question (Observation):</b> 'What animal is on the TV?'<br><b>Guidance:</b> 'It is a bird! Can you tweet like a bird?'"
+    },
+    {
+      "time": 53.1,
+      "label": "Loud bird",
+      "question": "<b>Question (Yes/No):</b> 'Is the bird quiet?'<br><b>Options:</b> 'A) Yes, it is. B) No, it is loud.'<br><b>Guidance:</b> 'No, it is loud! They can\\'t hear the TV.'"
+    },
+    {
+      "time": 64.2,
+      "label": "Going out",
+      "question": "<b>Question (Comprehension):</b> 'Are they going to watch TV all day?'<br><b>Guidance:</b> 'No! They are going outside to have fun!'"
+    },
+    {
+      "time": 75.5,
+      "label": "Tree World",
+      "question": "<b>Question (Observation):</b> 'What can you see in Tree World?'<br><b>Guidance:</b> 'You can see a big forest full of trees!'"
+    },
+    {
+      "time": 86.5,
+      "label": "Potato City",
+      "question": "<b>Question (Vocabulary):</b> 'What food do they have in Potato City?'<br><b>Guidance:</b> 'They have potatoes!'"
+    },
+    {
+      "time": 96.8,
+      "label": "Duckland",
+      "question": "<b>Question (Observation):</b> 'What animal lives in Duckland?'<br><b>Guidance:</b> 'Ducks live there! Quack quack!'"
+    },
+    {
+      "time": 104.4,
+      "label": "Choosing Duckland",
+      "question": "<b>Question (Yes/No):</b> 'Do Peppa and George love ducks?'<br><b>Guidance:</b> 'Yes, they do! Let\\'s go to Duckland!'"
+    },
+    {
+      "time": 118.4,
+      "label": "Asking the way",
+      "question": "<b>Question (Listening):</b> 'Listen! Who is talking and showing them the way?'<br><b>Guidance:</b> 'The camper van is talking!'"
+    },
+    {
+      "time": 135.0,
+      "label": "Buying tickets",
+      "question": "<b>Question (Counting):</b> 'How many tickets did Daddy Pig ask for?'<br><b>Guidance:</b> 'Two adults and two children. That makes four tickets!'"
+    },
+    {
+      "time": 148.1,
+      "label": "Time for a picnic",
+      "question": "<b>Question (Observation):</b> 'What are they going to do on the grass?'<br><b>Guidance:</b> 'They are going to have a picnic lunch!'"
+    },
+    {
+      "time": 155.5,
+      "label": "The ducks arrive",
+      "question": "<b>Question (Observation):</b> 'Who came to their picnic?'<br><b>Guidance:</b> 'The ducks came!'"
+    },
+    {
+      "time": 170.5,
+      "label": "More ducks",
+      "question": "<b>Question (Yes/No):</b> 'Is there only one duck?'<br><b>Guidance:</b> 'No, there are lots of brothers and sisters!'"
+    },
+    {
+      "time": 183.7,
+      "label": "Picnic gone",
+      "question": "<b>Question (Observation):</b> 'Oh no! Who ate all the picnic food?'<br><b>Guidance:</b> 'The ducks ate it all!'"
+    },
+    {
+      "time": 190.9,
+      "label": "Saying thank you",
+      "question": "<b>Question (Manners):</b> 'What did Daddy Pig say to the ducks?'<br><b>Guidance:</b> 'He said: You\\'re most welcome!'"
+    },
+    {
+      "time": 210.5,
+      "label": "Driving into the river",
+      "question": "<b>Question (Observation):</b> 'Where does the camper van want them to drive?'<br><b>Guidance:</b> 'Into the river!'"
+    },
+    {
+      "time": 229.7,
+      "label": "Turned into a boat",
+      "question": "<b>Question (Observation):</b> 'Wow! What did the camper van turn into?'<br><b>Guidance:</b> 'It turned into a boat!'"
+    },
+    {
+      "time": 245.5,
+      "label": "Meeting friends",
+      "question": "<b>Question (Observation):</b> 'Who is driving the other boat?'<br><b>Guidance:</b> 'It is Granddad Dog and Danny Dog!'"
+    },
+    {
+      "time": 280.3,
+      "label": "Back home",
+      "question": "<b>Question (Emotion):</b> 'Are they happy to be back home?'<br><b>Guidance:</b> 'Yes! It is nice to be back in their own little house.'"
+    }
+  ]
+}
