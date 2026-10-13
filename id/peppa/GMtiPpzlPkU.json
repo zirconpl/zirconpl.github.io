@@ -1,0 +1,85 @@
+{
+  "title": "Richard Rabbit Comes to Play",
+  "stopPoints": [
+    {
+      "time": 20.678,
+      "label": "Richard Rabbit arrives",
+      "question": "<b>Question (Friends):</b> 'Who comes to play at Peppa's house?'<br><b>Options:</b> 'A) Richard Rabbit 🐰<br>B) Danny Dog 🐶'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'Richard Rabbit!'"
+    },
+    {
+      "time": 48.365,
+      "label": "George's best friend",
+      "question": "<b>Question (Friends):</b> 'Who is George's best friend?'<br><b>Options:</b> 'A) Richard Rabbit 🐰<br>B) Suzy Sheep 🐑'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'Richard Rabbit!'"
+    },
+    {
+      "time": 57.491,
+      "label": "Knocking down the house",
+      "question": "<b>Question (Action):</b> 'What did Richard do to Peppa's toy house?'<br><b>Options:</b> 'A) He knocked it down! 💥<br>B) He painted it! 🎨'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'He knocked it down!'"
+    },
+    {
+      "time": 83.852,
+      "label": "Bedroom turns into Dinosaur Land",
+      "question": "<b>Question (Playtime):</b> 'What did the boys turn the bedroom into?'<br><b>Options:</b> 'A) Dinosaur Land! 🦕<br>B) A swimming pool! 🏊'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'Dinosaur Land!'"
+    },
+    {
+      "time": 99.603,
+      "label": "Rainy day activities",
+      "question": "<b>Question (Activities):</b> 'What is a good thing to do on a rainy day?'<br><b>Options:</b> 'A) Watch important TV programmes! 📺<br>B) Go to the beach! 🏖️'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'Watch TV!'"
+    },
+    {
+      "time": 117.477,
+      "label": "Peppa feels lonely",
+      "question": "<b>Question (Feelings):</b> 'Why is Peppa feeling sad?'<br><b>Options:</b> 'A) She has no one to play with 😢<br>B) She lost her toy 🧸'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'She has no one to play with!'"
+    },
+    {
+      "time": 123.075,
+      "label": "Peppa's best friend",
+      "question": "<b>Question (Friends):</b> 'Who is Peppa's best friend?'<br><b>Options:</b> 'A) Suzy Sheep 🐑<br>B) Candy Cat 🐱'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'Suzy Sheep!'"
+    },
+    {
+      "time": 147.813,
+      "label": "Suzy's costume",
+      "question": "<b>Question (Clothes):</b> 'What costume does Suzy want to wear?'<br><b>Options:</b> 'A) A nurse's costume 👩‍⚕️<br>B) A fairy's costume 🧚‍♀️'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'A nurse's costume!'"
+    },
+    {
+      "time": 173.553,
+      "label": "Suzy declares it a hospital",
+      "question": "<b>Question (Pretend Play):</b> 'What does Nurse Suzy say the bedroom is now?'<br><b>Options:</b> 'A) A hospital 🏥<br>B) Dinosaur Land 🦕'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'A hospital!'"
+    },
+    {
+      "time": 197.002,
+      "label": "Sick dinosaur color",
+      "question": "<b>Question (Colors):</b> 'What color is the sick dinosaur?'<br><b>Options:</b> 'A) A greeny ill color 🤢<br>B) A happy red color ❤️'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'Green!'"
+    },
+    {
+      "time": 220.616,
+      "label": "A railway station",
+      "question": "<b>Question (Pretend Play):</b> 'What did the boys turn the hospital into?'<br><b>Options:</b> 'A) A railway station 🚂<br>B) A school 🏫'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'A railway station!'"
+    },
+    {
+      "time": 225.974,
+      "label": "Trains in Fairyland",
+      "question": "<b>Question (Fairyland):</b> 'Are there any trains in Fairyland?'<br><b>Options:</b> 'A) No, no trains! ❌<br>B) Yes, lots of trains! ✅'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'No trains!'"
+    },
+    {
+      "time": 246.768,
+      "label": "Girls' games",
+      "question": "<b>Question (Playtime):</b> 'What do Peppa and Suzy want to play?'<br><b>Options:</b> 'A) Hospitals and fairies 🧚‍♀️<br>B) Dinosaurs and trains 🦕'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'Hospitals and fairies!'"
+    },
+    {
+      "time": 256.365,
+      "label": "Playing outside",
+      "question": "<b>Question (Locations):</b> 'Where does Mummy Pig say they can all play?'<br><b>Options:</b> 'A) Outside! 🌳<br>B) In the kitchen! 🍳'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'Outside!'"
+    },
+    {
+      "time": 270.492,
+      "label": "Muddy puddles",
+      "question": "<b>Question (Outdoors):</b> 'What do you find in the garden after it rains?'<br><b>Options:</b> 'A) Muddy puddles! 🤎<br>B) Snowmen! ⛄'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'Muddy puddles!'"
+    },
+    {
+      "time": 284.245,
+      "label": "Jumping in puddles",
+      "question": "<b>Question (Activities):</b> 'Who loves jumping up and down in muddy puddles?'<br><b>Options:</b> 'A) Everyone! 🙌<br>B) Only big girls! 👧'<br><b>Guidance:</b> Encourage Mia and Zero to say: 'Everyone!'"
+    }
+  ]
+}
