@@ -1,0 +1,95 @@
+{
+  "title": "Washing",
+  "stopPoints": [
+    {
+      "time": 23.77,
+      "label": "Daddy Pig carrying the washing basket outside",
+      "question": "<b>Question (Visual & Action):</b> What is Daddy Pig holding in his hands?<br><b>Options:</b><br>A) A yellow basket 🧺<br>B) A toy football ⚽<br><b>Guidance:</b> Encourage the child to answer: 'A yellow basket!'"
+    },
+    {
+      "time": 30.96,
+      "label": "Daddy Pig shows his white football shirt with number 5",
+      "question": "<b>Question (Visual & Number):</b> What number is on Daddy Pig's football shirt?<br><b>Options:</b><br>A) Number 5 🖐️<br>B) Number 2 ✌️<br><b>Guidance:</b> Encourage the child to say: 'Number five!'"
+    },
+    {
+      "time": 41.94,
+      "label": "Daddy Pig drives off to work in the red car",
+      "question": "<b>Question (Visual & Colors):</b> What color is Daddy Pig's car?<br><b>Options:</b><br>A) Red 🚗<br>B) Blue 🚙<br><b>Guidance:</b> Encourage the child to say: 'A red car!'"
+    },
+    {
+      "time": 54.23,
+      "label": "Peppa, George, and Mummy Pig run out to play",
+      "question": "<b>Question (Dialogue & Action):</b> What do Peppa and Mummy Pig want to do now?<br><b>Options:</b><br>A) Let's play! 🏃<br>B) Go to sleep 😴<br><b>Guidance:</b> Encourage the child to cheer: 'Let's play!'"
+    },
+    {
+      "time": 68.55,
+      "label": "George and Peppa jump in muddy puddles",
+      "question": "<b>Question (Visual & Action):</b> What is Peppa wearing on her feet to jump in the mud?<br><b>Options:</b><br>A) Yellow boots 👢<br>B) Red slippers 🥿<br><b>Guidance:</b> Encourage the child to say: 'Yellow boots!'"
+    },
+    {
+      "time": 80.70,
+      "label": "Peppa spots mud on Daddy Pig's football shirt",
+      "question": "<b>Question (Dialogue & Observation):</b> What happened to Daddy Pig's white shirt?<br><b>Options:</b><br>A) Splashed with mud! 💩<br>B) Blown away by the wind 🍃<br><b>Guidance:</b> Encourage the child to say: 'Splashed with mud!'"
+    },
+    {
+      "time": 97.82,
+      "label": "Peppa notices her own dress is muddy",
+      "question": "<b>Question (Visual & Colors):</b> What color is Peppa's dress?<br><b>Options:</b><br>A) Red 👗<br>B) Green 🍏<br><b>Guidance:</b> Encourage the child to say: 'Red dress!'"
+    },
+    {
+      "time": 105.54,
+      "label": "George brings a white sock to the laundry basket",
+      "question": "<b>Question (Visual & Object):</b> What small piece of clothing is George holding?<br><b>Options:</b><br>A) A white sock 🧦<br>B) A winter hat 🧢<br><b>Guidance:</b> Encourage the child to point and say: 'A sock!'"
+    },
+    {
+      "time": 111.07,
+      "label": "Mummy Pig puts clothes in the washing machine",
+      "question": "<b>Question (Action & Listening):</b> What does Mummy Pig do after putting the clothes inside?<br><b>Options:</b><br>A) Switch it on 🔘<br>B) Open the fridge 🥛<br><b>Guidance:</b> Encourage the child to say: 'Switch it on!'"
+    },
+    {
+      "time": 124.85,
+      "label": "Water filling the washing machine",
+      "question": "<b>Question (Dialogue & Listening):</b> What kind of water is filling up the machine?<br><b>Options:</b><br>A) Hot soapy water 🫧<br>B) Cold apple juice 🧃<br><b>Guidance:</b> Encourage the child to answer: 'Soapy water!'"
+    },
+    {
+      "time": 132.48,
+      "label": "Washing machine making the whole room shake",
+      "question": "<b>Question (Action & Fun):</b> What are Peppa, George, and Mummy Pig doing while the machine shakes?<br><b>Options:</b><br>A) Shaking and dancing together 💃<br>B) Sitting quietly on chairs 🪑<br><b>Guidance:</b> Encourage the child to shake their body and say: 'Shaking!'"
+    },
+    {
+      "time": 149.05,
+      "label": "Peppa takes her clean red dress out of the machine",
+      "question": "<b>Question (Dialogue & Observation):</b> How does Peppa's red dress look now?<br><b>Options:</b><br>A) Nice and clean ✨<br>B) Still dirty and muddy 泥<br><b>Guidance:</b> Encourage the child to say: 'Nice and clean!'"
+    },
+    {
+      "time": 158.26,
+      "label": "Daddy Pig's white football shirt turned pink",
+      "question": "<b>Question (Visual & Color change):</b> Oh dear! What color did the football shirt turn into?<br><b>Options:</b><br>A) Pink 🌸<br>B) Green 🥦<br><b>Guidance:</b> Encourage the child to say: 'It turned pink!'"
+    },
+    {
+      "time": 169.85,
+      "label": "Daddy Pig returns home with his briefcase",
+      "question": "<b>Question (Dialogue & Greeting):</b> Daddy Pig is back from work! What does he say?<br><b>Options:</b><br>A) Hello, everyone! 👋<br>B) Good night, sleep tight! 🌙<br><b>Guidance:</b> Encourage the child to wave and say: 'Hello, everyone!'"
+    },
+    {
+      "time": 187.45,
+      "label": "Peppa hands Daddy Pig the pink shirt",
+      "question": "<b>Question (Dialogue & Comprehension):</b> Whose dress did Daddy Pig first think the pink shirt was?<br><b>Options:</b><br>A) Mummy Pig's dress 👗<br>B) Peppa's dress 👚<br><b>Guidance:</b> Encourage the child to answer: 'Mummy's dress!'"
+    },
+    {
+      "time": 211.73,
+      "label": "Daddy Pig asks George what he thinks of pink",
+      "question": "<b>Question (Dialogue & Expression):</b> Does George like the color pink?<br><b>Options:</b><br>A) Yuck! He does not like pink 😝<br>B) Yes, he loves pink! 😍<br><b>Guidance:</b> Encourage the child to make a silly face and say: 'Yuck!'"
+    },
+    {
+      "time": 239.16,
+      "label": "Daddy Pig takes off his jacket to reveal a smart white shirt",
+      "question": "<b>Question (Visual & Colors):</b> What color is Daddy Pig's work shirt under his jacket?<br><b>Options:</b><br>A) White 👔<br>B) Yellow 🟨<br><b>Guidance:</b> Encourage the child to say: 'A white shirt!'"
+    },
+    {
+      "time": 272.68,
+      "label": "Daddy Pig scores a goal in the muddy field",
+      "question": "<b>Question (Dialogue & Story conclusion):</b> According to Daddy Pig, what are football shirts meant to be?<br><b>Options:</b><br>A) Meant to be muddy! ⚽<br>B) Meant to stay clean forever 🧼<br><b>Guidance:</b> Encourage the child to laugh and say: 'Meant to be muddy!'"
+    }
+  ]
+}
