@@ -2,84 +2,94 @@
   "title": "Pedro's Cough",
   "stopPoints": [
     {
-      "time": 24.8,
-      "label": "Madame Gazelle playing guitar",
-      "question": "<b>Question (Instrument):</b> 'What instrument is Madame Gazelle playing?'<br><b>Options:</b> 'A) A guitar 🎸<br>B) A drum 🥁'<br><b>Guidance:</b> Encourage the child to say: 'A guitar!'"
+      "time": 25.40,
+      "label": "Music lesson starts with Madame Gazelle",
+      "question": "<b>Question (Visual & Dialogue):</b> What musical instrument is Madame Gazelle playing for the class?<br><b>Options:</b><br>A) A guitar 🎸<br>B) A drum 🥁<br><b>Guidance:</b> Encourage the child to look at Madame Gazelle and say: 'A guitar!'"
     },
     {
-      "time": 35.8,
-      "label": "Pedro is sick with a cough",
-      "question": "<b>Question (Sickness):</b> 'Oh no, what is wrong with Pedro?'<br><b>Options:</b> 'A) He is sleepy 😴<br>B) He has a cough 🤧'<br><b>Guidance:</b> Encourage the child to say: 'He has a cough!'"
+      "time": 33.45,
+      "label": "Pedro coughs and interrupts the song",
+      "question": "<b>Question (Action & Dialogue):</b> Who started coughing during the music lesson?<br><b>Options:</b><br>A) Pedro Pony 🐴<br>B) Peppa Pig 🐷<br><b>Guidance:</b> Ask the child who coughed: 'Pedro Pony!'"
     },
     {
-      "time": 47.8,
-      "label": "Madame Gazelle makes a phone call",
-      "question": "<b>Question (Calling):</b> 'Who is Madame Gazelle calling on the phone?'<br><b>Options:</b> 'A) Dr. Brown Bear 🐻<br>B) Peppa's Mummy 🐷'<br><b>Guidance:</b> Encourage the child to say: 'Dr. Brown Bear!'"
+      "time": 40.44,
+      "label": "Madame Gazelle rings the doctor",
+      "question": "<b>Question (Visual & Dialogue):</b> Who is Madame Gazelle calling on the phone?<br><b>Options:</b><br>A) Dr. Brown Bear 🐻<br>B) Grandpa Pig 👴<br><b>Guidance:</b> Prompt the child: 'Dr. Brown Bear!'"
     },
     {
-      "time": 59.5,
-      "label": "Dr. Brown Bear drives his car",
-      "question": "<b>Question (Color):</b> 'What color is Dr. Brown Bear's car?'<br><b>Options:</b> 'A) White 🚗<br>B) Red 🚒'<br><b>Guidance:</b> Encourage the child to say: 'White!'"
+      "time": 52.96,
+      "label": "Dr. Brown Bear answers the emergency call",
+      "question": "<b>Question (Visual):</b> What color is the telephone on Dr. Brown Bear's desk?<br><b>Options:</b><br>A) Green 🟢<br>B) Red 🔴<br><b>Guidance:</b> Have the child point to the telephone and say: 'Green!'"
     },
     {
-      "time": 75.8,
-      "label": "Pedro coughing",
-      "question": "<b>Question (Action):</b> 'What is Pedro doing?'<br><b>Options:</b> 'A) Laughing 😂<br>B) Coughing 🤧'<br><b>Guidance:</b> Encourage the child to say: 'Coughing!'"
+      "time": 59.50,
+      "label": "Dr. Brown Bear drives through the traffic",
+      "question": "<b>Question (Visual):</b> What vehicle is Dr. Brown Bear driving with a flashing light?<br><b>Options:</b><br>A) An ambulance car 🚑<br>B) A big bicycle 🚲<br><b>Guidance:</b> Encourage the child to identify the vehicle: 'An ambulance!'"
     },
     {
-      "time": 103.6,
+      "time": 66.60,
+      "label": "Pedro explains his cough to the doctor",
+      "question": "<b>Question (Dialogue):</b> What does Pedro say is the matter with him?<br><b>Options:</b><br>A) He has got a cough 🗣️<br>B) His foot hurts 🦶<br><b>Guidance:</b> Encourage the child to say: 'I\\'ve got a cough!'"
+    },
+    {
+      "time": 83.81,
+      "label": "Pedro explains when his cough started",
+      "question": "<b>Question (Dialogue):</b> When does Pedro say his cough started?<br><b>Options:</b><br>A) When Madame Gazelle started singing 🎶<br>B) At lunchtime 🥪<br><b>Guidance:</b> Ask the child: 'When Madame Gazelle started singing!'"
+    },
+    {
+      "time": 96.73,
+      "label": "Dr. Brown Bear explains catching coughs",
+      "question": "<b>Question (Dialogue):</b> What does Dr. Brown Bear say Pedro's cough might be?<br><b>Options:</b><br>A) Catching (contagious) 🤧<br>B) Very loud 📢<br><b>Guidance:</b> Encourage the child to repeat the key word: 'Catching!'"
+    },
+    {
+      "time": 104.00,
       "label": "Dr. Brown Bear gives Pedro medicine",
-      "question": "<b>Question (Object):</b> 'What is Dr. Brown Bear giving Pedro on a spoon?'<br><b>Options:</b> 'A) Soup 🍲<br>B) Medicine 🥄'<br><b>Guidance:</b> Encourage the child to say: 'Medicine!'"
+      "question": "<b>Question (Visual):</b> What color is the cough medicine bottle Dr. Brown Bear holds?<br><b>Options:</b><br>A) Pink 🩷<br>B) Blue 💙<br><b>Guidance:</b> Prompt the child to name the color: 'Pink!'"
     },
     {
-      "time": 108.2,
-      "label": "Pedro reacts to the medicine",
-      "question": "<b>Question (Taste):</b> 'Did Pedro like the taste of the medicine?'<br><b>Options:</b> 'A) Yes, it was yummy 😋<br>B) No, it tasted bad 🤢'<br><b>Guidance:</b> Encourage the child to say: 'No, it tasted bad!'"
+      "time": 111.75,
+      "label": "Pedro describes the taste of the medicine",
+      "question": "<b>Question (Dialogue):</b> What funny thing does Pedro say the medicine tastes like?<br><b>Options:</b><br>A) An old shoe full of jam 👟🍓<br>B) Sweet chocolate cake 🍫🍰<br><b>Guidance:</b> Laugh together and say: 'An old shoe full of jam!'"
     },
     {
-      "time": 123.7,
-      "label": "Danny and Suzy are coughing",
-      "question": "<b>Question (Characters):</b> 'Who caught Pedro's cough now?'<br><b>Options:</b> 'A) Danny Dog and Suzy Sheep 🐶🐑<br>B) Peppa and George 🐷🐷'<br><b>Guidance:</b> Encourage the child to say: 'Danny Dog and Suzy Sheep!'"
+      "time": 124.02,
+      "label": "Danny Dog and Suzy Sheep catch the cough",
+      "question": "<b>Question (Visual & Dialogue):</b> Which two friends caught Pedro's cough next?<br><b>Options:</b><br>A) Danny Dog and Suzy Sheep 🐶🐑<br>B) Candy Cat and Zoe Zebra 🐱🦓<br><b>Guidance:</b> Encourage the child to identify the two coughing friends: 'Danny and Suzy!'"
     },
     {
-      "time": 149.2,
-      "label": "Dr. Brown Bear holds an apple",
-      "question": "<b>Question (Food):</b> 'What does Dr. Brown Bear eat every day to stay healthy?'<br><b>Options:</b> 'A) An apple 🍏<br>B) A banana 🍌'<br><b>Guidance:</b> Encourage the child to say: 'An apple!'"
+      "time": 140.27,
+      "label": "Suzy and Danny taste the medicine",
+      "question": "<b>Question (Dialogue):</b> What does Danny Dog say his spoonful of medicine tastes of?<br><b>Options:</b><br>A) Flowers 🌸<br>B) Bananas 🍌<br><b>Guidance:</b> Encourage the child to recall Danny's reaction: 'Flowers!'"
     },
     {
-      "time": 157.5,
-      "label": "Parents arrive to pick up the children",
-      "question": "<b>Question (Vehicles):</b> 'What are the parents driving to pick up the kids?'<br><b>Options:</b> 'A) Bicycles 🚲<br>B) Cars 🚙'<br><b>Guidance:</b> Encourage the child to say: 'Cars!'"
+      "time": 148.34,
+      "label": "Dr. Brown Bear eats an apple",
+      "question": "<b>Question (Visual & Dialogue):</b> What healthy fruit does Dr. Brown Bear eat every day to stay well?<br><b>Options:</b><br>A) A green apple 🍏<br>B) An orange 🍊<br><b>Guidance:</b> Have the child point to the apple and say: 'An apple a day!'"
     },
     {
-      "time": 188.9,
-      "label": "The grown-ups catch the cough",
-      "question": "<b>Question (People):</b> 'Who is coughing now?'<br><b>Options:</b> 'A) The children 👦👧<br>B) All the grown-ups 👩👨'<br><b>Guidance:</b> Encourage the child to say: 'All the grown-ups!'"
+      "time": 168.44,
+      "label": "Parents pick up the children at home time",
+      "question": "<b>Question (Visual):</b> What is ringing at the top of the school roof when school ends?<br><b>Options:</b><br>A) A yellow school bell 🔔<br>B) A clock ⏰<br><b>Guidance:</b> Ask the child to spot the item on top of the school: 'A school bell!'"
     },
     {
-      "time": 196.4,
-      "label": "Peppa uses the phone to call the doctor",
-      "question": "<b>Question (Action):</b> 'What is Peppa doing?'<br><b>Options:</b> 'A) Calling the doctor 📞<br>B) Playing a game 🎮'<br><b>Guidance:</b> Encourage the child to say: 'Calling the doctor!'"
+      "time": 189.02,
+      "label": "All grown-ups start coughing together",
+      "question": "<b>Question (Action & Dialogue):</b> Who caught Pedro's cough after the children told their story?<br><b>Options:</b><br>A) All the grown-ups 👨‍👩‍👧‍👦<br>B) The birds outside 🐦<br><b>Guidance:</b> Encourage the child to answer: 'All the grown-ups!'"
     },
     {
-      "time": 216.9,
-      "label": "The grown-ups stand in line for medicine",
-      "question": "<b>Question (Action):</b> 'What are the grown-ups doing?'<br><b>Options:</b> 'A) Standing in line 🧍🧍‍♂️<br>B) Sitting in a circle ⭕'<br><b>Guidance:</b> Encourage the child to say: 'Standing in line!'"
+      "time": 221.00,
+      "label": "All the parents take their medicine",
+      "question": "<b>Question (Dialogue):</b> What does Mummy Pig say the medicine tastes like?<br><b>Options:</b><br>A) Custard and old socks 🧦🍮<br>B) Strawberries and cream 🍓🍦<br><b>Guidance:</b> Have fun with the silly description: 'Custard and old socks!'"
     },
     {
-      "time": 240.6,
-      "label": "Dr. Brown Bear gets sick",
-      "question": "<b>Question (Sickness):</b> 'Oh no! Who caught the cough now?'<br><b>Options:</b> 'A) Madame Gazelle 🎸<br>B) Dr. Brown Bear 🐻'<br><b>Guidance:</b> Encourage the child to say: 'Dr. Brown Bear!'"
+      "time": 244.18,
+      "label": "Dr. Brown Bear catches the cough himself",
+      "question": "<b>Question (Action & Visual):</b> Oh dear! Who starts coughing while leaving the classroom?<br><b>Options:</b><br>A) Dr. Brown Bear 🐻<br>B) Peppa Pig 🐷<br><b>Guidance:</b> Prompt the child: 'Dr. Brown Bear!'"
     },
     {
-      "time": 264.8,
-      "label": "The children visit Dr. Brown Bear",
-      "question": "<b>Question (Location):</b> 'Where is Dr. Brown Bear resting?'<br><b>Options:</b> 'A) In his car 🚗<br>B) In his bed 🛏️'<br><b>Guidance:</b> Encourage the child to say: 'In his bed!'"
-    },
-    {
-      "time": 269.7,
-      "label": "The children bring fruit and cushions",
-      "question": "<b>Question (Object):</b> 'What did the children bring to Dr. Brown Bear?'<br><b>Options:</b> 'A) Fruit and cushions 🍎🛋️<br>B) Toys and games 🧸🪁'<br><b>Guidance:</b> Encourage the child to say: 'Fruit and cushions!'"
+      "time": 272.66,
+      "label": "The children visit Dr. Brown Bear in bed",
+      "question": "<b>Question (Visual & Dialogue):</b> What special outfit is Suzy Sheep wearing while giving medicine to Dr. Brown Bear?<br><b>Options:</b><br>A) A nurse costume with a white hat 👩‍⚕️<br>B) A fairy costume with wings 🧚<br><b>Guidance:</b> Ask the child to look at Suzy's white hat and cross: 'A nurse!'"
     }
   ]
 }
