@@ -1,0 +1,65 @@
+{
+  "title": "Treasure Hunt",
+  "stopPoints": [
+    {
+      "time": 30.32,
+      "label": "Granny Pig draws the treasure map",
+      "question": "<b>Question (Visual & Action):</b> What is Granny Pig drawing on the paper with colored crayons?<br><b>Options:</b><br>A) A treasure map 🗺️<br>B) A toy car 🚗<br><b>Guidance:</b> Encourage the child to say: 'A treasure map!'"
+    },
+    {
+      "time": 36.8,
+      "label": "Grandpa Pig buries the treasure chest",
+      "question": "<b>Question (Dialogue & Visual):</b> What tool is Grandpa Pig using to dig in the garden?<br><b>Options:</b><br>A) A spade 🪣<br>B) An umbrella ☂️<br><b>Guidance:</b> Encourage the child to answer: 'A spade!'"
+    },
+    {
+      "time": 61.0,
+      "label": "Peppa and her family arrive at the house",
+      "question": "<b>Question (Visual):</b> What color is Daddy Pig's car parked outside the house?<br><b>Options:</b><br>A) Red 🚗<br>B) Blue 🚙<br><b>Guidance:</b> Point to Daddy Pig's car and ask the child: 'Is the car red or blue?'"
+    },
+    {
+      "time": 82.24,
+      "label": "Grandpa Pig tells them about the treasure",
+      "question": "<b>Question (Dialogue):</b> Where does Grandpa Pig say the treasure is buried?<br><b>Options:</b><br>A) In the garden 🏡<br>B) Under the bed 🛏️<br><b>Guidance:</b> Prompt the child to remember what Grandpa said: 'In the garden!'"
+    },
+    {
+      "time": 97.83,
+      "label": "George puts on the pirate hat",
+      "question": "<b>Question (Visual & Action):</b> What does George wear on his head to look like Captain George?<br><b>Options:</b><br>A) A pirate hat 🏴‍☠️<br>B) A crown 👑<br><b>Guidance:</b> Encourage the child to shout enthusiastically: 'A pirate hat!'"
+    },
+    {
+      "time": 116.55,
+      "label": "Daddy Pig holds the map upside down",
+      "question": "<b>Question (Visual & Dialogue):</b> How was Daddy Pig holding the treasure map before Mummy Pig corrected him?<br><b>Options:</b><br>A) Upside down 🙃<br>B) Folded in his pocket 👖<br><b>Guidance:</b> Ask the child: 'Was Daddy Pig holding it upside down?'"
+    },
+    {
+      "time": 139.07,
+      "label": "Granny Pig gives the first clue",
+      "question": "<b>Question (Dialogue):</b> Where did Granny Pig hide the very first clue?<br><b>Options:</b><br>A) In a bottle 🍾<br>B) Inside an apple 🍎<br><b>Guidance:</b> Prompt the child: 'In a bottle!'"
+    },
+    {
+      "time": 159.09,
+      "label": "Grandpa Pig reads the pirate's message",
+      "question": "<b>Question (Dialogue):</b> What did the pirate's secret note tell them to follow?<br><b>Options:</b><br>A) Follow the arrows ➡️<br>B) Follow the bird 🐦<br><b>Guidance:</b> Encourage the child to say: 'Follow the arrows!'"
+    },
+    {
+      "time": 186.74,
+      "label": "George spots the sticks on the grass",
+      "question": "<b>Question (Visual):</b> What are the sticks shaped like on the grass?<br><b>Options:</b><br>A) Arrows 🏹<br>B) Stars ⭐<br><b>Guidance:</b> Ask the child to trace the stick shape with their finger and say: 'Arrows!'"
+    },
+    {
+      "time": 200.16,
+      "label": "Peppa finds the key",
+      "question": "<b>Question (Visual & Identification):</b> What shiny golden object did Peppa find at the end of the arrows?<br><b>Options:</b><br>A) A golden key 🗝️<br>B) A golden spoon 🥄<br><b>Guidance:</b> Encourage the child to point and say: 'A key!'"
+    },
+    {
+      "time": 223.84,
+      "label": "Peppa spots the two apple trees",
+      "question": "<b>Question (Visual):</b> What kind of fruit is hanging on the two trees on the map?<br><b>Options:</b><br>A) Red apples 🍎<br>B) Yellow bananas 🍌<br><b>Guidance:</b> Encourage the child to look at the trees and answer: 'Apples!'"
+    },
+    {
+      "time": 263.22,
+      "label": "Grandpa Pig opens a coin",
+      "question": "<b>Question (Dialogue & Visual):</b> What are the shiny gold coins actually made of?<br><b>Options:</b><br>A) Yummy chocolate 🍫<br>B) Shiny rocks 🪨<br><b>Guidance:</b> Ask the child with a smile: 'Are they chocolate coins or rocks?'"
+    }
+  ]
+}
