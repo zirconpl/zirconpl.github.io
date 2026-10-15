@@ -1,0 +1,80 @@
+{
+  "title": "Pancakes",
+  "stopPoints": [
+    {
+      "time": 30.99,
+      "label": "Mummy Pig announces pancake day",
+      "question": "<b>Question (Dialogue & Visual):</b> What special food is Mummy Pig making for everyone today?<br><b>Options:</b><br>A) Pancakes 🥞<br>B) Pizza 🍕<br><b>Guidance:</b> Encourage the child to say: 'Pancakes!'"
+    },
+    {
+      "time": 44.27,
+      "label": "Daddy Pig holds the frying pan",
+      "question": "<b>Question (Visual & Action):</b> What is Daddy Pig holding in his hand?<br><b>Options:</b><br>A) A frying pan 🍳<br>B) A spoon 🥄<br><b>Guidance:</b> Encourage the child to identify the pan: 'A frying pan!'"
+    },
+    {
+      "time": 56.50,
+      "label": "Daddy Pig claims there was a problem with the pan",
+      "question": "<b>Question (Character & Dialogue):</b> Who dropped the pancake on the floor last time?<br><b>Options:</b><br>A) Daddy Pig 👓<br>B) Peppa Pig 🐷<br><b>Guidance:</b> Ask the child: 'Who was it?' and guide them to answer: 'Daddy Pig!'"
+    },
+    {
+      "time": 68.00,
+      "label": "Mummy Pig pours flour into the bowl",
+      "question": "<b>Question (Visual):</b> What white ingredient does Mummy Pig pour into the bowl first?<br><b>Options:</b><br>A) Flour 🌾<br>B) Sugar 🍬<br><b>Guidance:</b> Encourage the child to say: 'Flour!'"
+    },
+    {
+      "time": 73.00,
+      "label": "Mummy Pig cracks an egg into the bowl",
+      "question": "<b>Question (Visual & Action):</b> What does Mummy Pig crack and add into the bowl next?<br><b>Options:</b><br>A) An egg 🥚<br>B) An apple 🍎<br><b>Guidance:</b> Prompt the child to notice the egg: 'An egg!'"
+    },
+    {
+      "time": 77.00,
+      "label": "Mummy Pig pours milk from the jug",
+      "question": "<b>Question (Visual):</b> What liquid is Mummy Pig pouring into the bowl?<br><b>Options:</b><br>A) Milk 🥛<br>B) Orange juice 🍊<br><b>Guidance:</b> Guide the child to answer: 'Milk!'"
+    },
+    {
+      "time": 97.60,
+      "label": "Peppa and George stir the batter together",
+      "question": "<b>Question (Visual):</b> Where did the batter splash onto Peppa and George's faces?<br><b>Options:</b><br>A) On their noses and cheeks 🐽<br>B) On their shoes 👟<br><b>Guidance:</b> Encourage the child to laugh and point: 'On their noses!'"
+    },
+    {
+      "time": 117.00,
+      "label": "Mummy Pig flips the pancake over",
+      "question": "<b>Question (Action):</b> What did Mummy Pig just do to the pancake in the frying pan?<br><b>Options:</b><br>A) Flipped it over 🥞<br>B) Ate it up 😋<br><b>Guidance:</b> Encourage the child to say: 'Flipped it over!'"
+    },
+    {
+      "time": 130.00,
+      "label": "George receives the first pancake with syrup",
+      "question": "<b>Question (Visual & Dialogue):</b> What sweet syrup does Mummy Pig squeeze onto George's pancake?<br><b>Options:</b><br>A) Maple syrup 🍁<br>B) Tomato ketchup 🍅<br><b>Guidance:</b> Point out the bottle with the leaf and say: 'Syrup!'"
+    },
+    {
+      "time": 157.00,
+      "label": "Peppa gets her pancake",
+      "question": "<b>Question (Visual):</b> Who gets the second delicious pancake?<br><b>Options:</b><br>A) Peppa Pig 👧<br>B) Daddy Pig 👓<br><b>Guidance:</b> Ask the child: 'Whose turn is it?' and encourage: 'Peppa!'"
+    },
+    {
+      "time": 174.00,
+      "label": "Daddy Pig gets ready to cook his pancake",
+      "question": "<b>Question (Dialogue):</b> Whose turn is it next to flip a pancake?<br><b>Options:</b><br>A) Daddy Pig 🐷<br>B) George 🦖<br><b>Guidance:</b> Encourage the child to answer: 'Daddy Pig!'"
+    },
+    {
+      "time": 199.00,
+      "label": "Daddy Pig flips the pancake too high",
+      "question": "<b>Question (Action & Visual):</b> Where did Daddy Pig's pancake go when he flipped it?<br><b>Options:</b><br>A) Stuck on the ceiling ☁️<br>B) Into his tummy 🍽️<br><b>Guidance:</b> Prompt the child to look up: 'Up on the ceiling!'"
+    },
+    {
+      "time": 218.00,
+      "label": "Daddy Pig stands on the table trying to reach",
+      "question": "<b>Question (Visual):</b> What is Daddy Pig standing on to reach the ceiling?<br><b>Options:</b><br>A) The dining table 🪑<br>B) A tall ladder 🪜<br><b>Guidance:</b> Encourage the child to point out: 'The table!'"
+    },
+    {
+      "time": 236.80,
+      "label": "Mummy Pig and the children jump upstairs",
+      "question": "<b>Question (Action):</b> What are Mummy Pig, Peppa, and George doing in the bedroom upstairs?<br><b>Options:</b><br>A) Jumping up and down 🦘<br>B) Sleeping in bed 🛏️<br><b>Guidance:</b> Encourage the child to jump and say: 'Jumping up and down!'"
+    },
+    {
+      "time": 257.66,
+      "label": "The pancake lands on Daddy Pig's head",
+      "question": "<b>Question (Visual):</b> Where did the pancake land when it fell down?<br><b>Options:</b><br>A) On Daddy Pig's head 🥞<br>B) In the kitchen sink 🚰<br><b>Guidance:</b> Encourage the child to giggle and point: 'On Daddy Pig's head!'"
+    }
+  ]
+}
