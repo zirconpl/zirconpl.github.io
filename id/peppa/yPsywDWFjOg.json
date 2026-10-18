@@ -1,0 +1,65 @@
+{
+  "title": "Shopping",
+  "stopPoints": [
+    {
+      "time": 36.2,
+      "label": "George sits happily in the shopping trolley",
+      "question": "<b>Question (Dialogue & Visual):</b> Look at George! Where is George sitting right now?<br><b>Options:</b><br>A) In the trolley 🛒<br>B) In the car 🚗<br><b>Guidance:</b> Point to the shopping cart and encourage the child to say: 'In the trolley!'"
+    },
+    {
+      "time": 49.7,
+      "label": "Daddy Pig says Peppa is too big for the trolley",
+      "question": "<b>Question (Dialogue & Visual):</b> Why can't Peppa sit in the trolley like George?<br><b>Options:</b><br>A) She is too big 👧<br>B) She is too small 👶<br><b>Guidance:</b> Compare Peppa and George's size, and guide the child to say: 'She's too big!' or 'Peppa helps with the shopping!'"
+    },
+    {
+      "time": 58.6,
+      "label": "Daddy Pig and Mummy Pig read the shopping list",
+      "question": "<b>Question (Dialogue & Visual):</b> Look at the list in Daddy Pig's hand! How many things are on the shopping list?<br><b>Options:</b><br>A) Four (4) 📝<br>B) Two (2) ✌️<br><b>Guidance:</b> Hold up four fingers and count the lines on the list together: 'One, two, three, four! Four things!'"
+    },
+    {
+      "time": 76.2,
+      "label": "Peppa spots the red tomatoes on the shelf",
+      "question": "<b>Question (Dialogue & Visual):</b> Peppa found the tomatoes! What colour are the tomatoes on the shelf?<br><b>Options:</b><br>A) Red 🍅<br>B) Blue 🫐<br><b>Guidance:</b> Point to the tomatoes on the screen and encourage the child to say: 'Red!' or 'Red tomatoes!'"
+    },
+    {
+      "time": 87.6,
+      "label": "Peppa counts four tomatoes into a bag",
+      "question": "<b>Question (Dialogue & Visual):</b> Peppa put the tomatoes in the bag! How many tomatoes did she count?<br><b>Options:</b><br>A) Four tomatoes 🍅🍅🍅🍅<br>B) One tomato 🍅<br><b>Guidance:</b> Count the tomatoes inside the clear bag together and say: 'Four tomatoes!'"
+    },
+    {
+      "time": 110.58,
+      "label": "Everyone talks about Peppa and George's favourite food",
+      "question": "<b>Question (Dialogue & Visual):</b> George calls it 'Pighetti'! What is Peppa and George's favourite food?<br><b>Options:</b><br>A) Spaghetti 🍝<br>B) Ice cream 🍦<br><b>Guidance:</b> Practice pronouncing the word clearly together: 'Spaghetti!'"
+    },
+    {
+      "time": 124.2,
+      "label": "Peppa puts the pack of spaghetti into the trolley",
+      "question": "<b>Question (Dialogue & Visual):</b> Well done, Peppa! Where did Peppa put the spaghetti?<br><b>Options:</b><br>A) In the trolley 🛒<br>B) On the floor ⬇️<br><b>Guidance:</b> Point to the long blue-and-yellow pack inside the cart and say: 'In the trolley!'"
+    },
+    {
+      "time": 146.55,
+      "label": "Peppa guesses crisps are next on the list",
+      "question": "<b>Question (Dialogue & Visual):</b> Peppa wants to buy crisps! Are crisps on the shopping list?<br><b>Options:</b><br>A) No, they aren't 🙅‍♀️<br>B) Yes, they are 🙆‍♀️<br><b>Guidance:</b> Shake your head like Daddy Pig and guide the child to answer: 'No! We have plenty of crisps at home!'"
+    },
+    {
+      "time": 161.5,
+      "label": "George shouts Dinosaur in the supermarket",
+      "question": "<b>Question (Dialogue & Visual):</b> Haha! What funny thing does George want to buy in the supermarket?<br><b>Options:</b><br>A) A dinosaur 🦖<br>B) A teddy bear 🧸<br><b>Guidance:</b> Laugh together and ask: 'Are there any dinosaurs in the supermarket? No! Encourage them to say: Dinosaur!'"
+    },
+    {
+      "time": 181.8,
+      "label": "Peppa counts four onions and puts them in the trolley",
+      "question": "<b>Question (Dialogue & Visual):</b> Peppa just counted four round vegetables and put them in the trolley. What are they?<br><b>Options:</b><br>A) Onions 🧅<br>B) Carrots 🥕<br><b>Guidance:</b> Point to the bag of round brown onions in the trolley and say: 'Onions! Four onions!'"
+    },
+    {
+      "time": 226.8,
+      "label": "George chooses a very big green melon",
+      "question": "<b>Question (Dialogue & Visual):</b> Look in the trolley! Did George choose apples, oranges, bananas, or a very big melon?<br><b>Options:</b><br>A) A very big melon 🍉<br>B) Apples 🍏<br><b>Guidance:</b> Point to the huge green striped fruit in the cart and encourage the child to say: 'A melon!' or 'A big green melon!'"
+    },
+    {
+      "time": 266.52,
+      "label": "Daddy Pig admits he put the chocolate cake in the trolley",
+      "question": "<b>Question (Dialogue & Visual):</b> Surprise at the checkout! Who secretly put the yummy chocolate cake in the trolley?<br><b>Options:</b><br>A) Daddy Pig 🐷🎂<br>B) Peppa Pig 👧<br><b>Guidance:</b> Point to Daddy Pig holding the brown cake and encourage the child to laugh and say: 'Daddy Pig! Naughty Daddy!'"
+    }
+  ]
+}
