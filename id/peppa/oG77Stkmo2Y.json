@@ -1,91 +1,65 @@
 {
-  "title": "Mr. Dinosaur is Lost",
-  "watched": true,
+  "title": "Mr Dinosaur Is Lost",
   "stopPoints": [
     {
-      "time": 37.373,
-      "label": "George scaring Peppa",
-      "question": "<b>Question (Emotion):</b> 'Look at Peppa! Is she laughing 😂 or scared 😱?'<br><b>Guidance:</b> Guide the child to say: 'She is scared!'"
+      "time": 32.8,
+      "label": "George plays happily with Mr. Dinosaur",
+      "question": "<b>Question (Visual & Dialogue):</b> What is George's favourite toy?[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)<br><b>Options:</b><br>A) A dinosaur 🦖<br>B) A teddy bear 🧸<br><b>Guidance:</b> Encourage the child to roar and say: 'A dinosaur[span_2](start_span)!'[span_2](end_span)"
     },
     {
-      "time": 47.947,
-      "label": "Playing outside in the garden",
-      "question": "<b>Question (Location):</b> 'Where are they playing? Inside the house 🏠 or outside in the garden 🌳?'<br><b>Guidance:</b> Help the child say: 'Outside in the garden!'"
+      "time": 48.5,
+      "label": "George scares Peppa in the garden",
+      "question": "<b>Question (Action):</b> Who does George like to scare with Mr. Dinosaur?[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span)<br><b>Options:</b><br>A) Peppa 🐷<br>B) Daddy Pig 👓<br><b>Guidance:</b> Encourage the child to say: 'Peppa!'"
     },
     {
-      "time": 63.768,
-      "label": "Eating supper",
-      "question": "<b>Question (Action):</b> 'Look at the family. Are they sleeping 😴 or eating supper 🍽️?'<br><b>Guidance:</b> Encourage the child to answer: 'They are eating!'"
+      "time": 63.5,
+      "label": "The family sits down for supper",
+      "question": "<b>Question (Visual):</b> Where is Mr. Dinosaur sitting at supper time?[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span)<br><b>Options:</b><br>A) Next to George 🪑<br>B) Under the table 🥣<br><b>Guidance:</b> Encourage the child to point to the high chair and say: 'Next to George!'"
     },
     {
-      "time": 72.164,
-      "label": "Taking a bath",
-      "question": "<b>Question (Location):</b> 'Where is George now? Is he in the bed 🛏️ or in the bath 🛁?'<br><b>Guidance:</b> Help the child point and say: 'He is in the bath!'"
+      "time": 72.5,
+      "label": "George takes a warm bubble bath",
+      "question": "<b>Question (Dialogue & Visual):</b> Who does George share his bath with?[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span)<br><b>Options:</b><br>A) Mr. Dinosaur 🦕<br>B) A little duck 🦆<br><b>Guidance:</b> Encourage the child to say: 'Mr. Dinosaur!'"
     },
     {
-      "time": 86.635,
-      "label": "George in bed",
-      "question": "<b>Question (Character):</b> 'Who is sleeping next to George? Is it a teddy bear 🧸 or a dinosaur 🦖?'<br><b>Guidance:</b> The child should look closely and say: 'A dinosaur!'"
+      "time": 87.5,
+      "label": "George goes to bed at night",
+      "question": "<b>Question (Visual):</b> Where is Mr. Dinosaur tucked up at bedtime?[span_9](start_span)[span_9](end_span)[span_10](start_span)[span_10](end_span)<br><b>Options:</b><br>A) In bed with George 🛏️<br>B) On the sofa 🛋️<br><b>Guidance:</b> Encourage the child to say: 'In bed!'"
     },
     {
-      "time": 98.973,
-      "label": "Throwing Mr. Dinosaur in the air",
-      "question": "<b>Question (Action):</b> 'What is George doing? Is he throwing the dinosaur UP ⬆️ or DOWN ⬇️?'<br><b>Guidance:</b> Show the throwing motion and help them say: 'He is throwing it UP!'"
+      "time": 104.5,
+      "label": "George throws Mr. Dinosaur up in the air",
+      "question": "<b>Question (Action):</b> What is George's favourite game to play outside?[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span)<br><b>Options:</b><br>A) Throwing Mr. Dinosaur up in the air ⬆️<br>B) Riding a bicycle 🚲<br><b>Guidance:</b> Encourage the child to throw their hands up and say: 'Throwing Mr. Dinosaur!'"
     },
     {
-      "time": 109.731,
-      "label": "Peppa and Daddy playing drafts",
-      "question": "<b>Question (Action):</b> 'What are Peppa and Daddy Pig doing? Are they running 🏃 or playing a game 🎲?'<br><b>Guidance:</b> Guide the child to answer: 'They are playing a game!'"
+      "time": 116.5,
+      "label": "Peppa and Daddy Pig play draughts",
+      "question": "<b>Question (Dialogue & Visual):</b> What game are Peppa and Daddy Pig playing on the sofa?[span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span)<br><b>Options:</b><br>A) Draughts 🏁<br>B) Building blocks 🧱<br><b>Guidance:</b> Encourage the child to say: 'Draughts!'"
     },
     {
-      "time": 120.974,
-      "label": "George is crying",
-      "question": "<b>Question (Emotion):</b> 'Look at George. Is he happy 😊 or crying 😭?'<br><b>Guidance:</b> Help the child observe the tears and say: 'He is crying!'"
+      "time": 133.5,
+      "label": "George cries because his toy is missing",
+      "question": "<b>Question (Action & Dialogue):</b> Why is George crying?[span_15](start_span)[span_15](end_span)[span_16](start_span)[span_16](end_span)<br><b>Options:</b><br>A) He lost Mr. Dinosaur 😢<br>B) He is hungry 🍎<br><b>Guidance:</b> Encourage the child to say: 'He lost Mr. Dinosaur!'"
     },
     {
-      "time": 148.576,
-      "label": "Talking about a detective",
-      "question": "<b>Question (Job):</b> 'Daddy says they need someone to find lost things. A detective 🕵️ or a doctor 👨‍⚕️?'<br><b>Guidance:</b> Help the child learn the new word: 'A detective!'"
+      "time": 155.5,
+      "label": "Peppa volunteers to be the detective",
+      "question": "<b>Question (Dialogue):</b> Who is going to be the detective to find Mr. Dinosaur?[span_17](start_span)[span_17](end_span)[span_18](start_span)[span_18](end_span)<br><b>Options:</b><br>A) Peppa 🕵️‍♀️<br>B) Mummy Pig 👩<br><b>Guidance:</b> Encourage the child to point to Peppa and say: 'Peppa!'"
     },
     {
-      "time": 162.224,
-      "label": "Peppa being a detective",
-      "question": "<b>Question (Clothing):</b> 'What is Peppa wearing on her head? Is it a hat 🎩 or a shoe 👟?'<br><b>Guidance:</b> Encourage the child to laugh and answer: 'It's a hat!'"
+      "time": 197.5,
+      "label": "Peppa checks the yellow bathtub",
+      "question": "<b>Question (Visual):</b> Is Mr. Dinosaur inside the bathtub?[span_19](start_span)[span_19](end_span)[span_20](start_span)[span_20](end_span)<br><b>Options:</b><br>A) No, it's empty 🛁<br>B) Yes, he is in the bath 🧼<br><b>Guidance:</b> Encourage the child to shake their head and say: 'No!'"
     },
     {
-      "time": 176.264,
-      "label": "George doesn't know where his dinosaur is",
-      "question": "<b>Question (Knowledge):</b> 'Peppa asks George a question. Does George know where Mr. Dinosaur is?'<br><b>Options:</b> 'A) Yes, he does. B) No, he doesn't.'<br><b>Guidance:</b> Guide the child to shake their head and say: 'No, he doesn't know!'"
+      "time": 213.5,
+      "label": "Peppa searches under George's bed",
+      "question": "<b>Question (Visual):</b> Did Peppa find Mr. Dinosaur in George's bed?[span_21](start_span)[span_21](end_span)[span_22](start_span)[span_22](end_span)<br><b>Options:</b><br>A) No, he is not there ❌<br>B) Yes, under the pillow 枕<br><b>Guidance:</b> Encourage the child to say: 'No!'"
     },
     {
-      "time": 196.442,
-      "label": "Checking the empty bath",
-      "question": "<b>Question (Location):</b> 'They look in the bath. Is Mr. Dinosaur there?'<br><b>Options:</b> 'A) Yes. B) No.'<br><b>Guidance:</b> Have the child shake their head and say: 'No, he is not!'"
-    },
-    {
-      "time": 213.128,
-      "label": "Checking the bed",
-      "question": "<b>Question (Location):</b> 'Now they look in the bed 🛏️. Is Mr. Dinosaur hiding there?'<br><b>Guidance:</b> Encourage the child to look at the empty bed and say: 'No!'"
-    },
-    {
-      "time": 235.169,
-      "label": "Looking in the garden",
-      "question": "<b>Question (Location):</b> 'Where are they looking now? Inside the house 🏠 or outside in the garden 🌳?'<br><b>Guidance:</b> The child can observe the outdoors and say: 'Outside in the garden!'"
-    },
-    {
-      "time": 246.676,
-      "label": "Mr. Dinosaur found in the tree",
-      "question": "<b>Question (Location):</b> 'Peppa found him! Where is Mr. Dinosaur? In the tree 🌲 or on the ground?'<br><b>Guidance:</b> The child points at the screen and says: 'He is in the tree!'"
-    },
-    {
-      "time": 259.217,
-      "label": "Daddy Pig helping",
-      "question": "<b>Question (Character):</b> 'Who is helping to get the dinosaur down? Peppa or Daddy Pig 🐷?'<br><b>Guidance:</b> Help the child answer: 'Daddy Pig!'"
-    },
-    {
-      "time": 277.021,
-      "label": "Happy ending",
-      "question": "<b>Question (Emotion):</b> 'George has his dinosaur back. Is he sad 😢 or happy 😊?'<br><b>Guidance:</b> Encourage the child to smile and say: 'He is very happy!'"
+      "time": 256.5,
+      "label": "Peppa spots Mr. Dinosaur in the garden tree",
+      "question": "<b>Question (Visual & Action):</b> Where was Mr. Dinosaur hiding in the garden?[span_23](start_span)[span_23](end_span)[span_24](start_span)[span_24](end_span)<br><b>Options:</b><br>A) Up in the tree 🌳<br>B) In the flowers 🌸<br><b>Guidance:</b> Encourage the child to point up high and say: 'In the tree!'"
     }
   ]
 }
