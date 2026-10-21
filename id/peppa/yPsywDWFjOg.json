@@ -12,11 +12,6 @@
       "question": "<b>Question (Dialogue & Visual):</b> Why can't Peppa sit in the trolley like George?<br><b>Options:</b><br>A) She is too big 👧<br>B) She is too small 👶<br><b>Guidance:</b> Compare Peppa and George's size, and guide the child to say: 'She's too big!' or 'Peppa helps with the shopping!'"
     },
     {
-      "time": 87.6,
-      "label": "Peppa counts four tomatoes into a bag",
-      "question": "<b>Question (Dialogue & Visual):</b> Peppa put the tomatoes in the bag! How many tomatoes did she count?<br><b>Options:</b><br>A) Four tomatoes 🍅🍅🍅🍅<br>B) One tomato 🍅<br><b>Guidance:</b> Count the tomatoes inside the clear bag together and say: 'Four tomatoes!'"
-    },
-    {
       "time": 124.2,
       "label": "Peppa puts the pack of spaghetti into the trolley",
       "question": "<b>Question (Dialogue & Visual):</b> Well done, Peppa! Where did Peppa put the spaghetti?<br><b>Options:</b><br>A) In the trolley 🛒<br>B) On the floor ⬇️<br><b>Guidance:</b> Point to the long blue-and-yellow pack inside the cart and say: 'In the trolley!'"
