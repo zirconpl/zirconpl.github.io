@@ -2,11 +2,6 @@
   "title": "The Camper Van",
   "stopPoints": [
     {
-      "time": 50.5,
-      "label": "Daddy Pig presses the button for the TV",
-      "question": "<b>Question (Visual & Dialogue):</b> What pops up when Daddy Pig presses the button?<br><b>Options:</b><br>A) A little TV 📺<br>B) A toaster 🍞<br><b>Guidance:</b> Encourage the child to point and say: 'A TV!'"
-    },
-    {
       "time": 90.0,
       "label": "Daddy Pig looks at the tricky map",
       "question": "<b>Question (Story & Dialogue):</b> Are Peppa and her family lost?<br><b>Options:</b><br>A) Yes, they are lost! 🗺️<br>B) No, they are home 🏡<br><b>Guidance:</b> Encourage the child to say: 'Yes, lost!'"
@@ -15,6 +10,11 @@
       "time": 151.5,
       "label": "Grandad Dog explains the sat-nav",
       "question": "<b>Question (Visual & Action):</b> Who stops to help Peppa's family on the road?<br><b>Options:</b><br>A) Grandad Dog and Danny Dog 🐶<br>B) Miss Rabbit 🐰<br><b>Guidance:</b> Encourage the child to call out: 'Grandad Dog!'"
+    },
+    {
+      "time": 174.5,
+      "label": "The camper van warns that oil is low",
+      "question": "<b>Question (Visual & Dialogue):</b> What warning does the camper van show on the screen?<br><b>Options:</b><br>A) Oil is low! 🛢️⚠️<br>B) Time for ice cream! 🍦<br><b>Guidance:</b> Encourage the child to say: 'Oil is low!'"
     },
     {
       "time": 219.5,
