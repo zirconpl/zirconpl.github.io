@@ -1,0 +1,30 @@
+{
+  "title": "Police Station",
+  "stopPoints": [
+    {
+      "time": 37.5,
+      "label": "George realizes Mr. Dinosaur is missing",
+      "question": "<b>Question (Visual & Dialogue):</b> What favorite toy did George lose on their day out?<br><b>Options:</b><br>A) Mr. Dinosaur 🦖<br>B) Teddy Bear 🧸<br><b>Guidance:</b> Encourage the child to roar and say: 'Mr. Dinosaur!'"
+    },
+    {
+      "time": 86.5,
+      "label": "Police officers eating delicious snacks",
+      "question": "<b>Question (Visual & Action):</b> What tasty treat are Police Officer Squirrel and Officer Panda eating?<br><b>Options:</b><br>A) Doughnuts 🍩<br>B) Apples 🍎<br><b>Guidance:</b> Encourage the child to point and say: 'Doughnuts!'"
+    },
+    {
+      "time": 156.0,
+      "label": "The lost property room has pirate treasure",
+      "question": "<b>Question (Visual & Dialogue):</b> What sparkling gold treasure is kept in the lost property room?<br><b>Options:</b><br>A) Pirate treasure chest 🏴‍☠️💰<br>B) A toy rocket 🚀<br><b>Guidance:</b> Encourage the child to say: 'Pirate treasure!'"
+    },
+    {
+      "time": 204.0,
+      "label": "Checking the dinosaurs in the box",
+      "question": "<b>Question (Visual & Dialogue):</b> Which purple dinosaur did Officer Squirrel show George first?<br><b>Options:</b><br>A) A Stegosaurus 🦕<br>B) A flying bird 🦜<br><b>Guidance:</b> Encourage the child to answer: 'Stegosaurus!'"
+    },
+    {
+      "time": 268.0,
+      "label": "Officer Panda opens the car boot",
+      "question": "<b>Question (Visual & Action):</b> Where did Officer Panda finally find George's green dinosaur?<br><b>Options:</b><br>A) In the car boot 🚗📦<br>B) Under the couch 🛋️<br><b>Guidance:</b> Encourage the child to cheer and say: 'In the car boot!'"
+    }
+  ]
+}
