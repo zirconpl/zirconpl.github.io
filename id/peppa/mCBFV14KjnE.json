@@ -2,14 +2,14 @@
   "title": "Police Station",
   "stopPoints": [
     {
-      "time": 90.066,
+      "time": 106.366,
       "label": "Police officers eating donuts at the desk",
       "question": "<b>Q1 (Reason):</b> 'Why did Peppa's family come here?' (Prompt: George lost Mr. Dinosaur) ➔ <i>Guidance: Encourage child to say: 'George lost Mr. Dinosaur!'</i><br><b>Q2 (Food):</b> 'What is Officer Panda eating?' (Prompt: A pink donut / An apple) ➔ <i>Guidance: Encourage child to say: 'He is eating a donut!'</i><br><b>Q3 (Who):</b> 'Who are the two police officers?' (Prompt: Officer Squirrel and Officer Panda) ➔ <i>Guidance: Encourage child to say: 'Officer Squirrel and Officer Panda!'</i>"
     },
     {
       "time": 153.811,
       "label": "The lost and found room full of strange treasures",
-      "question": "<b>Q1 (Place):</b> 'Where are they now?' (Prompt: The Lost and Found room / The park) ➔ <i>Guidance: Encourage child to say: 'The Lost and Found room!'</i><br><b>Q2 (Item):</b> 'What is inside the big open chest?' (Prompt: Shiny gold coins / pirate treasure) ➔ <i>Guidance: Encourage child to say: 'Pirate treasure!'</i><br><b>Q3 (Story):</b> 'Why is there treasure here?' (Prompt: Pirates forgot where they buried it) ➔ <i>Guidance: Encourage child to say: 'Pirates forgot it!'</i>"
+      "question": "<b>Q1 (Place):</b> 'Where are they now?' (Prompt: The Lost and Found room / The park) ➔ <i>Guidance: Encourage child to say: 'The Lost and Found room!'</i><br><b>Q2 (Item):</b> 'What is inside the big open chest?' (Prompt: Shiny gold coins / pirate treasure) ➔ <i>Guidance: Encourage child to say: 'Pirate treasure!'</i><br><b>Q3 (Story):</b>"
     },
     {
       "time": 211.862,
