@@ -4,65 +4,22 @@
     {
       "time": 90.066,
       "label": "Police officers eating donuts at the desk",
-      "questions": [
-        {
-          "question": "<b>Question 1 (Story/Reason):</b> 'Why did Peppa's family come to the police station?'<br><b>Options:</b> 'A) George lost Mr. Dinosaur 🦖 B) To buy some ice cream 🍦'<br><b>Guidance:</b> Encourage the child to say: 'George lost his dinosaur!'"
-        },
-        {
-          "question": "<b>Question 2 (Observation/Action):</b> 'Look at Police Officer Panda! What yummy food is he holding?'<br><b>Options:</b> 'A) A pink donut 🍩 B) An apple 🍎'<br><b>Guidance:</b> Encourage the child to say: 'He is eating a pink donut!'"
-        },
-        {
-          "question": "<b>Question 3 (Who):</b> 'Who are the two police officers at the desk?'<br><b>Options:</b> 'A) Officer Squirrel and Officer Panda 👮 B) Mummy Pig and Daddy Pig 🐷'<br><b>Guidance:</b> Encourage the child to say: 'Officer Squirrel and Officer Panda!'"
-        }
-      ]
+      "question": "<b>Q1 (Reason):</b> 'Why did Peppa's family come here?' (Prompt: George lost Mr. Dinosaur) ➔ <i>Guidance: Encourage child to say: 'George lost Mr. Dinosaur!'</i><br><b>Q2 (Food):</b> 'What is Officer Panda eating?' (Prompt: A pink donut / An apple) ➔ <i>Guidance: Encourage child to say: 'He is eating a donut!'</i><br><b>Q3 (Who):</b> 'Who are the two police officers?' (Prompt: Officer Squirrel and Officer Panda) ➔ <i>Guidance: Encourage child to say: 'Officer Squirrel and Officer Panda!'</i>"
     },
     {
       "time": 153.811,
       "label": "The lost and found room full of strange treasures",
-      "questions": [
-        {
-          "question": "<b>Question 1 (Story/Place):</b> 'Where did the police officers take Peppa's family?'<br><b>Options:</b> 'A) The Lost and Found room 📦 B) The playground 🛝'<br><b>Guidance:</b> Encourage the child to say: 'The Lost and Found room!'"
-        },
-        {
-          "question": "<b>Question 2 (Observation/Color):</b> 'Look at the big open chest! What is shining inside?'<br><b>Options:</b> 'A) Gold pirate coins 🪙 B) Old dirty shoes 👟'<br><b>Guidance:</b> Encourage the child to say: 'Shiny gold treasure!'"
-        },
-        {
-          "question": "<b>Question 3 (Plot):</b> 'Why is there a pirate treasure chest in the police station?'<br><b>Options:</b> 'A) Pirates forgot where they buried it 🏴‍☠️ B) Peppa brought it from home 🏠'<br><b>Guidance:</b> Encourage the child to say: 'Pirates forgot where they buried it!'"
-        }
-      ]
+      "question": "<b>Q1 (Place):</b> 'Where are they now?' (Prompt: The Lost and Found room / The park) ➔ <i>Guidance: Encourage child to say: 'The Lost and Found room!'</i><br><b>Q2 (Item):</b> 'What is inside the big open chest?' (Prompt: Shiny gold coins / pirate treasure) ➔ <i>Guidance: Encourage child to say: 'Pirate treasure!'</i><br><b>Q3 (Story):</b> 'Why is there treasure here?' (Prompt: Pirates forgot where they buried it) ➔ <i>Guidance: Encourage child to say: 'Pirates forgot it!'</i>"
     },
     {
       "time": 211.862,
       "label": "Police officers show lost toy dinosaurs to George",
-      "questions": [
-        {
-          "question": "<b>Question 1 (Plot/Check):</b> 'Officer Panda is holding a red triceratops and a blue dinosaur. Are these George's dinosaur?'<br><b>Options:</b> 'A) No, they are not! ❌ B) Yes, they are! ✅'<br><b>Guidance:</b> Encourage the child to say: 'No, they are not George's dinosaur!'"
-        },
-        {
-          "question": "<b>Question 2 (Emotion):</b> 'Look at little George's face. How does he feel right now?'<br><b>Options:</b> 'A) Sad and worried 😢 B) Happy and laughing 😄'<br><b>Guidance:</b> Encourage the child to say: 'George feels sad.'"
-        },
-        {
-          "question": "<b>Question 3 (Color/Observation):</b> 'What color is the dinosaur sitting on the floor on the left?'<br><b>Options:</b> 'A) Purple / Pink 💜 B) Green 💚'<br><b>Guidance:</b> Encourage the child to say: 'It is a purple stegosaurus!'"
-        },
-        {
-          "question": "<b>Question 4 (Toy/Identification):</b> 'What color is George's real Mr. Dinosaur?'<br><b>Options:</b> 'A) Green 🦖 B) Yellow 💛'<br><b>Guidance:</b> Encourage the child to say: 'Mr. Dinosaur is green!'"
-        }
-      ]
+      "question": "<b>Q1 (Check):</b> 'Are these dinosaurs George's toy?' (Prompt: Yes / No) ➔ <i>Guidance: Encourage child to say: 'No, they aren't!'</i><br><b>Q2 (Feeling):</b> 'How does little George feel right now?' (Prompt: Sad / Happy) ➔ <i>Guidance: Encourage child to say: 'He feels sad.'</i><br><b>Q3 (Color):</b> 'What color is George's real Mr. Dinosaur?' (Prompt: Green / Purple) ➔ <i>Guidance: Encourage child to say: 'Mr. Dinosaur is green!'</i>"
     },
     {
       "time": 285.147,
       "label": "Mr. Dinosaur is finally found in the car boot",
-      "questions": [
-        {
-          "question": "<b>Question 1 (Plot/Outcome):</b> 'Where did the clever police officers finally find Mr. Dinosaur?'<br><b>Options:</b> 'A) In the car boot (trunk) 🚗 B) At the playground 🛝'<br><b>Guidance:</b> Encourage the child to say: 'In the car boot!'"
-        },
-        {
-          "question": "<b>Question 2 (Emotion/Reaction):</b> 'George is holding his green dinosaur again! Is he happy now?'<br><b>Options:</b> 'A) Yes, he is very happy! 😊🎉 B) No, he is angry 😠'<br><b>Guidance:</b> Encourage the child to say: 'Yes, George is very happy!'"
-        },
-        {
-          "question": "<b>Question 3 (Observation):</b> 'Look at Peppa! What toy is she holding in her hand?'<br><b>Options:</b> 'A) Teddy 🧸 B) A toy boat ⛵'<br><b>Guidance:</b> Encourage the child to say: 'Peppa is holding Teddy!'"
-        }
-      ]
+      "question": "<b>Q1 (Outcome):</b> 'Where did they find Mr. Dinosaur?' (Prompt: In the car boot / Under the table) ➔ <i>Guidance: Encourage child to say: 'In the car boot!'</i><br><b>Q2 (Feeling):</b> 'George has his dinosaur back. Is he happy now?' (Prompt: Yes / No) ➔ <i>Guidance: Encourage child to say: 'Yes, he is very happy!'</i><br><b>Q3 (Item):</b> 'What toy is Peppa holding in her hand?' (Prompt: Teddy / Dinosaur) ➔ <i>Guidance: Encourage child to say: 'She is holding Teddy!'</i>"
     }
   ]
 }
