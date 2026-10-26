@@ -1,0 +1,25 @@
+{
+  "title": "Work and Play",
+  "stopPoints": [
+    {
+      "time": 74.311,
+      "label": "Mummy Pig is working on her computer while Peppa and George watch",
+      "question": "<b>Q1 (Story/Work):</b> 'What is Mummy Pig doing on her computer?' (Prompt: Working / Playing games) ➔ <i>Guidance: Encourage child to say: 'She is working on her computer!'</i><br><b>Q2 (Desire):</b> 'George is standing here. What game does he want to play?' (Prompt: Happy Mrs Chicken / Car game) ➔ <i>Guidance: Encourage child to say: 'Happy Mrs Chicken!'</i><br><b>Q3 (Observation):</b> 'Look behind Mummy Pig! What green plant is sitting on the blue cabinet?' (Prompt: A green cactus / A flower) ➔ <i>Guidance: Encourage child to say: 'It's a cactus!'</i>"
+    },
+    {
+      "time": 148.416,
+      "label": "Peppa and Suzy play shops at playgroup with a toy till",
+      "question": "<b>Q1 (Pretend Play):</b> 'What pretend game are Peppa and Suzy playing?' (Prompt: Playing shops / Playing doctor) ➔ <i>Guidance: Encourage child to say: 'They are playing shops!'</i><br><b>Q2 (Role):</b> 'Peppa is standing by the yellow cash register. What is her job?' (Prompt: Shopkeeper / Customer) ➔ <i>Guidance: Encourage child to say: 'She is the shopkeeper!'</i><br><b>Q3 (Observation):</b> 'Look at the green shelf! Can you spot the yellow rubber duck?' (Prompt: Yes / No) ➔ <i>Guidance: Encourage child to say: 'Yes, on the shelf!'</i>"
+    },
+    {
+      "time": 219.667,
+      "label": "Rebecca Rabbit comes into the shop to buy a carrot",
+      "question": "<b>Q1 (Character/Food):</b> 'Rebecca Rabbit is the customer! What yummy vegetable does she want to buy?' (Prompt: A carrot / An apple) ➔ <i>Guidance: Encourage child to say: 'She wants to buy a carrot!'</i><br><b>Q2 (Item/Number):</b> 'Look at the cash register! Does it have numbers on top?' (Prompt: Yes, numbers / No) ➔ <i>Guidance: Encourage child to say: 'Yes, lots of numbers!'</i><br><b>Q3 (Humor):</b> 'How much does the carrot cost in their silly game?' (Prompt: A million pounds / One coin) ➔ <i>Guidance: Encourage child to say: 'A million thousand pounds!'</i>"
+    },
+    {
+      "time": 284.874,
+      "label": "Everyone plays Happy Mrs Chicken together and falls down laughing",
+      "question": "<b>Q1 (Outcome):</b> 'Mummy and Daddy finished their work! What game are they all playing now?' (Prompt: Happy Mrs Chicken / Football) ➔ <i>Guidance: Encourage child to say: 'Happy Mrs Chicken!'</i><br><b>Q2 (Action/Emotion):</b> 'Look at everyone lying on the floor! Why are they laughing?' (Prompt: They are very happy / They are crying) ➔ <i>Guidance: Encourage child to say: 'They are laughing and having fun!'</i><br><b>Q3 (Who):</b> 'Who is wearing glasses and rolling on his back?' (Prompt: Daddy Pig / George) ➔ <i>Guidance: Encourage child to say: 'Daddy Pig!'</i>"
+    }
+  ]
+}
