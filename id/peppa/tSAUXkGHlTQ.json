@@ -1,0 +1,25 @@
+{
+  "title": "Soft Play",
+  "stopPoints": [
+    {
+      "time": 112.711,
+      "label": "Mummy Pig and Miss Rabbit watch the children play in the soft play maze",
+      "question": "<b>Q1 (Place/Fun):</b> 'Where are Mummy Pig and Miss Rabbit?' (Prompt: At the soft play center / At the supermarket) ➔ <i>Guidance: Encourage child to say: 'At the soft play center!'</i><br><b>Q2 (Observation/Colors):</b> 'Look at the ball pit! What colorful toys are the children jumping in?' (Prompt: Lots of colorful plastic balls / Water) ➔ <i>Guidance: Encourage child to say: 'In the colorful balls!'</i><br><b>Q3 (Characters):</b> 'Can you spot Richard Rabbit sliding down the rope?' (Prompt: Yes / No) ➔ <i>Guidance: Encourage child to say: 'Yes, Richard Rabbit is sliding!'</i>"
+    },
+    {
+      "time": 179.7,
+      "label": "Mr. Elephant volunteers to climb inside to help the stuck grown-ups",
+      "question": "<b>Q1 (Who/Animal):</b> 'Who came into the ball pit wearing a red bow tie?' (Prompt: Mr. Elephant / Daddy Pig) ➔ <i>Guidance: Encourage child to say: 'Mr. Elephant!'</i><br><b>Q2 (Action/Problem):</b> 'The mothers are stuck! What does Mr. Elephant say he will do?' (Prompt: Help them get out / Eat some cake) ➔ <i>Guidance: Encourage child to say: 'He wants to rescue them!'</i><br><b>Q3 (Observation/Face):</b> 'Look at Mr. Elephant's big trunk. What animal is he?' (Prompt: A big elephant / A tiger) ➔ <i>Guidance: Encourage child to say: 'He is an elephant!'</i>"
+    },
+    {
+      "time": 242.981,
+      "label": "Daddy Pig and Miss Rabbit get stuck in the climbing tunnels",
+      "question": "<b>Q1 (Funny/Plot):</b> 'Oh no! What happened to Daddy Pig and Miss Rabbit inside the tunnel?' (Prompt: They got stuck / They are dancing) ➔ <i>Guidance: Encourage child to say: 'They are stuck!'</i><br><b>Q2 (Tool/Action):</b> 'Look at Daddy Pig's hand! What is he holding to call for help?' (Prompt: A walkie-talkie / phone / A spoon) ➔ <i>Guidance: Encourage child to say: 'He is holding a phone!'</i><br><b>Q3 (Observation):</b> 'Miss Rabbit is upside down! Are her ears pointing down?' (Prompt: Yes, upside down / No) ➔ <i>Guidance: Encourage child to say: 'Yes, she is upside down!'</i>"
+    },
+    {
+      "time": 285.886,
+      "label": "The grown-ups are rescued and stand outside the play area together",
+      "question": "<b>Q1 (Rescue/Hero):</b> 'Who went into the small tunnels to rescue the grown-ups?' (Prompt: Peppa and Suzy Sheep / The fire truck) ➔ <i>Guidance: Encourage child to say: 'Peppa and Suzy!'</i><br><b>Q2 (Feelings):</b> 'Everyone is out of the tunnels now! Are the parents happy and smiling?' (Prompt: Yes, smiling / No, crying) ➔ <i>Guidance: Encourage child to say: 'Yes, they are happy!'</i><br><b>Q3 (Next/Story):</b> 'Daddy says it is time to go home, but where did the little children go?' (Prompt: Back inside to play / To sleep) ➔ <i>Guidance: Encourage child to say: 'Back inside to play!'</i>"
+    }
+  ]
+}
