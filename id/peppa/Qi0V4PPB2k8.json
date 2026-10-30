@@ -1,0 +1,25 @@
+{
+  "title": "The Fire Engine",
+  "stopPoints": [
+    {
+      "time": 83.62,
+      "label": "Miss Rabbit shows Mummy Pig, Peppa, and George the fire engine at the fire station",
+      "question": "<b>Q1 (Vehicle/Color):</b> 'Look at the big red truck! What vehicle is it?' (Prompt: A fire engine / A school bus) ➔ <i>Guidance: Encourage child to say: 'It is a fire engine!'</i><br><b>Q2 (Uniform/Clothes):</b> 'What are Mummy Pig and Miss Rabbit wearing on their heads?' (Prompt: Yellow firefighter helmets / Crowns) ➔ <i>Guidance: Encourage child to say: 'Yellow firefighter helmets!'</i><br><b>Q3 (Tools):</b> 'Can you see the ladder on top and the hose on the side?' (Prompt: Yes / No) ➔ <i>Guidance: Encourage child to say: 'Yes, a ladder and a hose!'</i>"
+    },
+    {
+      "time": 154.87,
+      "label": "The daddies get ready to light the barbecue in the garden",
+      "question": "<b>Q1 (Food/Activity):</b> 'What are Daddy Pig and his friends getting ready to do?' (Prompt: Have a barbecue / Play football) ➔ <i>Guidance: Encourage child to say: 'Have a barbecue!'</i><br><b>Q2 (Observation/Item):</b> 'Mr. Rabbit is holding a black bag. What is inside?' (Prompt: Charcoal / Ice cream) ➔ <i>Guidance: Encourage child to say: 'It is charcoal!'</i><br><b>Q3 (Costume/Chef):</b> 'Look at Daddy Pig's head! What kind of hat is he wearing?' (Prompt: A white chef's hat / A police hat) ➔ <i>Guidance: Encourage child to say: 'A white chef hat!'</i>"
+    },
+    {
+      "time": 216.847,
+      "label": "Daddy Pig's barbecue catches fire and fills the air with black smoke",
+      "question": "<b>Q1 (Problem/Fire):</b> 'Oh no! What happened to the barbecue grill?' (Prompt: It is on fire / It is broken) ➔ <i>Guidance: Encourage child to say: 'The barbecue is on fire!'</i><br><b>Q2 (Tool/Action):</b> 'Daddy Pig looks worried! What is he holding in his hand to call for help?' (Prompt: A phone / A spoon) ➔ <i>Guidance: Encourage child to say: 'He is calling on the phone!'</i><br><b>Q3 (Observation/Smoke):</b> 'Look above the barbecue grill! What color is the smoke rising up into the sky?' (Prompt: Dark black smoke / Blue smoke) ➔ <i>Guidance: Encourage child to say: 'Black smoke!'</i>"
+    },
+    {
+      "time": 285.347,
+      "label": "The fire is out and everyone jumps and falls happily into the muddy puddles",
+      "question": "<b>Q1 (Outcome/Water):</b> 'The mummies put out the fire with water! What did the water make on the grass?' (Prompt: Muddy puddles / A swimming pool) ➔ <i>Guidance: Encourage child to say: 'Muddy puddles!'</i><br><b>Q2 (Action/Emotion):</b> 'Look at all the daddies and mummies lying on the ground! Are they laughing and happy?' (Prompt: Yes, laughing / No, crying) ➔ <i>Guidance: Encourage child to say: 'Yes, they are laughing!'</i><br><b>Q3 (Clothes/Mud):</b> 'What happened to their white shirts and yellow coats?' (Prompt: Covered in brown mud / Completely clean) ➔ <i>Guidance: Encourage child to say: 'They are covered in mud!'</i>"
+    }
+  ]
+}
