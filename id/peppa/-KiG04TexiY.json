@@ -1,0 +1,25 @@
+{
+  "title": "George's New Clothes",
+  "stopPoints": [
+    {
+      "time": 82.805,
+      "label": "Mummy Pig notices holes in George's washed clothes in the kitchen",
+      "question": "<b>Q1 (Story/Problem):</b> 'Look at George's clothes! Why are they giggling?' (Prompt: His clothes have holes in them / They are wet) ➔ <i>Guidance: Encourage child to say: 'His clothes have holes in them!'</i><br><b>Q2 (Observation/Body):</b> 'What can Peppa see through the hole in George's pants?' (Prompt: George's bottom / His hand) ➔ <i>Guidance: Encourage child to say: 'George's bottom!'</i><br><b>Q3 (Observation/Details):</b> 'Look at the white fridge behind George. What yellow magnet do you see?' (Prompt: A yellow duck / A banana) ➔ <i>Guidance: Encourage child to say: 'A yellow duck!'</i>"
+    },
+    {
+      "time": 163.991,
+      "label": "George tries on a colorful clown outfit in Miss Rabbit's clothes shop",
+      "question": "<b>Q1 (Story/Pretend):</b> 'George came out of the changing booth! What does he look like?' (Prompt: A clown / A policeman) ➔ <i>Guidance: Encourage child to say: 'He looks like a clown!'</i><br><b>Q2 (Feeling):</b> 'Does George want to dress like a silly clown?' (Prompt: No, he doesn't / Yes, he does) ➔ <i>Guidance: Encourage child to say: 'No, he doesn't like it!'</i><br><b>Q3 (Observation/Item):</b> 'What is spinning on George's colorful hat?' (Prompt: A little propeller / A flower) ➔ <i>Guidance: Encourage child to say: 'A propeller on the hat!'</i>"
+    },
+    {
+      "time": 197.959,
+      "label": "George is happy to get brand new blue clothes that look just like him",
+      "question": "<b>Q1 (Color/Clothes):</b> 'George found his favorite clothes! What color is his shirt now?' (Prompt: Blue / Red) ➔ <i>Guidance: Encourage child to say: 'It is blue!'</i><br><b>Q2 (Action/Emotion):</b> 'Look at George in the mirror! What is he doing because he is so happy?' (Prompt: Jumping up and down / Sleeping) ➔ <i>Guidance: Encourage child to say: 'He is jumping!'</i><br><b>Q3 (Story/Comparison):</b> 'What is special about these new clothes?' (Prompt: They are just like his old ones, but with no holes / They have a cape) ➔ <i>Guidance: Encourage child to say: 'The same as before, but no holes!'</i>"
+    },
+    {
+      "time": 285.711,
+      "label": "Peppa and her family jump in muddy puddles and roll around laughing",
+      "question": "<b>Q1 (Action):</b> 'Everyone is out in the garden! What are they jumping and rolling in?' (Prompt: Muddy puddles / Cold snow) ➔ <i>Guidance: Encourage child to say: 'Muddy puddles!'</i><br><b>Q2 (Counting):</b> 'How many pigs are covered in brown mud and lying on the ground?' (Prompt: Four / Two) ➔ <i>Guidance: Encourage child to say: 'One, two, three, four pigs!'</i><br><b>Q3 (Observation/Weather):</b> 'Look up at the bright blue sky! What is shining brightly above them?' (Prompt: The yellow sun / A rainbow) ➔ <i>Guidance: Encourage child to say: 'The sun!'</i>"
+    }
+  ]
+}
